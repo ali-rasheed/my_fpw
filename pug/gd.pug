@@ -4,13 +4,15 @@ mixin img-cap-lazyloaded(name,path,caption)
     img(class="lazy", data-src="imgs/gd/"+path, alt=name, onerror="hide()") 
     figcaption=caption
 
-mixin gd-ll-lg(name1,name2,caption,cname,type)
-    a(class=cname+" mfp-"+type+"  l-gd img-cont p-tilt" title=caption href="imgs/gd/"+name2)  
+mixin gd-ll-lg(name1,name2,caption,cname,type,attr)
+    a(class=cname+" mfp-"+type+"  l-gd img-cont p-tilt" title=caption href="imgs/gd/"+name2 data-gall=attr)  
         img(class=" lazy grid-image", data-src="imgs/gd/"+name1 ,   
         src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
             ) 
     //-  src="imgs/threedee-sm/"+name1
  
+mixin gd-gall(name2,caption,cname,type,attr)
+    a(class=cname+" mfp-"+type+"  l-gd img-cont" href="imgs/gd/"+name2 title=caption)  
 
 doctype
 html(lang='en')
@@ -23,16 +25,20 @@ html(lang='en')
 
         main.gallery 
 
-            //- section#overview.x12c.grid  
+            section#overview.x12c.grid  
             
-            //-     h1.main-heading Graphic design et al.
-            //-     //- p.big.ml-sect 
-            //-     //-   em September 2019 - January 2020      
+                h1.main-heading Graphic design et al.
+                //- p.big.ml-sect 
+                //-   em September 2019 - January 2020      
 
 
-            //-     p.big#summary
+                p.big#summary
                     | graphic design projects I've done for professional and personal projects, and for online challenges such as                    
-                    a(href="https://posterjam.ro/", title="Posterjam").in-txt Posterjam 
+                    a(href="https://posterjam.ro/", title="Posterjam").in-txt Posterjam  
+                    |
+                    | and 
+                    a(href="https://www.instagram.com/taketwo_poster/", title="Posterjam").in-txt Taketwo_poster  
+
 
             section#gd-cont.gd-cont 
 
@@ -68,24 +74,37 @@ html(lang='en')
 
                 +gd-ll-lg("poster-5.png","poster-5.png","","w-half","image") 
 
-
-                
-                //- +gd-ll-lg("cookie_01.jpg","cookie_01.jpg",
-                //- "Color Exploration for <strong>Posterjam: Cookie Policy</strong> ","w-half","image") 
-
-                
-                +gd-ll-lg("cookie_02.jpg","cookie_02.jpg",
-                "Color Exploration for <strong>Posterjam: Cookie Policy</strong> ","w-quart","image") 
-                
-                +gd-ll-lg("cookie_03.jpg","cookie_03.jpg",
-                "Color Exploration for <strong>Posterjam: Cookie Policy</strong> ","w-half","image") 
-                
-                +gd-ll-lg("cookie_04.jpg","cookie_04.jpg",
-                "Color Exploration for <strong>Posterjam: Cookie Policy</strong> ","w-quart","image") 
-                
-                
-   
  
+                
+                +gd-ll-lg("cookie_01.jpg","cookie_01.jpg",
+                "Color Exploration for <strong>Posterjam: Cookie Policy</strong> ","w-half","image") 
+
+                
+                //- +gd-ll-lg("cookie_02.jpg","cookie_02.jpg",
+                //- "Color Exploration for <strong>Posterjam: Cookie Policy</strong> ","w-quart","image") 
+                
+                //- +gd-ll-lg("cookie_03.jpg","cookie_03.jpg",
+                //- "Color Exploration for <strong>Posterjam: Cookie Policy</strong> ","w-half","image") 
+                
+                
+                //- .minibox.p-tilt.img-cont.w-half
+                +gd-ll-lg("cookie_04.jpg","cookie_04.jpg",
+                "Color Exploration for <strong>Posterjam: Cookie Policy</strong> ","w-quart","image","cookie") 
+                +gd-gall("cookie_03.jpg",
+                "Color Exploration for <strong>Posterjam: Cookie Policy</strong> ","w-half","image","cookie") 
+                +gd-gall("cookie_02.jpg",
+                "Color Exploration for <strong>Posterjam: Cookie Policy</strong> ","w-half","image","cookie") 
+                
+                //- 
+                    a(href="imgs/gd/"+"cookie_04.jpg" class="l-gd minibox-item"  title="Color Exploration for Posterjam: Cookie Policy")  
+                        img(class=" lazy", data-src="imgs/gd/"+"cookie_04.jpg" ,   
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
+                            ) 
+                    a(href="imgs/gd/"+"cookie_03.jpg" title="Color Exploration for Posterjam: Cookie Policy".).minibox-item  
+
+                    a(href="imgs/gd/"+"cookie_02.jpg" title="Color Exploration for Posterjam: Cookie Policy").minibox-item      
+    
+
         //- section.grid.x12c
         //-     h2.l-sect December-January Prompt: suprise  
         //-     //- +img-cap-lazyloaded("","poster-6.jpg","")
@@ -103,7 +122,7 @@ html(lang='en')
 
         //- hr.small
 
-
+ 
         //- section.grid.x12c    
 
         //-     figure.ml-sect   
@@ -136,7 +155,7 @@ html(lang='en')
 
         //-     p.ml-sect A no.2 pencil = ubiquitous “2”. Another opportunity to explore using texture; I attempted to replicate  lined paper, albeit with a underlaid pencil. I also reused the photograph from my previous poster, using the children' outline to create a counterbalance to the pencil.
 
-        //- hr.small
+        //- hr.small 
 
         footer 
             include ./includes/footer2.pug  

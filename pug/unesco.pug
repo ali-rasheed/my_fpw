@@ -30,393 +30,269 @@ html(lang='en')
                 h1.main-heading UNESCO Lodestar
 
                 p.big#summary
-                    | Dispelling product care misconceptions. 
-                    | Achieving product longevity, sustainability and brand trust 
+                    |Grounding learning for students, while bringing awareness to lesser known World Heritage Sites. UNESCO Lodestar is an online platform for lower-secondary educators to access  lessons plans with World Heritage Site case-studies.
 
-                #cover-image.magenta-hover   
-                    //- img(src="imgs/arcy/arcy2.png")  
-                    img(src="imgs/arcy/cover.jpg") 
- 
             section.flex-s.points
+                .flex-i 
+                    h5 Context
+                    p 6 week project completed as part of Senior Experience Design Course in Vancouver, Canada.
 
                 div.flex-i
                     h5 Responsibilities
                     ol
-                        li Research and Ethnography
-                        li Interaction Design
-                        li Industrial Design
-                        li Product Strategy 
-                div.flex-i
+                        li Project Management
+                        li Product Strategy
+                        li Content Strategy
+                        li Copywriting
+                        li Prototyping 
+                        li Curricular design
+
+                        
+                div.flex-i 
                     h5 Tools
-                    ol
+                    ul
                         li Figma
-                        li Blender
-                        li Illustrator
-                        li Miro
+                        li Google Sprint Book, Experience Design, Branded Interactions
 
-                div.flex-i
-                    h5 Team
+                div.flex-i.team
+                    h5 Team 
                     div.team
-                        +faList("")(class="fad fa-rabbit")
-                            a(href="https://traucy.com").in-txt Tracy Chen
 
-                        +faList("")(class="fad fa-ram")
-                            a(href="https://aape.design").in-txt Brendan Mckay
+                        +faList("Ali Rasheed")(class="fad fa-jedi")                
+                            //- a(href="https://www.yantimo.com/").in-txt 
+                            
+                        +faList("")(class="fad fa-cat")
+                            a(href="www.sfu.ca/~cpa38/KatiePark/").in-txt Katie Park 
+                            
+                        +faList("Benny Huang")(class="fad fa-dragon")
+                            //- a(href="https://aape.design").in-txt 
 
-                        +faList("")(class="fad fa-deer")                
-                            a(href="https://www.yantimo.com/").in-txt Yan Tymoshenko
+                        +faList("Grace Lai")(class="fad fa-fish")
+                            //- a(href="https://aape.design").in-txt 
 
+                        +faList("Lia Yujin")(class="fad fa-deer")                
+            section 
+                #cover-image.magenta-hover   
+                    img(src="imgs/unesco/landing-cover.jpg") 
+ 
             hr
- 
-
-
-            section.grid.x12c 
-                h2.l-sect The Gist
-                
-                h3.l-sect Project Context
-                
-                p.med.quote.ml-sect 
-                    q To minimize our impact as much as possible and make sure that we build products to last a really, really long time
-
-                p.ml-sect
-                    |For a senior design course at Simon Fraser University, our team was tasked with seeking a local Vancouver organization whose values we shared. 
-                    mark Arc’teryx’s philosophy as a design company and commitment to sustainability resonated with our team. 
-                    |We were fortunate to be able to 
-                    mark work with the Kitsilano and Metrotown branches,  and senior executives from Arc'teryx HQ.
-
-       
-                figure.ml-sect   
-                    img(data-src="imgs/arcy/kits.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
-                
-            hr.small 
-
-
-            section.grid.x12c 
-
-                h3.l-sect Contribution 
-                p.ml-sect Conducted in-person ethnography, user-research and interviews, and 
-                    mark led our 4-week iterative process of designing our product care  artefacts
-                    |  and 
-                    mark executing their final visualisations. Co-designed our weekly posters & slide decks. 
-                    |Designed online experience for receiving product care knowledge.
-
-            
-            hr.small 
-
-
-            section.grid.x12c 
-
-
-
-                h3.l-sect Insights  
-                p.ml-sect Based on our ethnographic research and user interviews, we identified common patterns around product care. You can read more about our process below. 
-                ol.ml-sect
-                    li.med 
-                        |Customers are 
-                        mark unaware of proper product care procedures
-                    li.med Customers are unaware of educational content
-                    li.med Customers believe it is damaging to machine wash or dry their garments  
-                    li.med Customers 
-                        mark believe that Arc’teryx’s reputation for quality and the high price point mean that products do not need care.                    
-                    li.med Power users may recommend people not to wash their garments                   
-                    li.med  New and old customers both carry the same misconceptions when it comes to product care.
-          
-
-
-            section.callout#dgoals
-                h4 Design Goals
-                p.med 
-                   |To inform customers why regular product care is so important, making the instructions feel worth their attention.
-                p.med 
-                   |To dispell the misconceptions that garments don’t need regular care, and that washing and drying can ruin them.
-
-                p.med 
-                   |To design for customers who have limited touchpoints with product guides and Arc’teryx itself.
-
-            hr.small
-
-            section.grid.x12c#personas
-                h3.l-sect Personas
-                p.ml-sect
-                    |We also created 
-                    mark three initial personas as a storytelling tool
-                    |  to help us frame our problem as Arc'teryx had multiple primary user types. 
-                    |This included the online deal seeker, the in-store customer, and the warehouse sale customer. However our 
-                    mark final implementation was guided by a combined two personas
-                    |, a power-user purchasing from Arc'teryx's online store and a first-time customer buying in-store.
-                figure.lr-sect
-                    .manual-swipe   
-                        .img
-                            img(data-src="imgs/arcy/persona/persona-01.jpg", src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 2'%3E%3C/svg%3E").lazy    
-                        .img
-                            img(data-src="imgs/arcy/persona/persona-02.jpg" ).lazy    
-                        .img
-                            img(data-src="imgs/arcy/persona/persona-03.jpg" ).lazy    
-                        .img
-                            img(data-src="imgs/arcy/persona/persona-04.jpg" ).lazy    
-                        .img
-                            img(data-src="imgs/arcy/persona/persona-05.jpg" ).lazy    
-
-            hr
- 
-
-
-            section.callout#dquestion
-                h4 Final Design Question
-                p.big 
-                    |How might we dispell misconceptions by 
-                    strong facilitating post-purchase self learning on why and how 
-                    |garments are cared for? 
-
-
-            section.grid.x12c#productcare
-                //- h3.l-sect Product Care Journey 
-                p.ml-sect Our ethnography showed that customers valued and kept artifacts such as shopping bags, boxes and other packaging from brands like Arc'teryx.
-                p.ml-sect
-                    |Our 
-                    |#[a(href="https://www.tandfonline.com/doi/full/10.1400/14606925.2018.1469331").in-txt secondary research]
-                    | showed us that product care behaviour resulted from the confluence of three factors:
-                ol.ml-sect
-                    li motivation (if people want to do it)
-                    li ability (if people can do it)
-                    li #[mark triggers (a stimulus that provokes them to do it)]
-                p.ml-sect Through this knowledge, we created 
-                h3.l-sect Arc'teryx Product Care:
-                figure.lr-sect
-                    img(data-src="imgs/arcy/pc.jpg", src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E", alt="alt").lazy
-                    figcaption 3D render made by me.
- 
-            hr.small
- 
-            section.grid.x12c#online
   
-                h4.ml-sect The Online Experience
-                p.ml-sect
-                    |For this project, we found
-                    mark  an opportunity to design for online buyers since there are no current online product care touchpoints
-                    |  through ordering on the Arc'teryx website.
-                p.ml-sect Customers are asked to choose a product care gift at checkout.
-                    
-                figure.mlmr-sect
-                    .manual-swipe   
-                        .img
-                            img(data-src="imgs/arcy/000.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy    
-                        .img
-                            img(data-src="imgs/arcy/100.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy  
-
-                p.ml-sect
-                    |An email with product care links will be sent to users who are expecting to receive their gift soon. We want users to have product care on their minds even before the product arrives as  
-                    mark washing and tumble-drying the jacket increases the DWR (Durable Water Repellent) coating's effectiveness.
 
 
-            hr.small
-          
-          
-            section.grid.x12c#store
-
-                h4.ml-sect The In-store Experience
-                p.ml-sect Arc'teryx customers are able to choose a free product care gift upon purchasing an item in-store. 
-                figure.mlmr-sect
-                    img(data-src="imgs/arcy/instoreexperience.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",alt="alt").lazy 
-            hr.small  
-
-            section.grid.x12c#magnet
-                
-                h5.l-sect Product Care
-                h4.ml-sect Magnet
-                p.ml-sect
-                    |The magnet is a reflexive product care guide 
-                    mark made from Gore-tex fabric scraps from Arc'teryx clothes production
-                    |, an environmentally conscious decision. The grommet is 
-                    mark magnetic, allowing users to stick it on their laundry machines
-                    |. The magnet is versatile, with the grommet loop 
-                    mark also allowing people to hang the magnet on their coat hangers
-                    | or wall hooks in case users don't have laundry machines.
-
-                p.ml-sect.r4 With a product that lives in either the same place as Arc'teryx garments, or where they are supposed to be washed, 
-                    mark it acts as an indirect trigger.
-                figure.mlmr-sect
-                    .manual-swipe   
-                        .img
-                            img(data-src="imgs/arcy/mg.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy    
-                        .img
-                            img(data-src="imgs/arcy/wm.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy   
-                        .img
-                            img(data-src="imgs/arcy/arcy2.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy   
-
-
-            section.grid.x12c#bandana
-                
-                h5.l-sect.r1 Product Care
-                h4.ml-sect.r2 Trail Bandana
-                p.ml-sect.r3 The Trail Bandana artifact has a local hiking trail pattern on the front and product care instructions on the back. As bandanas are regularly washed garments, 
-                    mark they are meant to act as a direct trigger for product care habits.
-                figure.mlmr-sect
-                    .manual-swipe   
-                        .img  
-                            img(data-src="imgs/arcy/rd.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy
-                        .img    
-                            img(data-src="imgs/arcy/rfb.jpg" ).lazy   
-                        .img    
-                            img(data-src="imgs/arcy/box.jpg" ).lazy   
-
-           
-            section.grid.x12c#value
-                
-                h3.l-sect.r1 The value
-                    p.ml-sect.big Longevity of garments leading to more brand trust and loyalty, and reduced environmental impact through fewer garment replacements                 
-                figure.mlmr-sect
-                    img(data-src="imgs/arcy/value.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy       
-            
-            hr
- 
-
-            section.grid.x12c#process
+            section.grid.x12c 
                 h2.l-sect Research
-                //- h3.l-sect 
-
-                h3.l-sect Initial Questions 
-                p.ml-sect To begin, we set the course for our research by asking ourselves:
-
-                p.ml-sect.med How does Arc’teryx’s design and philosophy fit in the context of urban lifestyle?
-                p.ml-sect.med Who are the people embedded in the Arc’teryx community whose behaviors and rituals best represent Arc’teryx enthusiasts?
-                p.ml-sect.med What rituals do people who purchase Arc’teryx practice at home, when browsing in store, or when outdoors with their gear? 
-
-            hr.small
-
-            section.grid.x12c#ethno
-                h3.l-sect Ethnography and User Interviews
-
-                p.ml-sect  We began our research by visiting and 
-                    mark observing each store across the lower mainland to understand their unique programs
-                    |, while keeping in frequent contact with the store manager and marketing leads. During hour long sessions of undercover browsing, we took 
-                    mark field notes, photos, and conducted interviews with product guides regarding customer-employee interactions.
-
-                figure.mlmr-sect
-                    .manual-swipe   
-                        .img  
-                            img(data-src="imgs/arcy/2.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy
-                        .img    
-                            img(data-src="imgs/arcy/4.jpg" ).lazy 
-
-            hr.small
-            section.grid.x12c#interviews
-
-                p.ml-sect To attain a nuanced and learned understanding of Arc’teryx customers, 
-                    mark we conducted 8 qualitative interviews seeking to understand motivations, behaviors, and rituals. 
-                    |We sought out the people who were best able to shed light on our questions which included athletes, outdoor enthusiasts, urban commuters, techwear fans, and casual shoppers. 
-                figure.mlmr-sect
-                    .manual-swipe   
-                        .img  
-                            img(data-src="imgs/arcy/11.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy
-                        .img    
-                            img(data-src="imgs/arcy/12.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy 
-
-            hr
- 
-
-
-            section.grid.x12c#synthesis
-                h2.l-sect Data Synthesis
-
-            section.grid.x12c#frustrations
-                h3.l-sect Frustrations
-                p.ml-sect Frictions described by Arc’teryx customers confirmed for us that people’s experience with Arc’teryx is great — until they feel frustrated and betrayed by their product’s need for care. 
-
-                ul.ml-sect
-                    li.med.quote “I left Vancouver before I had a chance to bring it in. Fabric glue stopped working in London. Has really bothered me considering how good their products can be.”
-                    li.med.quote “In 2013, I was on a hunt for a jacket to climb Kilimanjaro but one that I can still wear in the city’s winter too. I learned the hard way that you're supposed to wash these jackets regularly/often to keep the waterproofness etc.  Basically something went wrong when I once washed my Beta AR...”
-
-                    li.med.quote “Once I figure out the fabric glue situation I’ll stand by them 100%. But if I’m paying this kinda money for a jacket I want it to stay strong for longer than a couple years.”
-
-            hr.small
-
-
-            section.grid.x12c#habits
-
-                h3.l-sect Habits
-                p.ml-sect Our interviews also confirmed that customers care for their garments in unconventional and potentially damaging ways, listening to advice from friends and family over official resources.
-
-                ul.ml-sect
-                    li.med.quote
-                        q I use a hose to clean it, so it doesn’t remove coating, especially after I come back from camping. I make sure I air dry the jacket. I know heat is not good for the jacket, so I don’t put it near a heater or a dryer.
-                    li.med.quote 
-                        q At most, I go over it with wax cause it’s cotton.
-                    li.med.quote 
-                        q Just with dish soap, I wash it or dry clean
-            
-            
-            hr.small
-
-            section.grid.x12c#currentsolutions
-                      
-                figure.lr-sect
-                    img(data-src="imgs/arcy/current.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 2'%3E%3C/svg%3E").lazy 
-
-            
-            hr.small
-
-            section.grid.x12c#discrepancies
-
-                h3.l-sect Discrepancies
-
-                p.ml-sect  Through cross-referencing our discussions with Arc'teryx representatives and interviews with users, we were able to map the most typical journeys customers took when purchasing and then using Arc'teryx garments.
-  
-                p.ml-sect
-                    mark Discrepancies between 
-                        i.fas.fa-comment
-                        |Arc’teryx’s expectations and actual 
-                        i.fas.fa-head-side-brain
-                        |customer behavior confirmed for us that there was an opportunity to further leverage the current touchpoints. 
-
-                ul.ml-sect.med
-                    +faList("Arc’teryx expects customers to have consulted product care resources, and to perform maintenance on garments as needed after purchase")(class="fas fa-comment")
-                    
-                    +faList("Arc’teryx expects customers to have consulted product care resources, and to perform maintenance on garments as needed after purchase")(class="fas fa-head-side-brain space")
-
-                    +faList("Arc’teryx expects product care education to take place in-store, during the sales process")(class="fas fa-comment ")
-                    
-                    +faList("Customers leave the store having forgotten product care information")(class="fas fa-head-side-brain space")
-
-                    +faList("The Arc’teryx website has product care information for customers to find")(class="fas fa-comment space")
-                    
-                    +faList(" Customers don’t seek product care information")(class="fas fa-head-side-brain space")
-
-                    
-
-            hr.small
-
-            section.grid.x12c#journey
-
-                h3.l-sect Journey Maps
                 
-                p.ml-sect
-                    | From the information our team gathered, we created 2 
-                    mark journey maps that looked at the pre-purchase and post-purchase experiences of an Arc'teryx customers, through online and instore touchpoints.
-                    | We used this identify the design opportunities with the most potential.
+                h3.l-sect What is UNESCO?
+                
 
+                p.ml-sect
+                    |UNESCO is a UN agency who’s main mission is to build a culture of peace and sustainability through education, communication and dialogue between different people.
+                h4.l-sect World Heritage
+                p.ml-sect We focused on their World Heritage Centre which preserves and protects landmarks that bring immense value to the culture and the environment of humanity.
+                
+                figure.ml-sect   
+                    img(data-src="imgs/unesco/whc.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
+                
+
+                //- h4.l-sect Brand Purpose
+                //- p.ml-sect UNESCO aims to promote peace and international understanding through shared cultural heritage
+
+                //- p.med.quote.ml-sect 
+                //-     q Heritage is our legacy from the past, what we live with today, and what we pass on the future generation.
+                //-     small.it UNESCO World Heritage Centre 
+                //- h4.l-sect Brand Perception
+                //- p.ml-sect A unique certification of places the global community considers valuable and worth preserving and understanding
+   
+            //- hr
+            //- hr.small 
+
+            section.grid.x12c 
+                h4.l-sect Channels 
+                p.ml-sect Along with physical Heritage Sites ,  UNESCO provides a variety of tools, guidelines and knowledge through its online channels, such as its main websites, and project-specific micro-sites
+                figure.r-sect 
+                    .manual-swipe   
+                        .img
+                            img(data-src="imgs/unesco/channel1.jpg" ).lazy    
+                        .img
+                            img(data-src="imgs/unesco/channel2.jpg" ).lazy     
+                        .img
+                            img(data-src="imgs/unesco/channel3.jpg" ).lazy    
+
+
+            section.grid.x12c 
+                h3.l-sect User Research
+
+
+                //- h4.ml-sect Interviews & Surveys     
+                p.ml-sect Our initial primary research of 13 student and 11 educator survey respondents, helped us frame our interviews with 13 experts, including university and secondary school educators, second-language educators, and professionals working with UNESCO. 
+
+                figure.mlmr-sect                     
+                    .manual-swipe   
+                        .img
+                            img(data-src="imgs/unesco/quotes.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1'%3E%3C/svg%3E").lazy        
+                        .img
+                            img(data-src="imgs/unesco/stakeholders.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1'%3E%3C/svg%3E").lazy        
+
+            section.grid.x12c 
+
+
+                h2.l-sect Insights  
+                p.ml-sect Synthesizing our research gave us 4 key insights to drive our intervention
+
+                ul.ml-sect.big
+
+                    +faList("Second language teachers use cultural heritage to bring personal bearing to language education.")(class="fas fa-sticky-note")
+                    +faList("Educators, need age-specific, modular actionable lesson resources.")(class="fas fa-sticky-note")
+                    +faList("Open-ended middle school curriculum = freedom to bring in external topics such as World Heritage.")(class="fas fa-sticky-note")
+                    +faList("World Heritage is eurocentric and so finding resources on lesser-known non-european Heritage Sites is difficult.")(class="fas fa-sticky-note")
+
+                figure.mlmr-sect   
+                    .manual-swipe   
+                        .img
+                            img(data-src="imgs/unesco/insight1.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1'%3E%3C/svg%3E" ).lazy    
+                        .img
+                            img(data-src="imgs/unesco/insight2.jpg" ).lazy    
+                        .img
+                            img(data-src="imgs/unesco/insight3.jpg" ).lazy     
+                        .img
+                            img(data-src="imgs/unesco/insight4.jpg" ).lazy     
+
+
+            section.grid.x12c#framing.flip  
+                h2.l-sect Framing
+                p.ml-sect Synthesizing our interview findings regarding teachers needs  lead to these framing questions:
                 p.ml-sect.med 
-                    |See the journey maps 
-                    |
-                    a(href="assets/Arc'teryx-journey-map.pdf").in-txt here
+                   |How might we make information architecture more systematic and guided to reduce cognitive overhead when accessing educational resources?
+                p.ml-sect.med 
+                   |How might we leverage project-based learning to re-orient UNESCO’s existing educational resources towards its World Heritage Sites?
+          
+
+
             hr.small
 
-            hr
- 
 
+            section.grid.x12c#proposal
+                h2.l-sect Proposal
+                p.ml-sect Lodestar is a content distribution platform run by the UNESCO World Heritage Centre, comprising of curated lesson plans accessible to secondary school educators globally.    
+
+            section.grid.x12c
+                h3.l-sect Project-based Learning
+                p.ml-sect#smart Lesson Plans are based on project-based learning using World Heritage sites as foundational case-studies to build class projects on. 
+                    |We utilised the SMART(Specific, Measurable, Attainable, Relevant, and, Timely) learning objectives guidelines to guide our information architecture.
+                figure.r-sect   
+                    img(data-src="imgs/unesco/learning.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
+            
+            section.grid.x12c
+                h3.l-sect User Journey
+                figure.lr-sect   
+                    img(data-src="imgs/unesco/educator-journey-map.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
+
+            section.grid.x12c   
+                h4.l-sect Entice • Discovery 
+                p.ml-sect Our research showed that most educators find their lesson plans by simply googling.
+
+                figure.ml-sect 
+                    video(src="imgs/unesco/google.mp4" autoplay muted loop preload="auto" controls auto
+                    poster="imgs/unesco/google.jpg") 
+
+
+            section.grid.x12c
+                h4.l-sect Enter • Filter for Your Needs  
+                p.ml-sect The filter feature focuses on "Specific" and "Relevant" components of 
+                    |#[a(href="#smart").in-txt SMART], providing actionable prompts for different forms of teaching.   
+
+                figure.ml-sect 
+                    video(src="imgs/unesco/filter.mp4", muted, loop, controls, preload="auto", poster="imgs/unesco/filter.jpg") 
+    
+                figure.mlmr-sect 
+                    //- .manual-swipe   
+                        //- .img  
+                    img(data-src="imgs/unesco/explain3.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
+
+
+            section.grid.x12c
+                h4.l-sect Engage • Browse for Applicable Plans
+                p.ml-sect 
+                figure.ml-sect 
+                    video(src="imgs/unesco/browse.mp4", autoplay, muted, loop, controls, preload="none" , poster="imgs/unesco/browse.jpg") 
+        
+                figure.mlmr-sect                       
+                    .manual-swipe   
+                        .img
+                            img(data-src="imgs/unesco/explain12.jpg" ).lazy    
+                        .img
+                            img(data-src="imgs/unesco/explain11.jpg" ).lazy    
+        
+        
+            section.grid.x12c
+                h4.l-sect Engage • Consider, Use &amp; Adapt
+                p.ml-sect 
+                    //- |A significant component of our intervention is the content of the lesson plans. 
+                    |Along with providing materials such as videos, worksheets etc, we used project-based learning to help broaden the scope of lesson plans, making them applicable despite curriculum differences.
+
+                figure.r-sect 
+                    video(src="imgs/unesco/lesson-plan.mp4", muted, loop, controls, preload="none", poster="imgs/unesco/lesson-plan.jpg")
+
+
+                figure.lr-sect                       
+                    .manual-swipe   
+                        .img
+                            img(data-src="imgs/unesco/explain5.jpg" ).lazy    
+                        .img
+                            img(data-src="imgs/unesco/explain9.jpg" ).lazy    
+                        .img
+                            img(data-src="imgs/unesco/explain8.jpg" ).lazy    
+                        .img
+                            img(data-src="imgs/unesco/explain7.jpg" ).lazy    
+                        .img
+                            img(data-src="imgs/unesco/explain6.jpg" ).lazy    
+        
+
+            section.grid.x12c
+                h4.l-sect Exit • Resources Straight to your students 
+                p.ml-sect Lodestar expedites the lesson delivery process, allowing teachers to directly add plans to their online learning platform. For the scope of this project, we only considered the most-used education platform in secondary schools, Google Classroom.
+                figure.mlmr-sect 
+                    video(src="imgs/unesco/classroom.mp4", muted, loop, controls, preload="auto" auto poster="imgs/unesco/classroom.jpg") 
+        
+
+
+             
+            section.grid.x12c#value
+                  
+                h3.l-sect The value
+                    //- p.ml-sect Streamlined process for teachers to find and integrate teaching resources that are:
+                    //- ul.ml-sect
+                    //-     li assured to be of quality and reputability.
+                    //-     li modifiable and modular.
+                    //-     li tangible and contextualised through project-based learning.
+                figure.lr-sect
+                    img(data-src="imgs/unesco/value-matrix.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy       
+            
+            hr
+            section.grid.x12c#decisions
+                h2.l-sect Design Decisions • Reflection
+                h4.l-sect Surfacing Content 
+                p.ml-sect We considered the user tendency to focus on well-known, eurocentric World Heritage Sites, and a lack of awareness of endangered Sites. To counter this, the filter was designed to avoid enabling biases, and recommendations helped surface plans on lesser known Heritage Sites.
+                figure.r-sect 
+                    img(data-src="imgs/unesco/explain2.jpg" ).lazy        
+                h4.l-sect Choosing Opportunities 
+                p.ml-sect While UNESCO channels such as their main website lacked intuitive information architecture, we found that a redesign would be simply fixing a painpoint, as compared to creating meaningful value for UNESCO, and for its stakeholders.  
+                figure.mlmr-sect
+                    img(data-src="imgs/unesco/process.jpg" ).lazy     
+
+ 
 
             section#reflection.grid.x12c
-                h2.l-sect Reflection
 
-                p.ml-sect I think trust was a consistently emerging theme throughout the project for me. 
-                    mark The undefined nature of the project emphasised the uncertainty that is essential to the design process, 
-                    | which I have always found personally unintuitive. I've therefore always needed to push myself into it, and this project really made me work on that, and as our professor Dr.Ron Wakkary, kept reminding us, 
-                    mark trust the process.
-
-                p.ml-sect Trust was also key to successfully designing with all of our stakeholders in mind - designing a solution that maintained, if not increased, the trust customers have in Arc'teryx and creating products that were inline with Arc'teryx's sustainability mission.
-
-                p.ml-sect Most important was trusting the team process, being able to delegate work while believing in the competency of each others skills and abilities. I think this was key in our success, as we recognised where we each excelled, and provided the space for us to grow where we didn't.
-                figure.lr-sect
+                h4.l-sect Constraints & Filling in the Gaps
+                p.ml-sect
+                    | I think that if more time were allocated to the project, there was place to consider and implement features to 
+                    strong extend 
+                    |
+                    | the customer experience through creating convenient touchpoints in educational platforms such as Google classrooms
+                p.ml-sect 
+                    | Given that lesson plans with the trademark of UNESCO would need quality assurance, a next step would be creating a way for teachers to submit their own plans for verification and upload. 
+                //- figure.lr-sect
                     img(data-src="imgs/arcy/arcy-team.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 2'%3E%3C/svg%3E").lazy 
 
         footer 

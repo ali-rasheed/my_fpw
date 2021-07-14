@@ -39,58 +39,60 @@ opa = 100%
 
 
 nav 
-   transition: top 0.3s ease; /* Transition effect when sliding down (and up) */
-   font-weight: 300
-   z-index 500
-   margin-top: 1rem
-   margin-bottom: 3rem
-   margin rem 1rem 3rem 1rem
-   padding:0rem
-   display: grid
-   grid-template-rows: 1fr
-   // grid-template-columns: 1fr 1.5fr  
-   // grid-template: auto auto
-   display: flex
-    
+    transition: top 0.3s ease; /* Transition effect when sliding down (and up) */
+    font-weight: 300
+    z-index 500
+    margin-top: 1rem
+    margin-bottom: 3rem
+    margin rem 1rem 3rem 1rem
+    padding:0rem
+    display: grid
+    grid-template-rows: 1fr
+    // grid-template-columns: 1fr 1.5fr  
+    // grid-template: auto auto
+    display: flex
+        
 
-   justify-content: space-between
-   margin-left: 5vw
-   margin-right: 5vw
+    justify-content: space-between
+    margin-left: 5vw
+    margin-right: 5vw
 
-   a
-      font-size: 01.05rem 
-   min-height: 1.5rem
+    a
+        font-size: 01.05rem 
+        min-height: 1.5rem
+    .nav-holder
+        
+        align-items: last baseline
+        align-self: last baseline
+        z-index: inherit
+        text-align: center
+        overflow-wrap: none
+        white-space: nowrap;
+        // text-align: right 
+        display: flex 
+        justify-content: space-between 
 
-   .nav-holder
-      
-      align-items: last baseline
-      align-self: last baseline
-      z-index: inherit
-      text-align: center
-      overflow-wrap: none
-      white-space: nowrap;
-      // text-align: right 
-      display: flex 
-      justify-content: space-between 
+    #nav-home   
+        // margin-right: 40vw 
+        // flex-basis 33%  
+        // margin-right: auto
+        z-index: inherit
+        color: var(--txtcol)
+        opacity opa
+        transition: background-color 200ms ease-in
+        align-self: last baseline
+        line-height: 1.4
+        margin-right: .4em
+        height 100%
+        font-weight: var(--bold)
+        +narrowerthan(800px)
 
-   #nav-home   
-      // margin-right: 40vw 
-      // flex-basis 33%  
-      // margin-right: auto
-      z-index: inherit
-      color: var(--txtcol)
-      opacity opa
-      transition: background-color 200ms ease-in
-      align-self: last baseline
-      line-height: 1.4
-      margin-right: .4em
-      height 100%
-      font-weight: var(--bold)
+            font-weight: var(--reg)
 
       // &:hover,&&:focus
       //    opacity 100%
 
-   #desk-nav
+    #desk-nav
       // flex-grow: 7
       align-items: last baseline
       align-self: last baseline
@@ -116,23 +118,26 @@ nav
             
             // height: 1.1rem
             color: var(--txtcol)
-            margin: .9rem 0
+            // margin: .9rem 0
 
             opacity opa
             transition: all  200ms ease-in
             // &:hover,&&:focus
             //    opacity 100%
+            +narrowerthan(800px)
+                flex-basis: 100% 
 
    #nav-home, #nav-links a, #nav-theme-toggle label
-
+      display inline-block
       border-radius: .3em
       border solid transparent
       border-width: 4px 
       background-clip: padding-box;
       transition: background-color ease-out 200ms, border-color ease-out 250ms 
          
-      &:hover, &&:focus, &.active
-         background-color: var(--magenta-hlight);
+      &:hover, &&:focus, &.active, &:active
+        //  background-color: var(--magenta-hlight); 
+        // transform: scale(1.5) 
 
       &:after
         // content: "°"
@@ -155,7 +160,6 @@ nav
 
 
 
-//theme
 
    #nav-theme-toggle
       height 100% 
@@ -168,7 +172,7 @@ nav
          height 1em
          position static !important  
          margin-top: -.25rem  
-   
+    
 
    input#adjust[type=checkbox]
    input#font[type=checkbox]
@@ -193,7 +197,7 @@ nav
   
    input[type=checkbox]#adjust + label::before
       // margin-right: .25rem  
-      font-weight: var(--reg-w)
+      font-weight: var(--reg)
       content: "Dark side"
       transition: color ease-in .15s
       color: var(--txtcol)
@@ -266,10 +270,11 @@ nav
             height 1rem
             width 1.5rem
             // border-style: 
-            border  outset 2.5px var(--bgcol) 
+            border  outset 3px var(--bgcol) 
             border-bottom-style: inset
             border-top-color: var(--txtcol)
             border-bottom-color: var(--txtcol)
+            border-right: var(--bgcol) inset;
 
             background-color var(--bgcol)
             transition: all 500ms ease-in-out
@@ -300,7 +305,7 @@ nav
                 display: flex
                 flex-direction: vertical
                 flex-wrap: wrap
-                margin-top: 1rem
+                // margin-top: 1rem
                 flex-basis: 100%
                 &:after
                     content: ""  
@@ -312,7 +317,7 @@ nav
                     // flex-basis: 100%
                     justify-self: left
                     text-align: left
-                    font-size: 3rem   
+                    font-size: 2.6rem   
                     &:after
                         content: ""  
       
@@ -353,7 +358,7 @@ nav
 
     #menu-input:checked ~ .nav-holder #nav-home   
         padding-bottom: 1rem
-        font-size: 3rem
+        font-size: 2.6rem
         animation-name: nav-home-expand;
         animation-duration: .5s;
         animation-fill-mode: both

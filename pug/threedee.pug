@@ -1,6 +1,6 @@
 //- ////////MIXINS/////////
 mixin threedee-lazyloaded-lg(name1,name2,caption,cname,type)
-  a(class=cname+" mfp-"+type+"   l-threedee img-cont p-tilt" title=caption href="imgs/threedee/"+name2)  
+  a(class=cname+" mfp-"+type+"   l-threedee img-cont p-tilt" title=caption href=name2)  
     img(class=" lazy grid-image", data-src="imgs/threedee-sm/"+name1 ,   
     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
      ) 
@@ -10,10 +10,10 @@ doctype
 html(lang='en')
   head
     include ./includes/head1.pug
-    title 3d visualisations - Ali Rasheed
+    title 3d visualisations - Ali Rasheed 
   body 
     header.gallery
-      include ./includes/nav1.pug  
+      include ./includes/nav1.pug   
 
  
     main.gallery 
@@ -23,21 +23,20 @@ html(lang='en')
         //- +threedee-lazyloaded-lg("bed.jpg","bed.jpg","","w-reg") /
         +threedee-lazyloaded-lg("tet.jpg","https://vimeo.com/568222219","","w-double","iframe") 
 
-        +threedee-lazyloaded-lg("nevarro.jpg","nevarro.jpg","","w-reg","image") 
+        +threedee-lazyloaded-lg("nevarro.jpg","imgs/threedee/nevarro.jpg","","w-reg","image") 
+        +threedee-lazyloaded-lg("openingsequence.png","imgs/threedee/openingsequence.mp4","","w-double","iframe")  
 
-        +threedee-lazyloaded-lg("openingsequence.png","openingsequence.mp4","","w-double","image")  
+        +threedee-lazyloaded-lg("bed.jpg","imgs/threedee/bed.jpg","","w-double","image")  
 
-        +threedee-lazyloaded-lg("bed.jpg","bed.jpg","","w-double","image")  
+        +threedee-lazyloaded-lg("wtrmln.png","imgs/threedee/wtrmln.gif","Procedurally generated and textured watermelon","w-reg","image") 
 
-        +threedee-lazyloaded-lg("wtrmln.png","wtrmln.gif","Procedurally generated and textured watermelon","w-reg","image") 
-
-        +threedee-lazyloaded-lg("Curator.png","Curator.png","Procedurally-generated Nebula full of star-dust!","w-half","image")
+        +threedee-lazyloaded-lg("Curator.png","imgs/threedee/Curator.png","Procedurally-generated Nebula full of star-dust!","w-half","image")
         
-        +threedee-lazyloaded-lg("nebula.png","nebula.png","Procedurally-generated Nebula full of star-dust!","w-reg","image")  
+        +threedee-lazyloaded-lg("nebula.png","imgs/threedee/nebula.png","Procedurally-generated Nebula full of star-dust!","w-reg","image")  
         
-        +threedee-lazyloaded-lg("dancer.png","dancer.png","","w-half","image")  
-        +threedee-lazyloaded-lg("tea.jpg","tea.jpg","Procedurally-generated Nebula full of star-dust!","w-half","image")
+        +threedee-lazyloaded-lg("dancer.png","imgs/threedee/dancer.png","","w-half","image")  
+        +threedee-lazyloaded-lg("tea.jpg","imgs/threedee/tea.jpg","Procedurally-generated Nebula full of star-dust!","w-half","image")
         //- +threedee-lazyloaded-lg("wtrmln.png","wtrmln.gif")
-          
+           
     footer
-      include ./includes/footer2.pug
+      include ./includes/footer2.pug  

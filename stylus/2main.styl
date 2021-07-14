@@ -69,7 +69,7 @@ h1,h2,h3,h4,h5,h6,.big, .med, li,figcaption,.email
       opacity: 95% 
 
 p,li, a 
-   font-weight: var(--reg-w) 
+   font-weight: var(--reg) 
    letter-spacing: .35px;
 
 p
@@ -115,7 +115,7 @@ h3
 h4
    font-family: var(--pfont), "Times New Roman", serif
    font-weight: 400
-   font-size 3rem
+   font-size 2.5rem
 
    margin-bottom: 0.5rem
    margin-top: 0
@@ -125,9 +125,9 @@ h4
       font-size: 1.75rem
  
 h5
-   font-size: 2rem
+   font-size: 1.5rem
    font-family: var(--sfont), sans-serif
-   font-weight: 600 
+   font-weight: var(--mid) 
    line-height: 1.45
    margin-bottom: .1em
    margin-top: .2em
@@ -135,12 +135,12 @@ h5
 
 h6
    font-family: var(--sfont), sans-serif
-   font-weight: 600 
+   font-weight: var(--bold) 
 
    font-size 1.5rem
 
 small 
-   font-size: 0.8em
+   font-size: 0.7em
    max-width 50ch 
 
 figcaption
@@ -178,12 +178,15 @@ mark
 em
    font-style italic
 
-   
+    
 ul 
-   padding-left: 0em;
-   margin-top: 0.2rem
-   margin-bottom: 0.5rem
-//    list-style-type none 
+    padding-left: 0em;
+    margin-top: 0.2rem
+    margin-bottom: 0.5rem
+    //    list-style-type none 
+    list-style-position: outside
+    li
+        margin-left: 1.2rem 
 
 
 ol li
@@ -202,7 +205,14 @@ ol li
       width: 3ch;
 
 li
-   padding-bottom: 0.4rem
+    padding-bottom: 0.4rem
+    span
+        &.fad
+            width 1.5rem
+            margin-left: -0.2rem
+    a
+        border 0px 
+
 
 
 img
@@ -233,7 +243,7 @@ h1
    min-height: 0; 
    min-width: 0;
    max-width 60ch
-   font-weight: var(--reg-w)
+   font-weight: var(--reg)
    margin 1em 0
    +narrowerthan(1400px)
       font-size: 1.9rem
@@ -297,15 +307,15 @@ ol
          margin-bottom: .5em
 
 #cover-image
-   z-index 1
-   margin-top: 1rem
-   figcaption
-      margin-top:  0.5rem
-      padding-left: 1rem
-   img
-      width 100%
-      max-width 100vw
-
+    z-index 1
+    margin-top: 1rem
+    figcaption
+        margin-top:  0.5rem
+        padding-left: 1rem
+    img
+        width 100%
+        max-width 100vw
+        max-height 90vh  
 #summary
    padding .5em 0 
 
@@ -317,16 +327,16 @@ hr
       width 15vw
       border-color: var(--txtcol)
 
-.in-txt
-   border-radius: .3em
-   border solid transparent
-   border-width: medium 
+.in-txt 
+//    border-radius: .3em
+//    border solid transparent
+//    border-width: medium 
    background-clip: padding-box;
    transition: background-color ease-out 200ms, border-color ease-out 200ms 
    cursor: url(ex.svg) 30 30, auto
-       
+   display inline-block
    &:hover, &&:focus
-      background-color: var(--magenta-hlight);
+    //   background-color: var(--magenta-hlight);
 
 
    &:after
@@ -511,3 +521,38 @@ p i
     background-color: var(--pcol)
 
 
+.flex-s
+    margin 0 calc(100vw/12) 
+    .flex-i
+        padding 1rem
+
+        flex-basis: 20% 
+        flex-grow 1
+        flex-shrink: 1
+        p, li
+            max-width 30ch
+
+        // flex
+        // flex-grow: 2   
+        // &.team
+            // flex-basis: 
+            // flex-grow 1 
+
+.it
+    font-style: italic
+
+
+.quote
+    q
+        font-weight: var(--mid)
+
+.shad
+    box-shadow: 1px 1px 4px rgba(131,131,131,.5);
+figure.lr-sect.flex
+    display flex
+    flex-wrap wrap
+    justify-content:  space-around
+    *
+        max-height 90vh
+        width auto
+        flex-shrink: 1

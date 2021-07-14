@@ -11,23 +11,23 @@ nav#nav
      
     
     div.nav-holder
-        a#nav-home.name-link.name-expand(href="/index.html")
+        a#nav-home.name-link.name-expand.nav-tilt(href="/index.html")
             |Ali
 
     #desk-nav   
 
      
         #nav-links
-            |#[a(href=index class="nav-tilt" data-tilt data-tilt-scale="1.1"  data-tilt-axis="x") design]
+            |#[a(href=index class="nav-tilt" ) design]
 
-            |#[a(href=photolink  class="nav-tilt" data-tilt-axis="x") photo]
-            |#[a(href=threedee ) threedee]
+            |#[a(href=photolink  class="nav-tilt") photo]
+            |#[a(href=threedee class="nav-tilt" ) threedee]
 
             |#[a(href=about  class="nav-tilt") who?]
 
         #nav-theme-toggle  
             input(id="adjust", name="modeToggle", type="checkbox") 
-            label#modeLbl(for="adjust")      
+            label#modeLbl(for="adjust" class="nav-tilt")      
             //- input(id="font", name="fontToggle", type="checkbox") 
             //- label#fontLbl(for="font")      
         //- div |
@@ -36,4 +36,4 @@ nav#nav
         
     #side-nav    
         
-        a.fal.fa-angle-double-up.nav-tilt.name-link#pull-up(href="#")   
+        a.fal.fa-angle-double-up.nav-tilt.name-link#pull-up(href="#" )  
