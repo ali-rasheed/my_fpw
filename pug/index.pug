@@ -1,6 +1,6 @@
-mixin grid-item(title,link,desc,tiltm,image,name)
+mixin grid-item(title,link,desc,tiltm,image,cl)
     //- - var link = "arcteryx" + end    
-    a(href=link data-tilt-startX=tiltm).grid-item&attributes(attributes)= name
+    a(href=link class=cl data-tilt-startX=tiltm).grid-item&attributes(attributes)
         .proj-title
             h1=title
                 .genre=desc
@@ -16,27 +16,26 @@ html(lang='en')
         - var end = ".html"
         header 
             include ./includes/nav1.pug   
-        main
+        main#grain
             //- section.define 
-            //-     h2 Ali: A designer who unabashedly wants to design to help people and make beautiful things 
-            section.grid
+            //-     h2 Ali: A designer who unabashedly wants to design to  help people and make beautiful things 
+            section#index-grid
                 //- -var tiltp="8"
                 //- -var tilts="-8"
 
-                +grid-item("Arc'teryx Fulcrum","arcteryDx.html","service design for product care",tiltp,"imgs/arcy/cover.jpg",arcy)
-                
-                +grid-item(
-                    "TPR Bords De Plateau"
+                +grid-item("Arc'teryx Fulcrum","arcteryx.html","service design for product care",tiltp,"imgs/arcy/cover.jpg",w-reg)
+                 
+                +grid-item("TPR Bords De Plateau"
                 ,"tpr.html","graphic & interaction design ",tiltp,"imgs/tpr/cover2.jpg",arcy)
 
                 +grid-item("UNESCO Lodestar","unesco.html","ux designing education through World Heritage",tiltp,"imgs/unesco/cover.jpg",arcy)
 
-                +grid-item("Graphic Design et al.","gd.html",
-                "Posterjam; TakeTwo; personal projects; experiments",tilts,"imgs/projects/posterjam.png")
+                +grid-item("Graphic Archive.","gd.html",
+                "professional & personal projects; experiments",tilts,"imgs/projects/posterjam.png")
 
-                +grid-item("Threads To Heaven","threadstoheaven.html","speculative design exploring the choice of a 'good death'",tilts,"imgs/projects/spec.jpg")
+                //- +grid-item("Threads To Heaven","threadstoheaven.html","speculative design exploring the choice of a 'good death'",tilts,"imgs/projects/spec.jpg")
 
-                +grid-item("Gakko 2019","gakko.html","summer program focusing on graphic & type design & new media",tiltp,"imgs/projects/gakko.jpg")
+                +grid-item("Gakko 2019","gakko.html","a summer of type, graphic design & new media",tiltp,"imgs/projects/gakko.jpg")
                 
                 //- - var link = "javascript:;"       
                 //- a(href=link).grid-item.in-progress

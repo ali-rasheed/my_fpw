@@ -35,10 +35,10 @@ html(lang='en')
             section.flex-s.points
                 .flex-i 
                     h5 Context
-                    p 6 week project completed as part of Senior Experience Design Course in Vancouver, Canada.
+                    p 6 week project completed as part of Senior Experience Design Course in Vancouver, Canada. 
 
                 div.flex-i
-                    h5 Responsibilities
+                    h5 My Responsibilities
                     ol
                         li Project Management
                         li Product Strategy
@@ -75,15 +75,22 @@ html(lang='en')
                 #cover-image.magenta-hover   
                     img(src="imgs/unesco/landing-cover.jpg") 
  
-            hr
+            //- hr
   
+            section.grid.x12c 
+                h2.l-sect The Gist 
+
+                h3.l-sect Contribution 
+                p.ml-sect As project lead, I led our team in determining the area of intervention and framing. As content strategist I determined the content design of the site (the lesson plan in particular) and wrote its corresponding copy. As UX/UI designer, I conducted user interviews/research, and co-designed the site's user flow and user interface.
 
 
+                h3.l-sect Brief 
+                p.ml-sect Find areas of opportunity to increasing or retaining value for UNESCO. Use user experience design to acheive this value.  
+                
+                 
             section.grid.x12c 
                 h2.l-sect Research
-                
                 h3.l-sect What is UNESCO?
-                
 
                 p.ml-sect
                     |UNESCO is a UN agency who’s main mission is to build a culture of peace and sustainability through education, communication and dialogue between different people.
@@ -106,7 +113,6 @@ html(lang='en')
             //- hr
             //- hr.small 
 
-            section.grid.x12c 
                 h4.l-sect Channels 
                 p.ml-sect Along with physical Heritage Sites ,  UNESCO provides a variety of tools, guidelines and knowledge through its online channels, such as its main websites, and project-specific micro-sites
                 figure.r-sect 
@@ -147,9 +153,9 @@ html(lang='en')
                     +faList("World Heritage is eurocentric and so finding resources on lesser-known non-european Heritage Sites is difficult.")(class="fas fa-sticky-note")
 
                 figure.mlmr-sect   
-                    .manual-swipe   
+                    .manual-swipe    
                         .img
-                            img(data-src="imgs/unesco/insight1.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1'%3E%3C/svg%3E" ).lazy    
+                            img(data-src="imgs/unesco/insight1.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 10'%3E%3C/svg%3E" ).lazy    
                         .img
                             img(data-src="imgs/unesco/insight2.jpg" ).lazy    
                         .img
@@ -177,9 +183,9 @@ html(lang='en')
 
             section.grid.x12c
                 h3.l-sect Project-based Learning
-                p.ml-sect#smart Lesson Plans are based on project-based learning using World Heritage sites as foundational case-studies to build class projects on. 
+                //- p.ml-sect#smart Lesson Plans are based on project-based learning using World Heritage sites as foundational case-studies to build class projects on. 
                     |We utilised the SMART(Specific, Measurable, Attainable, Relevant, and, Timely) learning objectives guidelines to guide our information architecture.
-                figure.r-sect   
+                figure.mlmr-sect   
                     img(data-src="imgs/unesco/learning.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
             
             section.grid.x12c
@@ -191,7 +197,7 @@ html(lang='en')
                 h4.l-sect Entice • Discovery 
                 p.ml-sect Our research showed that most educators find their lesson plans by simply googling.
 
-                figure.ml-sect 
+                figure.mlmr-sect 
                     video(src="imgs/unesco/google.mp4" autoplay muted loop preload="auto" controls auto
                     poster="imgs/unesco/google.jpg") 
 
@@ -201,9 +207,9 @@ html(lang='en')
                 p.ml-sect The filter feature focuses on "Specific" and "Relevant" components of 
                     |#[a(href="#smart").in-txt SMART], providing actionable prompts for different forms of teaching.   
 
-                figure.ml-sect 
+                figure.mlmr-sect 
                     video(src="imgs/unesco/filter.mp4", muted, loop, controls, preload="auto", poster="imgs/unesco/filter.jpg") 
-    
+      
                 figure.mlmr-sect 
                     //- .manual-swipe   
                         //- .img  
@@ -213,7 +219,7 @@ html(lang='en')
             section.grid.x12c
                 h4.l-sect Engage • Browse for Applicable Plans
                 p.ml-sect 
-                figure.ml-sect 
+                figure.mlmr-sect 
                     video(src="imgs/unesco/browse.mp4", autoplay, muted, loop, controls, preload="none" , poster="imgs/unesco/browse.jpg") 
         
                 figure.mlmr-sect                       
@@ -230,14 +236,14 @@ html(lang='en')
                     //- |A significant component of our intervention is the content of the lesson plans. 
                     |Along with providing materials such as videos, worksheets etc, we used project-based learning to help broaden the scope of lesson plans, making them applicable despite curriculum differences.
 
-                figure.r-sect 
+                figure.mlmr-sect 
                     video(src="imgs/unesco/lesson-plan.mp4", muted, loop, controls, preload="none", poster="imgs/unesco/lesson-plan.jpg")
 
 
                 figure.lr-sect                       
                     .manual-swipe   
                         .img
-                            img(data-src="imgs/unesco/explain5.jpg" ).lazy    
+                            img(data-src="imgs/unesco/explain5.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E" ).lazy    
                         .img
                             img(data-src="imgs/unesco/explain9.jpg" ).lazy    
                         .img
@@ -246,7 +252,7 @@ html(lang='en')
                             img(data-src="imgs/unesco/explain7.jpg" ).lazy    
                         .img
                             img(data-src="imgs/unesco/explain6.jpg" ).lazy    
-        
+                    figcaption details regarding lessons plans and how decisions behind content strategy
 
             section.grid.x12c
                 h4.l-sect Exit • Resources Straight to your students 
@@ -274,11 +280,11 @@ html(lang='en')
                 h4.l-sect Surfacing Content 
                 p.ml-sect We considered the user tendency to focus on well-known, eurocentric World Heritage Sites, and a lack of awareness of endangered Sites. To counter this, the filter was designed to avoid enabling biases, and recommendations helped surface plans on lesser known Heritage Sites.
                 figure.r-sect 
-                    img(data-src="imgs/unesco/explain2.jpg" ).lazy        
+                    img(data-src="imgs/unesco/explain2.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E" ).lazy        
                 h4.l-sect Choosing Opportunities 
                 p.ml-sect While UNESCO channels such as their main website lacked intuitive information architecture, we found that a redesign would be simply fixing a painpoint, as compared to creating meaningful value for UNESCO, and for its stakeholders.  
                 figure.mlmr-sect
-                    img(data-src="imgs/unesco/process.jpg" ).lazy     
+                    img(data-src="imgs/unesco/process.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 55'%3E%3C/svg%3E").lazy     
 
  
 

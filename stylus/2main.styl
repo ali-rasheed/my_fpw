@@ -58,15 +58,15 @@ body,footer,header
       background-color var(--slctcol) 
 
 
-h1, h2, h3, h4, h5, h6, figcaption, p, li, a, button, #summary, small,label, mark, div, span
+h1, h2, h3, h4, h5, h6, figcaption, p, li, a, button, #summary, small,label, mark, div, span, q, blockquote
    color: textcol
    
 h1,h2,h3,h4,h5,h6,.big, .med, li,figcaption,.email
    // +narrowerthan(1200px)
-   opacity: 90% 
+   opacity: 95% 
    transition: opacity ease-out 200ms
    &:hover,&:focus
-      opacity: 95% 
+      opacity: 100% 
 
 p,li, a 
    font-weight: var(--reg) 
@@ -92,13 +92,33 @@ h1
    font-family: var(--qfont), serif
    font-size: 7.5rem
 h2 
-   font-family: var(--qfont), serif
-   font-weight: 400 
-   font-size: 4rem
-   // text-transform: uppercase
-   color: var(--pcol)
-   +narrowerthan(900px)
-      font-size: 2.27rem
+    font-family: var(--qfont), serif
+    font-weight: 400 
+    font-size: 3.25rem
+    // text-transform: uppercase
+    color: var(--pcol)
+    +narrowerthan(900px)
+        font-size: 2rem 
+// #project
+//     h2.l-sect 
+//         display: grid
+//         grid-column: 1fr
+//         *
+//             grid-column: 1/-1
+//             grid-row: 1/2  
+//         &::after
+
+//             height: 2px 
+//             content ""
+//             display inline-block 
+//             // width 100%
+//             flex-grow: 2
+//             min-width: 2px
+//             border-bottom: solid 1px #fff;
+//             position: relative;
+//             left: 0;
+//             // top: 50%;
+//             z-index: 1;
 
 h3
    font-family: var(--pfont), serif 
@@ -543,8 +563,22 @@ p i
 
 
 .quote
-    q
+    q, blockquote
         font-weight: var(--mid)
+    figcaption
+        display: inline-block
+        padding-left: 0 
+
+blockquote,q
+
+    quotes: "“" "”" "‘" "’";
+
+    &::before
+        content: open-quote;
+
+    &::after 
+        content: close-quote; 
+
 
 .shad
     box-shadow: 1px 1px 4px rgba(131,131,131,.5);
@@ -556,3 +590,5 @@ figure.lr-sect.flex
         max-height 90vh
         width auto
         flex-shrink: 1
+
+//  #grain > * { position:relative; }
