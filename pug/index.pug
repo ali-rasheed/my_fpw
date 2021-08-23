@@ -1,6 +1,6 @@
 mixin grid-item(title,link,desc,tiltm,image,cl)
     //- - var link = "arcteryx" + end    
-    a(href=link class=cl data-tilt-startX=tiltm).grid-item&attributes(attributes)
+    a(class=cl data-tilt-startX=tiltm href=link)
         .proj-title
             h1=title
                 .genre=desc
@@ -14,8 +14,10 @@ html(lang='en')
         title Aliasger Rasheed
     body.index
         - var end = ".html"
+        - var home = "index1.html#"
+
         header 
-            include ./includes/nav1.pug   
+            include ./includes/nav2.pug   
         main#grain
             //- section.define 
             //-     h2 Ali: A designer who unabashedly wants to design to  help people and make beautiful things 
@@ -23,7 +25,7 @@ html(lang='en')
                 //- -var tiltp="8"
                 //- -var tilts="-8"
 
-                +grid-item("Arc'teryx Fulcrum","arcteryx.html","service design for product care",tiltp,"imgs/arcy/cover.jpg",w-reg)
+                +grid-item("Arc'teryx","arcteryx.html","service design for product care",tiltp,"imgs/arcy/cover.jpg",w-reg)
                  
                 +grid-item("TPR Bords De Plateau"
                 ,"tpr.html","graphic & interaction design ",tiltp,"imgs/tpr/cover2.jpg",arcy)

@@ -6,8 +6,9 @@ html(lang='en')
 
 
   body
+    - var home = "index1.html#"
     header
-      include ./includes/nav1.pug
+      include ./includes/nav2.pug
     
     main.grid#project
 
@@ -41,7 +42,7 @@ html(lang='en')
 
       section.x12c.grid
         h2.sect-h.ml-sect In-text link
-        p.ml-sect Lorem ipsum dolor sit amet,   #[a(href="#" class="in-txt") consectetur] , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        p.ml-sect Lorem ipsum dolor sit amet,   #[a(class="in-txt" href="#") consectetur] , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       //- section.x20c.grid
       //-   h2.sect-h.ml-sect Image Hover
       //-   figure.m-sect.magenta-hover

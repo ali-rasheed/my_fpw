@@ -16,12 +16,14 @@ doctype html
 
 html(lang='en') 
     head
+
         include ./includes/head1.pug
         title UNESCO Lodestar • Ali
 
     body 
+        - var home = "index1.html#"
         header
-            include ./includes/nav1.pug   
+            include ./includes/nav2.pug   
 
         main.grid#project 
 
@@ -147,15 +149,15 @@ html(lang='en')
 
                 ul.ml-sect.big
 
-                    +faList("Second language teachers use cultural heritage to bring personal bearing to language education.")(class="fas fa-sticky-note")
-                    +faList("Educators, need age-specific, modular actionable lesson resources.")(class="fas fa-sticky-note")
-                    +faList("Open-ended middle school curriculum = freedom to bring in external topics such as World Heritage.")(class="fas fa-sticky-note")
-                    +faList("World Heritage is eurocentric and so finding resources on lesser-known non-european Heritage Sites is difficult.")(class="fas fa-sticky-note")
+                    +faList("Second language teachers use cultural heritage to bring personal bearing to language education.")(class="fas fa-lightbulb-on")
+                    +faList("Educators, need age-specific, modular actionable lesson resources.")(class="fas fa-lightbulb-on")
+                    +faList("Open-ended middle school curriculum = freedom to bring in external topics such as World Heritage.")(class="fas fa-lightbulb-on")
+                    +faList("World Heritage is eurocentric and so finding resources on lesser-known non-european Heritage Sites is difficult.")(class="fas fa-lightbulb-on")
 
-                figure.mlmr-sect   
+                //- figure.mlmr-sect   
                     .manual-swipe    
                         .img
-                            img(data-src="imgs/unesco/insight1.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 10'%3E%3C/svg%3E" ).lazy    
+                            img(data-src="imgs/unesco/insight1.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 10'%3E%3C/svg%3E").lazy    
                         .img
                             img(data-src="imgs/unesco/insight2.jpg" ).lazy    
                         .img
@@ -220,7 +222,7 @@ html(lang='en')
                 h4.l-sect Engage • Browse for Applicable Plans
                 p.ml-sect 
                 figure.mlmr-sect 
-                    video(src="imgs/unesco/browse.mp4", autoplay, muted, loop, controls, preload="none" , poster="imgs/unesco/browse.jpg") 
+                    video(src="imgs/unesco/browse.mp4", autoplay, muted, loop, controls, preload="none", poster="imgs/unesco/browse.jpg") 
         
                 figure.mlmr-sect                       
                     .manual-swipe   
@@ -243,7 +245,7 @@ html(lang='en')
                 figure.lr-sect                       
                     .manual-swipe   
                         .img
-                            img(data-src="imgs/unesco/explain5.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E" ).lazy    
+                            img(data-src="imgs/unesco/explain5.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy    
                         .img
                             img(data-src="imgs/unesco/explain9.jpg" ).lazy    
                         .img
@@ -258,7 +260,7 @@ html(lang='en')
                 h4.l-sect Exit • Resources Straight to your students 
                 p.ml-sect Lodestar expedites the lesson delivery process, allowing teachers to directly add plans to their online learning platform. For the scope of this project, we only considered the most-used education platform in secondary schools, Google Classroom.
                 figure.mlmr-sect 
-                    video(src="imgs/unesco/classroom.mp4", muted, loop, controls, preload="auto" auto poster="imgs/unesco/classroom.jpg") 
+                    video(src="imgs/unesco/classroom.mp4", muted, loop, controls, preload="auto", auto, poster="imgs/unesco/classroom.jpg") 
         
 
 
@@ -279,12 +281,12 @@ html(lang='en')
                 h2.l-sect Design Decisions • Reflection
                 h4.l-sect Surfacing Content 
                 p.ml-sect We considered the user tendency to focus on well-known, eurocentric World Heritage Sites, and a lack of awareness of endangered Sites. To counter this, the filter was designed to avoid enabling biases, and recommendations helped surface plans on lesser known Heritage Sites.
-                figure.r-sect 
-                    img(data-src="imgs/unesco/explain2.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E" ).lazy        
+                figure.mlmr-sect 
+                    img(data-src="imgs/unesco/explain2.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy        
                 h4.l-sect Choosing Opportunities 
                 p.ml-sect While UNESCO channels such as their main website lacked intuitive information architecture, we found that a redesign would be simply fixing a painpoint, as compared to creating meaningful value for UNESCO, and for its stakeholders.  
                 figure.mlmr-sect
-                    img(data-src="imgs/unesco/process.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 55'%3E%3C/svg%3E").lazy     
+                    img(data-src="imgs/unesco/process.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 55'%3E%3C/svg%3E").lazy     
 
  
 
@@ -292,12 +294,14 @@ html(lang='en')
 
                 h4.l-sect Constraints & Filling in the Gaps
                 p.ml-sect
-                    | I think that if more time were allocated to the project, there was place to consider and implement features to 
+                    | I think that if more time were allocated to the project, there would be a place to consider and implement features to 
                     strong extend 
                     |
-                    | the customer experience through creating convenient touchpoints in educational platforms such as Google classrooms
+                    | the customer experience through creating convenient touchpoints in educational platforms such as Google classrooms.
                 p.ml-sect 
                     | Given that lesson plans with the trademark of UNESCO would need quality assurance, a next step would be creating a way for teachers to submit their own plans for verification and upload. 
+                p.ml-sect I think overall our project effectively brings the intended value to UNESCO by revitalising an outdated education programme for a new, more international audience in a much more accessible way. 
+
                 //- figure.lr-sect
                     img(data-src="imgs/arcy/arcy-team.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 2'%3E%3C/svg%3E").lazy 
 

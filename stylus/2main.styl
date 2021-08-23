@@ -43,15 +43,17 @@ html
 
 
 *
-    font-family: var(--sfont), "Palatino Linotype" ,serif
-    font-display: swap
-    margin: 0
-    padding: 0 
-    cursor: url(plus.svg) 30 30, auto
-    box-sizing: border-box 
-    transition: background-color ease-out 400ms, color ease-out 400ms
+   
+   font-feature-settings: "calt" 1, "case" 1, "dlig" 1, "ordn" 1, "ss01" 1, "ss03" 1;
+   font-family: var(--sfont), "Palatino Linotype" ,serif
+   font-display: swap
+   margin: 0
+   padding: 0 
+   cursor: url(plus.svg) 30 30, auto
+   box-sizing: border-box 
+   transition: background-color ease-out 400ms, color ease-out 400ms
 
-       
+
 body,footer,header 
    background-color: var(--bgcol) 
    &::selection, &::-moz-selection
@@ -99,6 +101,8 @@ h2
     color: var(--pcol)
     +narrowerthan(900px)
         font-size: 2rem 
+em   
+   font-family: var(--qfont)
 // #project
 //     h2.l-sect 
 //         display: grid
@@ -134,6 +138,8 @@ h3
 
 h4
    font-family: var(--pfont), "Times New Roman", serif
+
+   font-feature-settings: "calt" 1, "case" 1, "dlig" 1, "ordn" 1, "ss01" 1, "ss03" 1;
    font-weight: 400
    font-size 2.5rem
 
@@ -583,12 +589,20 @@ blockquote,q
 .shad
     box-shadow: 1px 1px 4px rgba(131,131,131,.5);
 figure.lr-sect.flex
-    display flex
-    flex-wrap wrap
-    justify-content:  space-around
-    *
-        max-height 90vh
-        width auto
-        flex-shrink: 1
+   
 
+   display flex
+   flex-wrap wrap
+   justify-content:  space-around
+   *
+      max-height 90vh
+      width auto
+      flex-shrink: 1
+
+figure
+   z-index: 21 
+img, video
+   z-index: 21 
+
+      
 //  #grain > * { position:relative; }

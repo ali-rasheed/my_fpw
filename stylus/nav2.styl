@@ -1,0 +1,202 @@
+widerthan(var)
+    condition = 'screen and (min-width: %s)' % var
+    @media condition
+        {block}
+
+narrowerthan(var)
+    condition = 'screen and (max-width: %s)' % var
+    @media condition
+        {block}
+
+opa = 100% 
+
+.top 
+    height: 0
+    width 100%
+nav#nav2
+    position: fixed
+    left: 0;
+    overflow: hidden;
+    transition: transform .4s cubic-bezier(.25,.46,.45,.94);
+    width: 100%;
+    z-index: 5;
+    box-sizing: border-box
+    top 0
+    #back-home
+        position: absolute;
+        left 50%
+        top: 5vh;
+        font-size: .75rem
+        text-transform: uppercase;
+        letter-spacing: -0.025em
+        // padding-top: .5rem
+        font-weight: 500
+        // width 50%
+
+    .title
+        font-size: 1.5vw
+        font-weight: 500
+        +narrowerthan(1400px)
+            font-size: 1.5rem
+        padding-right: 2.5vw
+        
+    .caption
+        font-size: .75rem 
+        +narrowerthan(1400px)
+            font-size: .9vw
+        text-transform: uppercase;
+        letter-spacing: -0.025em
+        padding-top: .5rem
+        word-wrap: break-word
+        overflow-wrap: break-word
+        max-width: 95%
+    
+
+    #top-nav
+        transition: transform .4s cubic-bezier(.25,.46,.45,.94) .1s,opacity .4s cubic-bezier(.25,.46,.45,.94) .2s,letter-spacing .5s cubic-bezier(.25,.46,.45,.94);
+        margin: 5vh 0rem 0rem 4vh 
+        justify-content: space-between 
+        display: flex
+
+        #nav-filters 
+            display: flex
+            // margin: 1rem 1rem 0rem 1rem  
+            .nav-item
+                .caption
+                    transition: transform .25s cubic-bezier(.25,.46,.45,.94) .1s,opacity .25s cubic-bezier(.25,.46,.45,.94) .2s
+                    z-index: 3
+                // margin 0 1rem  
+                // display: flex
+                // padding: .25rem
+    .spacer 
+        display: block
+        width: 100%
+    
+    .active 
+        font-weight: bold
+    
+    #nav-theme-toggle
+        position: fixed
+        top : 0 
+        right 0
+        
+        writing-mode: vertical-rl
+
+        input#adjust[type=checkbox]
+        // input#font[type=checkbox]
+        // input#mobile-input[type=checkbox]
+            display: none;  /* to hide the checkbox itself */
+
+        input[type=checkbox]#adjust+ label:after
+            display: inline;
+            transition: color ease-in .15s
+            letter-spacing: 7px;
+            font-family: "Font Awesome 5 Brands";
+            content: "\f1d1"
+            color: var(--txtcol)
+            top 0
+            // height: 1.5em
+            // width 1em
+                
+        input[type=checkbox]#adjust:checked + label:after
+            letter-spacing: 7px 
+            font-family: "Font Awesome 5 Brands";
+            content: "\f50e"
+
+        input[type=checkbox]#adjust + label::before
+            // margin-right: .25rem  
+            // font-weight: var(--reg)
+            content: "Dark side"
+            transition: color ease-in .15s
+            color: var(--txtcol)
+            font-weight: 500
+
+        input[type=checkbox]#adjust:checked + label::before
+            content: "Light side"
+
+        label#modeLbl
+            z-index 500
+            opacity opa
+            font-size: 2rem
+            // height 1em
+            &:hover,&&:focus
+                opacity 100%
+            &:after  
+                // margin-right: 1ch
+                margin-left: .5ch
+            display: flex 
+            // flex-direction: column
+        
+    #menulabel, Home 
+        display: none
+
+    +narrowerthan(800px)
+        #menu-input:checked ~ #desk-nav   
+        max-height:200vh
+        // height min-content
+
+        #menu-label
+
+            margin: .2rem
+
+            top: 1em;
+            right 1em
+            height 1rem
+            width 2rem
+            // border-style: 
+            border  inset 5px var(--bgcol) 
+            border-bottom-style: outset
+            border-top-color: var(--txtcol)
+            border-bottom-color: var(--txtcol)
+            border-right: var(--bgcol) inset;
+            border-left: var(--bgcol) outset;
+
+            background-color var(--bgcol)
+            transition: all 500ms ease-in-out
+            z-index 400
+        
+            display: block
+            position absolute
+            top 1rem
+            right 1rem
+            opacity 1
+            transition: opacity 200 ease-in
+
+            &:hover, &:focus
+                opacity 100%
+        #nav-filters, .nav-item 
+            height 100vh
+            transition max-height .5s ease-in-out
+            position relative
+            max-height: 0
+            overflow: hidden
+            flex-direction: vertical
+            flex-wrap: wrap
+            bottom: 0 
+            // align-content: 
+            align-content: start
+            #nav-links, #nav-theme-toggle 
+                display: flex
+                flex-direction: vertical
+                flex-wrap: wrap
+                // margin-top: 1rem
+                flex-basis: 100%
+                &:after
+                    content: ""  
+                
+                a, label
+                    font-family: var(--pfont)
+                    margin-left: 0
+                    // padding 1rem 0
+                    // flex-basis: 100%
+                    justify-self: left
+                    text-align: left
+                    font-size: 2.6rem   
+                    &:after
+                        content: ""  
+
+#new-index
+    #back-home
+        display: none
+        // +narrowerthan(800px)
+        //     display: 

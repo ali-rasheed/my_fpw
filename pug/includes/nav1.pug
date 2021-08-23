@@ -4,7 +4,7 @@
 
 - threedee ="/threedee.html"
 
-nav#nav
+nav#nav2
 
     input#menu-input(name="menu-input" type="checkbox")
     label#menu-label(for="menu-input")
@@ -16,18 +16,18 @@ nav#nav
 
     #desk-nav   
 
-     
+    
         #nav-links
-            |#[a(href=index class="nav-tilt" ) design]
+            |#[a(class="nav-tilt" href=index) design]
 
-            |#[a(href=photolink  class="nav-tilt") photo]
-            |#[a(href=threedee class="nav-tilt" ) threedee]
+            |#[a(class="nav-tilt" href=photolink) photo]
+            |#[a(class="nav-tilt" href=threedee) threedee]
 
-            |#[a(href=about  class="nav-tilt") who?]
+            |#[a(class="nav-tilt" href=about) who?]
 
         #nav-theme-toggle  
             input(id="adjust", name="modeToggle", type="checkbox") 
-            label#modeLbl(for="adjust" class="nav-tilt")      
+            label#modeLbl(class="nav-tilt" for="adjust")      
             //- input(id="font", name="fontToggle", type="checkbox") 
             //- label#fontLbl(for="font")      
         //- div |

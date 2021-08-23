@@ -21,7 +21,8 @@ html(lang='en')
 
     body 
         header
-            include ./includes/nav1.pug   
+        - var home = "index1.html#"
+        include ./includes/nav2.pug   
 
         main.grid#project
 
@@ -121,15 +122,15 @@ html(lang='en')
                     +faList("")(class="fad fa-tshirt")    
                         div
                             |I did the graphic design for the  
-                            a(href="#visualdesign" class="in-txt") camp t-shirt and venue signage
+                            a(class="in-txt" href="#visualdesign") camp t-shirt and venue signage
                     +faList("")(class="fad fa-text") 
                         div
                             |I designed a long-form investigative workshop,   
-                            a(href="#typography" class="in-txt") Typography: A Love Story
+                            a(class="in-txt" href="#typography") Typography: A Love Story
                     +faList("")(class="fad fa-acorn") 
                         div
                             |I facilitated a number of 
-                            a(href="#acorns" class="in-txt")
+                            a(class="in-txt" href="#acorns")
                                 em acorns
                             | - short skill-specific workshops.
 
@@ -166,7 +167,7 @@ html(lang='en')
                     figcaption Initial Iterations
                 p.ml-sect
                     |I utilised Gakko’s 
-                    a(href="https://medium.com/@mariogomes/analysis-of-the-ens%C5%8D-symbol-f200f0798692" class="in-txt" target="_blank") Ensō-based
+                    a(class="in-txt" href="https://medium.com/@mariogomes/analysis-of-the-ens%C5%8D-symbol-f200f0798692" target="_blank") Ensō-based
                     |logo
                     |   as a constraining structure.
                     mark I focused more on iconography I found uniquely signified 2019's camp. 
@@ -244,7 +245,7 @@ html(lang='en')
                     |In order to move away from the  
                     a(href="https://www.brighthubeducation.com/teaching-methods-tips/5487-pros-and-cons-of-direct-teaching/" title="THe Pros and Cons of Direct Instruction" target="_blank").in-txt direct instruction
                     |  format I was using - which limits engagemnet with subject matter - I looked at what areas of typography my team resonated with, which were 
-                    a(href="https://www.nickkolenda.com/font-psychology/", title="Font Psychology" target="_blank").in-txt perceptual and direct associations
+                    a(href="https://www.nickkolenda.com/font-psychology/", title="Font Psychology", target="_blank").in-txt perceptual and direct associations
                     |. I used this insight to focus on 
                     mark having students leverage their own socio-cultural associations to prompt discussion, promote empathy across their cultures, through the lens of typography.
 
@@ -284,7 +285,7 @@ html(lang='en')
                 h3.l-sect Jewelry Making
                 p.ml-sect 
                     |For this acorn, I decided to extrapolate from 20th century artist Marcel Duchamp's 
-                    a(href="https://www.moma.org/collection/terms/44"  target="_blank" title="Museum of Modern Art's Objet Trouvé Collection").in-txt 
+                    a(href="https://www.moma.org/collection/terms/44" title="Museum of Modern Art's Objet Trouvé Collection" target="_blank").in-txt 
                         em Objet Trouvé
                     |  Found Objects, an art-form where a work's identity is designated by the artist and the work's social history. The were pieces were centered around found objects from a local beach. It asked kohai to
                     mark challenge what we consider valuable,

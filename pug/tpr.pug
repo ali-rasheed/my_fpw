@@ -13,9 +13,6 @@ mixin img-ll(name,data)
         img(class="lazy grid-image", data-src="imgs/"+name+".jpg", src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E") 
 
 
-mixin rM()
-  button.coll-button Read More
-
 doctype html
 
 html(lang='en') 
@@ -23,9 +20,11 @@ html(lang='en')
         include ./includes/head1.pug
         title TPR Bords De Plateau • Ali Rasheed
 
-    body 
+    body
+        - var home = "index1.html#"
+ 
         header
-            include ./includes/nav1.pug   
+            include ./includes/nav2.pug   
 
         main.grid#project 
 
@@ -132,11 +131,11 @@ html(lang='en')
                 h4.l-sect Animated Graphic Posters
                 p.ml-sect We began this project through graphic exploration to find a unique way of presenting the client. We looked at design studios and historic designers, extracting design principles and qualities from precedents. Thus we landed on the following three design qualities:
                 figure.lr-sect.flex 
-                    video(src="imgs/tpr/poster-round.mp4" autoplay muted loop preload="auto", poster="imgs/tpr/poster-round.jpg").shad
+                    video(src="imgs/tpr/poster-round.mp4", autoplay, muted, loop, preload="auto", poster="imgs/tpr/poster-round.jpg").shad
 
-                    video(src="imgs/tpr/poster-square.mp4" autoplay muted loop preload="auto", poster="imgs/tpr/poster-square.jpg").shad   
+                    video(src="imgs/tpr/poster-square.mp4", autoplay, muted, loop, preload="auto", poster="imgs/tpr/poster-square.jpg").shad   
                     
-                    video(src="imgs/tpr/poster-mixed.mp4" autoplay muted loop preload="auto", poster="imgs/tpr/poster-mixed.jpg").shad   
+                    video(src="imgs/tpr/poster-mixed.mp4", autoplay, muted, loop, preload="auto", poster="imgs/tpr/poster-mixed.jpg").shad   
                 //- figure.ml-sect  
                 //- figure.ml-sect 
 
@@ -161,17 +160,17 @@ html(lang='en')
                 p.ml-sect 
                     | The landing page establishes the types of masks and colour palettes used to differentiate between musicians, choreographers & directors.
                 figure.mlmr-sect 
-                    video(src="imgs/tpr/home.mp4",  muted, loop, preload="auto", controls poster="imgs/tpr/home.jpg").shad   
+                    video(src="imgs/tpr/home.mp4", muted, loop, preload="auto", controls, poster="imgs/tpr/home.jpg").shad   
                 
                 h4.l-sect Navigation  
                 p.ml-sect Navigation hover generates chunks of related content; showing the connection of elements to the procedural origin
                 figure.mlmr-sect
-                    video(src="imgs/tpr/nav.mp4", muted, loop, preload="auto",controls poster="imgs/tpr/nav.jpg").shad   
+                    video(src="imgs/tpr/nav.mp4", muted, loop, preload="auto", controls, poster="imgs/tpr/nav.jpg").shad   
                 h4.l-sect Content Page  
                 p.ml-sect 
                     |Background typography masks images revealed through hover interactions. This ongoing interaction continuously suggests that there is more content to be uncovered ont the person and their work.
                 figure.mlmr-sect
-                    video(src="imgs/tpr/content.mp4", muted, loop, preload="auto", controls poster="imgs/tpr/content.jpg").shad   
+                    video(src="imgs/tpr/content.mp4", muted, loop, preload="auto", controls, poster="imgs/tpr/content.jpg").shad   
 
 
             //- hr.small

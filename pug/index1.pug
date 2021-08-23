@@ -1,0 +1,141 @@
+mixin grid-item(title,link,desc,tiltm,image,cl)
+    //- - var link = "arcteryx" + end    
+    a(href=link class=cl ).grid-item&attributes(attributes)
+        .project-img
+            img(src=image, alt="").maskable
+        .proj-title
+            h1=title
+            .genre=desc
+        
+doctype html
+html(lang='en')
+    head
+        include ./includes/head1.pug
+        title Aliasger Rasheed
+    body#new-index.new-index
+        - var end = ".html"
+        - var home = "#"
+
+        header 
+            include ./includes/nav2.pug   
+        main#grain
+            section#intro 
+                img#intro-cover(src="imgs/projects/index-cover2.jpg", alt="", )
+                h1 
+                    span 
+                        em Ali
+                        |asger
+                    span Rasheed 
+                
+                .copy
+                    h4.desc A designer &amp;  photographer who unabashedly creates for good, for education, for delight, for beauty, for value.
+    
+                    h4.loc
+                        div Available For Hire  
+                        div Canada ~ World
+                        div Remote
+
+                //- #nav-theme-toggle  
+                    input(id="adjust", name="modeToggle", type="checkbox") 
+                    label#modeLbl(for="adjust")      
+
+                //- input(type="text" size="3")#mx
+            section#expertise 
+                h4 Services
+                h2.expertise-list
+                    span 
+                        em Web
+                        |  Design &amp; Dev, 
+                    span 
+                        em  Graphic 
+                        |&amp; 
+                        em  Visual
+                        |  Design, 
+                    span Photography, 
+                    span 
+                        em 3D
+                        |  Design, 
+                    span 
+                        em Experience
+                        |  Design/Strategy
+
+                //- input(type="text" size="3")#my
+                //- section.define 
+                    h2 Ali: A designer who unabashedly wants to design to  help people and make beautiful things 
+            section#projects
+                h4 Projects
+
+            section#index-grid-2
+                //- -var tiltp="8" 
+                //- -var tilts="-8"
+
+                +grid-item("Arc'teryx","arcteryx.html","service design for product care",tiltp,"imgs/arcy/cover.jpg","item50 ux threedee")
+
+                +grid-item("Natural Landscapes"
+                ,"photo-natural.html","Gallery A",tiltp,"imgs/projects/natural1.jpg","item50 photo")
+ 
+                +grid-item("Theatre Populaire Romand"
+                ,"tpr.html","graphic & interaction design ",tiltp,"imgs/tpr/cover2.jpg","item50 ux graphic")
+
+                +grid-item("Graphic Archive.","gd.html",
+                "Collection of Curated Graphic/Visual Design",tilts,"imgs/projects/honest.jpg"," item33 graphic")
+
+
+                +grid-item("UNESCO Lodestar","unesco.html","ux designing education through World Heritage",tiltp,"imgs/projects/unesco2.jpg","item50 ux")
+
+                +grid-item("3D Archive.","gd.html",
+                "Curated Collection of Work",tilts,"imgs/projects/threedee.jpg"," item33 threedee")
+
+                +grid-item("Anthropogenic Landscapes"
+                ,"photo-anthro.html","Gallery B", tiltp,"imgs/projects/anthro.jpg","photo item33")
+                +grid-item("People"
+                ,"photo-people.html","Gallery C", tiltp,"imgs/projects/people.jpg","photo item33")
+
+                +grid-item("Architecture"
+                ,"photo-anthro.html","Gallery D", tiltp,"imgs/projects/arch.jpg","photo item25")
+
+
+                +grid-item("Still Life"
+                ,"photo-anthro.html","Gallery E", tiltp,"imgs/projects/still.jpg","photo item25")
+
+
+
+                +grid-item("Threads To Heaven","threadstoheaven.html","speculative design exploring the choice of a 'good death'",tilts,"imgs/projects/spec.jpg","other threedee item33")
+
+                +grid-item("Gakko 2019","gakko.html","a summer of type, graphic design & new media",tiltp,"imgs/projects/gakko.jpg","graphic other item33")
+                
+                //- - var link = "javascript:;"       
+                //- a(href=link).grid-item.in-progress
+                //-     .proj-title
+                //-         h1 OpenIDEO Bagsket 
+                //-             .genre smart bag UX/UI & industrial design submission 
+                //-     .project-img
+                //-         img(src="imgs/projects/bagsket"+".jpg").maskable 
+                    
+                    
+                //- - var link = "charette"    + end       
+                //- section.grid-item
+                //-   a(href=link).project-img
+                //-     img(src="imgs/charette/hearth-underlit"+".jpg", alt=" Hearth Model").maskable
+                //-   a(href=link).proj-title
+                //-     h1 Hearth 
+                //-   ul.genre
+                //-     li Photography
+                //-     li 3D Modelling
+                //-     li Model Making
+
+                //- - var link = "headset" + end
+
+                //- section.grid-item#headset 
+                //-   a(href=link).project-img
+                //-     img(src="imgs/projects/headset"+".jpg", alt=" Kamishibai Headset title").maskable.saturate
+                //-   a(href=link).proj-title
+                //-     h1 Kamishibai
+                //-   ul.genre 
+                //-     li A VR headset designed for experiencing 
+                //-     li traditional Japanese Kabuki Theatre
+                    //- li Industrial Design
+                    //- li 3D Modelling
+
+        footer
+            include ./includes/footer1.pug 

@@ -5,7 +5,9 @@ html(lang='en')
     title References 
   body 
     header
-      include ./includes/nav1.pug 
+      - var home = "index1.html#"
+
+      include ./includes/nav2.pug 
       //- #nav-mobile-placeholder.charette 
     main#project
       section#intro-sect.x20c.grid
@@ -16,7 +18,8 @@ html(lang='en')
           li.flex-b
             span.fab.fa-osi
             div Typefaces used: 
-                |#[a.space-g.in-txt(href="https://www.fontshare.com/fonts/cabinet-grotesk")  HK Grotesk] from <em>Hanken Design Co. </em> and #[a.mazius.in-txt(href="http://collletttivo.it/") Mazius Display] from <em>Colllectttivo</em>.
+                |#[a.space-g.in-txt(href="https://www.fontshare.com/fonts/General-Sans") General Sans] &amp; 
+                |#[a(href="http://collletttivo.it/") Mazius Display] from <em>Colllectttivo</em>.
           li.flex-b
             span.fab.fa-font-awesome-alt
             | Icons are from&nbsp;   
@@ -24,7 +27,7 @@ html(lang='en')
             |.
          
           li.flex-b
-            span.fad.fa-circle
+            span.fad.fa-circle 
             div 
               | Some documentation images for 
               |#[a.in-txt(href="/gakko.html") Gakko case-study]

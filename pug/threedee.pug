@@ -1,6 +1,6 @@
 //- ////////MIXINS/////////
 mixin threedee-lazyloaded-lg(name1,name2,caption,cname,type)
-  a(class=cname+" mfp-"+type+"   l-threedee img-cont p-tilt" title=caption href=name2)  
+  a(class=cname+" mfp-"+type+"   l-threedee img-cont p-tilt" href=name2 title=caption)  
     img(class=" lazy grid-image", data-src="imgs/threedee-sm/"+name1 ,   
     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
      ) 
@@ -11,9 +11,11 @@ html(lang='en')
   head
     include ./includes/head1.pug
     title 3d visualisations - Ali Rasheed 
-  body 
+  body.threedee 
+    - var home = "index1.html#"
+
     header.gallery
-      include ./includes/nav1.pug   
+      include ./includes/nav2.pug   
 
  
     main.gallery 

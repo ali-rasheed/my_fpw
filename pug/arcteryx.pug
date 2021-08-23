@@ -9,9 +9,6 @@ mixin img-ll(name,data)
         img(class="lazy grid-image", data-src="imgs/"+name+".jpg", src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E") 
 
 
-mixin rM()
-  button.coll-button Read More
-
 doctype html
 
 html(lang='en')
@@ -21,16 +18,18 @@ html(lang='en')
 
     body 
         header
-            include ./includes/nav1.pug   
+        -home = "index1.html#"
+        include ./includes/nav2.pug   
 
         main.grid#project 
 
+            
+
             section#overview.x12c.grid 
 
-                h1.main-heading Arc'teryx Fulcrum
+                h1.main-heading Arc'teryx
 
-                p.big#summary
-                    | Dispelling product care misconception while achieving product longevity, sustainability and brand trust. Arc'teryx Fulcrum is a series of accessories to educate and remind outdoor and lifestyle customers of product care.
+                p.big#summary Dispelling product care misconceptions while achieving product longevity, sustainability and brand trust. A series of service accessories to educate and remind customers of product care.
 
             section.flex-s.points
 
@@ -91,27 +90,24 @@ html(lang='en')
             section.grid.x12c 
                 h3.l-sect Contribution 
                 
-                p.ml-sect Conducted in-person ethnography, user research and interviews, and 
-                    mark led our 5-week iterative process of designing our product care accessories
-                    |  and 
-                    mark executing their final visualisations. Co-designed our weekly graphic posters & slide decks. 
+                p.ml-sect Conducted in-person ethnography, research and interviews. Led our process of designing product care accessories. Executed their final visualisations. Co-designed graphic posters & slide decks. 
                     //- |Designed online experience for receiving product care knowledge.
                 
  
                 h3.l-sect Brief
                 p.ml-sect
-                    |For a senior design course, our team was tasked with seeking a local organization whose values we shared; conducting user research to identify problems, which we then solved through UX & service design. 
-                    |We were fortunate to be able to work with Arc'teryx's Kitsilano and Metrotown branches,  and the post-sales team from Arc'teryx HQ.
+                    |Conduct user research &amp; ethnography to identify customer+client problems. Develop a proposal that uses UX &amp; service design process to address and solve the problem. 
+                    |We were fortunate to work with two Arc'teryx branches,  and the post-sales team from Arc'teryx HQ.
 
        
                 figure.ml-sect   
-                    img(data-src="imgs/arcy/kits.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" ).lazy        
+                    img(data-src="imgs/arcy/kits.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
                     figcaption Meeting at Arc'teryx Kitsilano branch, the outdoors customer-focused flagship.
 
             section.grid.x12c 
                 h3.l-sect Client 
                 figure.r-sect.r2.r-5   
-                    img(data-src="imgs/arcy/brand1.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" ).lazy        
+                    img(data-src="imgs/arcy/brand1.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
                     //- figcaption Meeting at Arc'teryx Kitsilano branch, the outdoors customer-focused flagship.
                 p.ml-sect Arc'teryx is an international design-driven high-end outdoor clothing & gear brand based in Vancouver. The brand is committed to its goals of sustainability through its manufacturing as well as its durability-focused design and extensive repair policy.
             
@@ -145,13 +141,14 @@ html(lang='en')
 
             section.callout#dgoals
                 h3 Design Goals
-                p.med 
-                   |To inform customers why regular product care is so important, making the instructions feel worth their attention.
-                p.med 
-                   |To dispel the misconceptions that garments don’t need regular care, and that washing and drying can ruin them.
+                ol
+                    li.med 
+                        |To effectively convey importance of product care to customers. 
+                    li.med 
+                        |To dispel misconceptions that garments washing + drying process. 
 
-                p.med 
-                   |To design for customers who have limited touchpoints with product guides and Arc’teryx itself.
+                    li.med 
+                        |To design for customers with limited touchpoints  with the client.
 
             //- hr.small
 
@@ -163,7 +160,7 @@ html(lang='en')
                 //- h3.l-sect Product Care Journey 
                 h2.l-sect Proposal
                 figure.lr-sect
-                    img(data-src="imgs/arcy/pc.jpg", src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" alt="alt").lazy
+                    img(data-src="imgs/arcy/pc.jpg", src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E", alt="alt").lazy
                     figcaption 3D render made by me.
  
             //- hr.
@@ -176,7 +173,7 @@ html(lang='en')
                 p.ml-sect Customers are asked to choose a product care gift at checkout.
                     
                 figure.mlmr-sect
-                    img(data-src="imgs/arcy/000.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" ).lazy    
+                    img(data-src="imgs/arcy/000.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy    
 
           
           
@@ -185,14 +182,14 @@ html(lang='en')
                 h4.ml-sect In-store
                 p.ml-sect The opportunity for designing for in-store was that customers would not remember product care instructions given by sales reps, therefore requiring additional guidance. Arc'teryx customers are able to choose a free product care accessory upon purchasing an item in-store.
                 figure.mlmr-sect
-                    img(data-src="imgs/arcy/instoreexperience.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" alt="alt").lazy 
+                    img(data-src="imgs/arcy/instoreexperience.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E",alt="alt").lazy 
             hr.small  
             
             section.grid.x12c#reminders
                 h4.ml-sect Reminders 
                 p.ml-sect An email with product care links will be sent to users who are expecting to receive their gift soon. We want users to have product care on their minds even before the product arrives.
                 figure.mlmr-sect
-                    img(data-src="imgs/arcy/100.jpg"  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy  
+                    img(data-src="imgs/arcy/100.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy  
             
             
             section.grid.x12c#post-purchase
@@ -217,13 +214,13 @@ html(lang='en')
 
                 p.ml-sect We took products released by Arc'teryx & its competitors in the 1990s as precedents to justify our proposal.
                 figure.ml-sect 
-                    img(data-src="imgs/arcy/bandana_precedents.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy  
+                    img(data-src="imgs/arcy/bandana_precedents.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy  
 
                 p.ml-sect The Trail Bandana accessory has a location-specific hiking trail pattern on the front and product care instructions on the back. As bandanas are regularly washed garments, they act as physical reminders of product care.
                 figure.mlmr-sect
                     .manual-swipe   
                         .img  
-                            img(data-src="imgs/arcy/bandana1.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy
+                            img(data-src="imgs/arcy/bandana1.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy
                         .img    
                             img(data-src="imgs/arcy/bandana2.jpg" ).lazy   
                         .img    
@@ -238,14 +235,14 @@ html(lang='en')
             section.grid.x12c#magnet
                 
                 h3.l-sect Product Care Accessories
-                h4.ml-sect Fulcrum Magnet
+                h4.ml-sect Magnet
                 p.ml-sect
                     | The magnet is a reflexive product care guide with care instructions on the fabric. The grommet/loop is magnetic, allowing users to stick it on their laundry machines. The loop also allows users to hang the magnet on their coat hangers or wall hooks in case they don't have laundry machines.
 
                 figure.mlmr-sect
                     .manual-swipe   
                         .img
-                            img(data-src="imgs/arcy/mg.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy    
+                            img(data-src="imgs/arcy/mg.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy    
                         .img
                             img(data-src="imgs/arcy/wm.jpg" ).lazy   
                         .img
@@ -257,9 +254,9 @@ html(lang='en')
             section.grid.x12c#value
                 
                 h2.l-sect.r1 The value
-                p.ml-sect.med Longevity of garments leading to more brand trust and loyalty, and reduced environmental impact through fewer garment replacements                 
+                p.ml-sect.med Longevity of garments leading to more brand trust and loyalty. Reduced environmental impact through fewer garment replacements.                
                 figure.mlmr-sect
-                    img(data-src="imgs/arcy/value.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" ).lazy       
+                    img(data-src="imgs/arcy/value.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy       
             
             hr
             
@@ -285,7 +282,7 @@ html(lang='en')
                 figure.mlmr-sect
                     .manual-swipe   
                         .img  
-                            img(data-src="imgs/arcy/2.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E" ).lazy
+                            img(data-src="imgs/arcy/2.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy
                         .img    
                             img(data-src="imgs/arcy/4.jpg" ).lazy 
 
@@ -298,9 +295,9 @@ html(lang='en')
                 figure.mlmr-sect
                     .manual-swipe   
                         .img  
-                            img(data-src="imgs/arcy/11.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy
+                            img(data-src="imgs/arcy/11.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy
                         .img    
-                            img(data-src="imgs/arcy/12.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy 
+                            img(data-src="imgs/arcy/12.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy 
 
             hr
             
@@ -341,7 +338,7 @@ html(lang='en')
             //- section.grid.x12c#currentsolutions
                       
                 figure.lr-sect
-                    img(data-src="imgs/arcy/current.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 2'%3E%3C/svg%3E").lazy 
+                    img(data-src="imgs/arcy/current.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 2'%3E%3C/svg%3E").lazy 
 
             
             //- hr.small
@@ -424,7 +421,7 @@ html(lang='en')
                     |Our ethnography showed that customers valued and kept artifacts such as packaging and tokens from brands like Arc'teryx. Therefore a free accessory would have a more permanent place in the user's life.
                 
                 figure.r-sect.r3.r-8            
-                    img(data-src="imgs/arcy/graph.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E" ).lazy
+                    img(data-src="imgs/arcy/graph.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy
                     figcaption The Design Journal: Design for Product Care: Enhancing Consumers’ Repair and Maintenance Activities
                 
                 p.ml-sect
@@ -446,7 +443,7 @@ html(lang='en')
                 p.ml-sect Our accessories were designed with fabric to both remind customers of their garments, as well as make use of scrap Gore-tex fabric from Arc'teryx production, furthering Arc'teryx's sustainability goals. 
 
                 figure.ml-sect 
-                    img(data-src="imgs/arcy/scraps1.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E" ).lazy
+                    img(data-src="imgs/arcy/scraps1.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy
                     figcaption Scrap fabric from the CNC cutting process.
 
                 h4.l-sect Trust The Process 
@@ -456,7 +453,7 @@ html(lang='en')
                     | which I have always found personally unintuitive. I've therefore always needed to push myself into it, and this project really made me work on that, and as our professor Dr.Ron Wakkary, kept reminding us, 
                     mark trust the process.
 
-                p.ml-sect Trust was key in successfully designing with all of our stakeholders in mind - designing a solution that maintained, if not increased, the trust customers have in Arc'teryx and creating products that were inline with Arc'teryx's sustainability mission.
+                p.ml-sect Trust was key in successfully designing with all of our stakeholders in mind. It helped us create a solution that increased the trust customers have in Arc'teryx and creating products that were inline with Arc'teryx's sustainability mission.
 
                 //- p.ml-sect Most important was trusting the team process, being able to delegate work while believing in the competency of each others skills and abilities. I think this was key in our success, as we recognised where we each excelled, and provided the space for us to grow where we didn't.
                 figure.lr-sect
