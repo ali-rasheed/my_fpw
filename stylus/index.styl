@@ -8,253 +8,74 @@ narrowerthan(var)
     @media condition
         {block}
 
-.index
-    main
-    main
-        margin-top: 5rem
-    section
-        display: grid
-        grid-template-columns: 1fr
-        // grid-template-rows:  repeat(auto,auto)
-        grid-row-gap 2rem
-        
-
-        .grid-item
-            margin 1rem 
-            margin-top: 3rem
-            display: grid
-            will-change: opacity
-            .proj-title
-                grid-row 2/3
-                z-index: 5
-                font-size: 2rem
-                // opacity .75
-
-                // transition: all 300ms ease-out
-
-                h1
-                    font-size: inherit
-                    font-family: var(--qfont) 
-                    margin: 0
-                    line-height: 1
-                    padding-bottom: .1em
-                    padding-top: .1em
-
-            .project-img
-                display: grid
-                grid-template: 1fr / 1fr 
-                grid-row 1/2
-                max-with  100vw
-                overflow hidden
-                justify-content: center
-                will-change: opacity
-                img
-                    height 50vh   
-                    object-fit: cover
-                    justify-self: center
-                    grid-area: 1 / 2 / 1 / 2
-                &::after
-                    grid-area: 1 / 2 / 1 / 2
-                    content: ''
-                    z-index 30
-                    opacity 0
-                    background-color: var(--pcol) g
-                    // transition: all 300ms ease-out
-                    mix-blend-mode: hue   
-
-
-            .genre    
-                grid-row 3/4 
-                font-size: 1rem
-                line-height: 1.2
-                margin: .2em
-                // opacity .75
-                font-size: inherit
-                display:inline list-item
-                font-family: var(--pfont)
-
-
-            &:hover,&:focus,&:active
-
-                .project-img::after
-                    opacity 100%   
-                .proj-title,.genre
-                    opacity: .95
-
-    +widerthan(500px)
-        main
-            section
-                // margin 1rem .5rem 0rem 1rem
-                // grid-gap: 7rem
-                grid-template-columns: 1fr 1fr 1fr
-                .grid-item
-                    grid-template-columns: .5fr 6fr 9fr 6fr .5fr  
-                    margin: 0
-                    grid-row 1fr 1fr 1fr
-                    grid-row-gap: 0rem
-                    align-content: start;    
-
-                    &:nth-child(2n+1)
-                        grid-column: 1/3
-                        // margin-top: -5rem
-                        
-                    &:nth-child(2n+2)
-                        grid-column: -3/-1
-                        
-                    
-                    
-                    .project-img  
-                        grid-column: 1/-1
-                        // grid-row 1/2
-                        // min-height: 15rem
-                        align-content: center
-
-                        img
-                            // height: 39vh
-                            max-height: 45vh
-                            width: 100%
-
-                    .proj-title
-                        // grid-row 1/2
-                        grid-column: 1/-1
-                        font-size: 2rem
-                        // margin-top: -.7em
-                        padding 0 1.5rem
-
-                    .genre
-                        // grid-row 2/3
-                        grid-column: 1/-1
-
-
-
-    +widerthan(1200px)
-        main
-            section
-                margin-top: 10rem
-                display: grid
-                grid-template-columns: 1fr 1fr 1fr  1fr 1fr 1fr
-                grid-row repeat(auto,auto)
-                grid-row-gap 2rem 
-                grid-column-gap: 8rem
-                margin 0 0vw
-                
-
-                .grid-item
-                
-                    margin 0rem 
-                    display: grid
-                    grid-template-columns: repeat(11,1fr)
-                    grid-template-rows:repeat(4, min-content)
-
-                        margin-top: 15rem
-
-                    .project-img
-                        grid-column: 1/-1   
-
-                        display: grid
-                        height: 22rem  
-                        // min-height: 45vh
-                        justify-content: center
-                        align-content: center
-                        img
-                            height 100%
-                            width 100%
-                            object-fit: cover
-                            justify-self: center
-                            align-self: center
-                            max-height: 55vh
-
-
-                    .genre
-                        margin: .2em
-                        margin-top .6em
-                        // font-size: 1.2rem 
-    
-                    .proj-title
-                        z-index: 5
-                        font-size: 3.5rem 
-                        // margin-top: -1em 
-                        h1 
-                            margin: 0
-                            line-height: 1
-                            padding-bottom: .1em
-
-                    --rad: 0px
-                    grid-column-end: span 5
-
-                    &:nth-child(2n+1)
-                        grid-column: 1/4
-                        
-
-                    &:nth-child(2n+2)
-                        grid-column: -4/-1
-                        margin-top: 13rem
-            
-
-
-    +widerthan(1400px)
-        main
-            section
-                margin-top: 10rem
-                display: grid
-                grid-row repeat(auto,auto)
              
 .in-progress
     *
         opacity 60%
     // :hover
     //     opacity 60% 
-    
+
 
     &:hover, &&:focus
         .project-img::after
             opacity 0%   !important
 
 #new-index
-    // --temp:--purple
-    // --bgcol: --temp !important 
-    // background-color: var(--bgcol);
+    section
+        transition max-height ease 900ms 
+        overflow: hidden; 
+        max-height: 1000vh
+
     section#intro
         transform-style: preserve-3d
-        transform: perspective(1200px)
+        transform: perspective(1000px)
         display: grid
-        // grid-template-columns: repeat(6,1fr)
-        margin-top: 15vh
+        margin-top: 12vh
         // margin-left: 2rem
 
         grid-template-columns: repeat(12,1fr)
+        grid-template-rows: repeat( 121,auto)
         // +narrowerthan(800px)
 
-        grid-template-rows: 1fr auto
-        height: 90vh
+        grid-template-rows: auto
+        height: 88vh
         width 100%
         box-sizing: border-box
-        padding: 15vh
-        .copy
-            grid-row: 2/3
-            grid-column: 2/4
+        padding: 0vh 8vh 0vh 8vh
+        .copy 
+            grid-row: 3/4
+            grid-column: 2/5
         h1
-            transform: translateZ(100px)
+            transform: translateZ(20px)
             font-family: var(--pfont)
             justify-self: stretch; 
-            align-self: flex-end
-
+            align-self: start
+            @supports (-webkit-text-stroke:1px var(--txtcol))
+                -webkit-text-stroke: var(--stroke) var(--txtcol)
+                color transparent
+            
             // text-align: center
             vertical-align: top;
-            grid-row: 1/2
+            grid-row: 2/3
             grid-column: 2/6
             margin 0
             line-height: 1 
+            font-size: 7vw
+            em
+                font-size:  inherit
             span 
-                font-size: 8vw
+                font-size: inherit
                 padding-right: .5em
                 font-family: inherit
                 line-height: inherit
+                color inherit
+                -webkit-text-stroke: inherit
                 // font-size: inherit
         h4
             font-family: var(--sfont)
             font-size: 1rem 
             border-top: solid 1px
+            max-width:  45ch
             &.desc
                 grid-column: 2/3
                 grid-column-end: 2
@@ -263,107 +84,285 @@ narrowerthan(var)
             &.loc
                 grid-column: 2/3
                 grid-row: 5/6
+        #nav-theme-toggle
+            grid-column: 12/13
+            grid-row 3/4
+            align-self: first-baseline
+            justify-content: flex-end
+            // labelwriting-mode: vertical-rl
+            padding-bottom: 5vh 
+            input#adjust[type=checkbox]
+                display: none;  
 
+            input[type=checkbox]#adjust+ label:after
+                display: inline;
+                transition: color ease-in .15s
+                letter-spacing: 7px;
+                font-family: "Font Awesome 5 Brands";
+                content: "\f1d1"
+                color: var(--txtcol)
+                top 0
+                font-size: 3rem
+
+            input[type=checkbox]#adjust:checked + label:after
+                letter-spacing: 7px 
+                font-family: "Font Awesome 5 Brands";
+                content: "\f50e"
+                font-size: 3rem
+ 
+            input[type=checkbox]#adjust + label::before
+                content: "Dark side"
+                transition: color ease-in .15s
+                color: var(--txtcol)
+                
+                font-size: inherit 
+
+            input[type=checkbox]#adjust:checked + label::before
+                content: "Light side"
+
+            label#modeLbl
+                z-index 500        
+                +narrowerthan(1400px)
+                    font-size: .9vw
+                text-transform: uppercase;
+                letter-spacing: -0.025em
+                
+                padding-top: .5rem
+
+                font-size: .75rem  
+                display: flex 
+                flex-direction: column-reverse
+                align-items: center
+                align-self: last baseline
+                &:hover,&&:focus
+                    opacity 100%
         #intro-cover
-            
+            overflow: hidden    
+            img 
+                object-fit: cover
             object-fit: cover
             // right 0
             grid-row: 1/2
-            max-height: 100%
-            grid-column: 3/-1 
+            max-height: 50vh
+            grid-column: 5/13 
             overflow: none
-            mix-blend-mode: darken
+            mix-blend-mode: var(--blend)
+        h4.links
+            grid-row: 3/4
+            grid-column: 5/9
+            display: flex
+            font-size: 1.5rem
+            justify-content: space-between
+
+        +narrowerthan(500px)
+
+            padding 0
+            margin-top: 4rem
+            height  auto
+            h1 
+                grid-row 2/3
+                font-size: 10vw
+
+                span
+                    font-size: inherit
+            #intro-cover
+                grid-column: 1/-1
+                // display none
+            .copy
+                grid-column: 2/-2
     #projects
         margin-top: 15vh
     #expertise, #projects
+        margin-top: 5rem
         display: grid
-        grid-template-columns: 1fr 8fr 1fr
-         
+        grid-template-columns: 8vh 1fr 10fr 1fr 8vh 
+        +narrowerthan(1400px)
+            grid-template-columns: 1fr 10fr 1fr
+
         // .expertise-list
         //     display: flex 
         h4
-            grid-column: 2/3
+            grid-column: 2/-2
             text-align: center 
             font-size: 2rem
+            +narrowerthan(500px)
+                font-size: 1.5rem
+
             font-weight: 500
             font-family: var(--sfont)
 
         h2.expertise-list
-            grid-column: 2/3
+            grid-column: 2/-2
             font-family: var(--pfont)
+            @supports (-webkit-text-stroke: var(--txtcol) var(--stroke))
+                text-stroke:var(--txtcol) var(--stroke)
+                -webkit-text-stroke: var(--txtcol) var(--stroke)
+                color transparent
+
             span
                 line-height: 1.25
-                font-size: 4.5vw
-                +narrowerthan(400px)
-                    font-size: 2rem
+                font-size: 6.5vw
+                 
+                +narrowerthan(1400px)
+                    font-size: 2.25rem
+                +narrowerthan(500px)
+                    font-size: 2.5rem
                 font-family: inherit
+                color inherit
+
                 // word-wrap: C:\Users\alias\Documents\my_fpw\ali-rasheed.github.io\imgs\photography-lg\people\5.jpgbreak-word
-                display: inline 
+                &.col-exp
+                    // &:after
+                    //     ba
+                &.col-3D
+                    text-shadow: 5px 5px var(--customCol)
+                    +narrowerthan(500px)
+                        text-shadow: 3px 3px var(--customCol)
+// */
+                &.col-graphic
+                    // color var(--pcol) !important
+                    // background-clip: text
+                    // // -webkit-background-clip: text
+                    // text-stroke: initial
+                    // -webkit-text-stroke: initial
+                    // background: -webkit-linear-gradient(top, red, blue);
+
+                    // background linear-gradient(40deg,  var(--tcol)  var(--scol));
+                    @supports (-webkit-text-stroke: 1px blue) 
+                        animation vdesign infinite linear 3s
+                        background -webkit-linear-gradient(40deg, var(--pcol),var(--colB3),var(--colC3),var(--pcol),var(--colB3))
+                        background-size: 100% 800%;
+
+                        -webkit-text-fill-color: var(--bgcol);
+                        -webkit-background-clip: text;
+                        -webkit-text-stroke: 3px transparent;
+                        color:var(--bgcol) !important
+                    // 
+                    // em
+                    // padding-right 1rem
+
+                &.col-photo     
+                    display: inline-block
+                // &.col-web
+
+
 
     #index-grid-2 
         // display: grid
         width: 100%
-        display: flexbox
+        // display: flexbox
         // grid-template-columns: 1fr 1fr 1fr
         a.grid-item
-            display grid
+            // display flexbox
             box-sizing: border-box 
             // box-sizing: content-box 
 
             grid-template-columns: 1fr
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr
-
-            padding 2rem
+            grid-template-rows: 1fr 1fr
+            // border solid 1px black
+            padding 2.75rem
             +narrowerthan(1000px)
-                padding 1.2vw 
+                padding 1vw 
 
             &.item50
-                width calc(99vw*.5) 
+                width calc(100%*6/12) 
                 +narrowerthan(1000px)
-                    width 99vw
-            &.item33 
-                width calc(99vw*.32) 
+                    width 100vw
+            &.item33
+                width calc(100%*4/12) 
                 +narrowerthan(1000px)
                     width calc(99vw*.5)
                 
             &.item25
-                width calc(99vw*.25) 
+                width calc(100%*3/12) 
                 +narrowerthan(1000px)
                     width calc(99vw*.5)
-             
+
             .proj-title
+                grid-row: 2/3
+                +widerthan(1400px)
+                    position: absolute 
+                    top 30%
+                    bottom: 30% 
+                    left 10%
+                    right: 10% 
+                    filter: blur(8rem)
+                    text-align: center
+                transition: filter 250ms ease-out
                 h1 
-                    transform: translateZ(20px)
-                    font-size: 2.75rem
+                    // transform: translateZ(20px)
+                    font-size: 3.5rem
                     grid-column: 1/-1
-                    grid-row: 1/-1
                     margin-top: .5em
-                    margin-bottom: .25em 
+                    margin-bottom: .25em  
+                    // @supports (-webkit-text-stroke: 1px blue) 
+                    //     -webkit-text-stroke: var(--stroke) var(--txtcol)
+                    //     color transparent
                     +narrowerthan(1000px)
                         font-size 1.5rem
                         font-weight: 500
 
 
                 .genre 
-                    transform: translateZ(20px)
-                    grid-column: 1/-1
-                    grid-row: 1/-1
+                    // transform: translateZ(20px)
                     text-transform: uppercase
                     +narrowerthan(1000px)
                         font-size: .9rem
+                    +narrowerthan(500px)
+                        font-size: .6rem
+
+                    // transition: filter 300ms ease-in
 
             .project-img
                 // object-fit: cover 
                 grid-column: 1/-1
-                grid-row: 1/-1
+                grid-row: 1/2
                 img 
                     object-fit: contain;
                     max-width: 100%;
                     max-height: 100%;
                     width: auto;
                     height: auto;
+                    transition: filter 250ms ease-out
                 
-            // &:hover
-            //     img
-            //         transition: filter 500ms ease
-                    // filter: blur(1rem)
+            &:hover,&:focus
+                .proj-title
+                
+                    filter: blur(0)
+                img
+                    filter: blur(1rem)  brightness(var(--exposure))
+                    // mix-blend-mode: var(--blend)
+                // .genre
+                //     filter: blur(6rem)
+[data-theme = "dark"]
+
+    #modeLbl::before, nav#nav2 .caption
+        font-weight 400 !important
+        letter-spacing: .02em !important
+
+@keyframes vdesign 
+    0%
+        // color var(--colA1)
+    background-position: 0% 0% 
+    //     // background linear-gradient(40deg, var(--pcol) 0%, var(--colB3) 100%);
+
+    // //     filter: hue-rotate(calc(360deg/.4))
+    // 60% 
+    //     background linear-gradient(40deg, var(--colB3) 0%, var(--colC3) 100%);
+
+    // //     filter: hue-rotate(calc(360deg/.6))
+    // 80% 
+    //     background linear-gradient(40deg, var(--colC3) 0%, var(--colE3) 100%);
+
+    // //     filter: hue-rotate(calc(360deg/.8))
+    100% 
+        background-position: 0% 100% 
+
+
+@keyframes vis-design-backup 
+    0%
+        filter: hue-rotate(calc(360deg/0))
+
+    100% 
+        filter: hue-rotate(calc(360deg/1))
+

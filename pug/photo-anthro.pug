@@ -17,49 +17,21 @@ html(lang='en')
   head
     include ./includes/head1.pug
     title Photography - Ali Rasheed
-  body.photo 
-    - var home = "index1.html#"
+  body.photo.photo-proj 
+    - var home = "/"
 
     header.gallery
       include ./includes/nav2.pug  
 
 
     main.gallery 
-      h1 Natural Landscapes
+      h1 Anthropocenic Landscapes
 
-      //- #portfolioFilter    
-        //- #sizeBtns          
-        //-   button#add.colorH.fal.fa-search-plus
-          button#subtract.colorH.fal.fa-search-minus  
-        input(name="imgFltr", data-filter="*", type="radio", checked="checked").current#all-categories   
-        label(for="all-categories") All
- 
-        input(name="imgFltr", data-filter=".anthro", type="radio")#anthro 
-        label(for="anthro" ) Anthropogenic Landscape
-
-
-        input(name="imgFltr", data-filter=".people", type="radio")#human 
-        label(for="human") Human
-
-        input(name="imgFltr", data-filter=".architectural", type="radio")#architectural 
-        label(for="architectural") Architectural  
-      
-
-        input(name="imgFltr", data-filter=".natural", type="radio")#natural  
-        label(for="natural") Natural Landscape
-
-        input(name="imgFltr", data-filter=".still-life", type="radio")#still-life  
-        label(for="still-life") Still Life
-   
           
       section.photography-grid#portfolioContainer
         - for(var i=1; i<30; i++)
-          //- +img-lazyloaded-lg("people",i)
           +img-lazyloaded-lg("anthro",i)
-          //- +img-lazyloaded-lg("architectural",i)
-          //- +img-lazyloaded-lg("still-life",i)
-          //- +img-lazyloaded-lg("natural",i)
            
           
     footer
-      include ./includes/footer2.pug
+      include ./includes/footer2.pug 

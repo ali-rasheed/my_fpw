@@ -3,9 +3,10 @@ html(lang='en')
   head
     include ./includes/head1.pug
     title References 
-  body 
+  body.index-proj
+
     header
-      - var home = "index1.html#"
+      - var home = "/"
 
       include ./includes/nav2.pug 
       //- #nav-mobile-placeholder.charette 
@@ -18,8 +19,8 @@ html(lang='en')
           li.flex-b
             span.fab.fa-osi
             div Typefaces used: 
-                |#[a.space-g.in-txt(href="https://www.fontshare.com/fonts/General-Sans") General Sans] &amp; 
-                |#[a(href="http://collletttivo.it/") Mazius Display] from <em>Colllectttivo</em>.
+              |#[a.space-g.in-txt(href="https://www.fontshare.com/fonts/General-Sans") General Sans] &amp; 
+              |#[a(href="http://collletttivo.it/") Mazius Display] from <em>Colllectttivo</em>.
           li.flex-b
             span.fab.fa-font-awesome-alt
             | Icons are from&nbsp;   

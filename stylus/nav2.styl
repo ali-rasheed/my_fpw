@@ -23,15 +23,14 @@ nav#nav2
     box-sizing: border-box
     top 0
     #back-home
-        position: absolute;
-        left 50%
-        top: 5vh;
+        // position: absolute;
+        // left 50%
+        // top: 5vh;
         font-size: .75rem
         text-transform: uppercase;
         letter-spacing: -0.025em
-        // padding-top: .5rem
         font-weight: 500
-        // width 50%
+        padding-right: 3vw
 
     .title
         font-size: 1.5vw
@@ -39,29 +38,38 @@ nav#nav2
         +narrowerthan(1400px)
             font-size: 1.5rem
         padding-right: 2.5vw
+        color inherit
         
     .caption
         font-size: .75rem 
         +narrowerthan(1400px)
-            font-size: .9vw
+            font-size: 1.1vw
         text-transform: uppercase;
         letter-spacing: -0.025em
         padding-top: .5rem
         word-wrap: break-word
         overflow-wrap: break-word
         max-width: 95%
+        color inherit
     
-
+        
     #top-nav
         transition: transform .4s cubic-bezier(.25,.46,.45,.94) .1s,opacity .4s cubic-bezier(.25,.46,.45,.94) .2s,letter-spacing .5s cubic-bezier(.25,.46,.45,.94);
-        margin: 5vh 0rem 0rem 4vh 
+        padding: 5vh 0rem 0rem 4vh 
         justify-content: space-between 
         display: flex
-
+        *
+            z-index: 22
+            position relative
         #nav-filters 
             display: flex
+            justify-content: space-between
+            flex-basis: 50%
+            +narrowerthan(1400px)
+                flex-basis: 75%
             // margin: 1rem 1rem 0rem 1rem  
             .nav-item
+                
                 .caption
                     transition: transform .25s cubic-bezier(.25,.46,.45,.94) .1s,opacity .25s cubic-bezier(.25,.46,.45,.94) .2s
                     z-index: 3
@@ -75,67 +83,114 @@ nav#nav2
     .active 
         font-weight: bold
     
-    #nav-theme-toggle
-        position: fixed
-        top : 0 
-        right 0
+
         
-        writing-mode: vertical-rl
-
-        input#adjust[type=checkbox]
-        // input#font[type=checkbox]
-        // input#mobile-input[type=checkbox]
-            display: none;  /* to hide the checkbox itself */
-
-        input[type=checkbox]#adjust+ label:after
-            display: inline;
-            transition: color ease-in .15s
-            letter-spacing: 7px;
-            font-family: "Font Awesome 5 Brands";
-            content: "\f1d1"
-            color: var(--txtcol)
-            top 0
-            // height: 1.5em
-            // width 1em
-                
-        input[type=checkbox]#adjust:checked + label:after
-            letter-spacing: 7px 
-            font-family: "Font Awesome 5 Brands";
-            content: "\f50e"
-
-        input[type=checkbox]#adjust + label::before
-            // margin-right: .25rem  
-            // font-weight: var(--reg)
-            content: "Dark side"
-            transition: color ease-in .15s
-            color: var(--txtcol)
-            font-weight: 500
-
-        input[type=checkbox]#adjust:checked + label::before
-            content: "Light side"
-
-        label#modeLbl
-            z-index 500
-            opacity opa
-            font-size: 2rem
-            // height 1em
-            &:hover,&&:focus
-                opacity 100%
-            &:after  
-                // margin-right: 1ch
-                margin-left: .5ch
-            display: flex 
-            // flex-direction: column
-        
-    #menulabel, Home 
+    #menulabel, #mobile-menu, #mobileButton ,
         display: none
 
+    #unfilter
+        visibility: none
+
     +narrowerthan(800px)
-        #menu-input:checked ~ #desk-nav   
-        max-height:200vh
-        // height min-content
+        height 4rem
+        overflow: unset
+        .caption, #unfilter 
+            font-size 1rem
+        .title 
+            font-size: 3rem
+        .space
+            -webkit-backdrop-filter: blur(14px)
+            backdrop-filter: blur(14px)
+            z-index: 23
+            content: ""
+            //  opacity .5
+            -webkit-backdrop-filter: blur(14px)
+            backdrop-filter: blur(14px)
+            position: fixed
+            top 0
+            left 0
+            // bottom 0 
+            // right 0
+            height: 100vh
+            width: 100vw  
+            transition max-height .6s ease-in-out
+            max-height: 0vh
+        #top-nav
+            position relative
+
+            top 0
+            left 0
+            right 0
+            height 100vh
+            padding 0
+            z-index: 24 
+            *
+                z-index: 24 
+
+
+            transition max-height .4s ease-in-out
+            position relative
+            max-height: 0
+            overflow: hidden
+            // flex-direction: column
+            flex-wrap: wrap
+            bottom: 0 
+            justify-content: flex-start
+            // align-content: 
+            background-color: transparent
+            align-content: start
+            #nav-about, #nav-filters a
+                margin-left: 5vw
+                margin-bottom: 2vh
+                max-width 100%
+            #nav-about
+                order 2
+            #nav-filters 
+                display: flex
+                flex-direction: column
+                flex-wrap: wrap
+                // margin-top: 1rem
+                flex-basis: 100%
+                // &:after
+                //     content: ""  
+                
+                a
+                    // font-family: var(--pfont)
+                    // margin-left: 0
+                    // padding 1rem 0
+                    // flex-basis: 100%
+                    justify-self: left
+                    text-align: left
+                    font-size: 2.6rem   
+                    &:after
+                        content: ""  
+        
+        #menu-input:checked ~ #top-nav   
+            max-height:200vh
+            overflow-y: hidden;
+            .space
+                z-index: 23
+                content: ""
+                //  opacity .5
+                -webkit-backdrop-filter: blur(14px)
+                backdrop-filter: blur(14px)
+                position: fixed
+                top 0
+                left 0
+                // bottom 0 
+                // right 0
+                height: 100vh
+                width: 100vw
+                max-height: 100vh  
+            @css{
+                .space{
+            background-color: rgba(var(--bgcol-rgb),.6);
+                    } 
+                }
 
         #menu-label
+            // height 1rem
+            display: block
 
             margin: .2rem
 
@@ -144,14 +199,14 @@ nav#nav2
             height 1rem
             width 2rem
             // border-style: 
-            border  inset 5px var(--bgcol) 
+            border  inset 3px var(--bgcol) 
             border-bottom-style: outset
             border-top-color: var(--txtcol)
             border-bottom-color: var(--txtcol)
             border-right: var(--bgcol) inset;
             border-left: var(--bgcol) outset;
 
-            background-color var(--bgcol)
+            // background-color var(--bgcol)
             transition: all 500ms ease-in-out
             z-index 400
         
@@ -164,39 +219,38 @@ nav#nav2
 
             &:hover, &:focus
                 opacity 100%
-        #nav-filters, .nav-item 
-            height 100vh
-            transition max-height .5s ease-in-out
-            position relative
-            max-height: 0
-            overflow: hidden
-            flex-direction: vertical
-            flex-wrap: wrap
-            bottom: 0 
-            // align-content: 
-            align-content: start
-            #nav-links, #nav-theme-toggle 
-                display: flex
-                flex-direction: vertical
-                flex-wrap: wrap
-                // margin-top: 1rem
-                flex-basis: 100%
-                &:after
-                    content: ""  
-                
-                a, label
-                    font-family: var(--pfont)
-                    margin-left: 0
-                    // padding 1rem 0
-                    // flex-basis: 100%
-                    justify-self: left
-                    text-align: left
-                    font-size: 2.6rem   
-                    &:after
-                        content: ""  
 
+#unfilter
+    display none
 #new-index
     #back-home
         display: none
-        // +narrowerthan(800px)
-        //     display: 
+        
+    #unfilter
+        display: block
+        padding-right: 3vw
+        font-size: .75rem
+        text-transform: uppercase;
+        letter-spacing: -0.025em
+        font-weight: 500
+
+#top-nav
+    #nav-filters a
+        transition: color 300ms ease, filter 300ms ease-in-out
+
+    #nav-filters:hover a
+        +widerthan(1400px)
+            filter blur(4px)
+    #nav-filters a:hover
+        +widerthan(1400px)
+            filter blur(0px)
+            
+        &#nav-about, #unfilter
+        &#ux_
+        &#graphic_
+            color var(--customCol)
+        // #photo_
+        // #threedee_
+
+        // #other_
+ 

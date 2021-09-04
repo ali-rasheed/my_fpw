@@ -1,43 +1,129 @@
-mixin grid-item(title,link,desc,tiltm,image,cl)
+mixin grid-item(title,link,desc,image,cl)
     //- - var link = "arcteryx" + end    
-    a(class=cl data-tilt-startX=tiltm href=link)
+    a(href=link class=cl ).grid-item&attributes(attributes)
+        .project-img
+            img(data-src=image, src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E" alt="").lazy
         .proj-title
             h1=title
-                .genre=desc
-        .project-img
-            img(src=image, alt="").maskable
-        
-doctype html
+            .genre=desc
+         
+doctype html 
 html(lang='en')
     head
         include ./includes/head1.pug
         title Aliasger Rasheed
-    body.index
+    body#new-index.new-index.index-proj
+        - var home = "/"
         - var end = ".html"
-        - var home = "index1.html#"
 
         header 
             include ./includes/nav2.pug   
         main#grain
-            //- section.define 
-            //-     h2 Ali: A designer who unabashedly wants to design to  help people and make beautiful things 
-            section#index-grid
-                //- -var tiltp="8"
+            section#intro 
+                //- img#intro-cover(src="imgs/projects/index-cover.jpg", alt="", )
+                
+                .index-slide#intro-cover
+                    img(src="imgs/projects/index-cover.jpg")   
+                    img(src="imgs/projects/natural.jpg")   
+                    img(src="imgs/projects/honest.jpg")   
+                    img(src="imgs/projects/arcy2.jpg")   
+                    img(src="imgs/projects/threads-cover.jpg")   
+                    img(src="imgs/projects/spec.jpg")   
+                h1 
+                    em Ali
+                    span asger
+                        
+                    span Rasheed 
+                
+                .copy
+                    h4.desc A designer &amp; photographer who unabashedly creates for good, for education, for delight, for beauty, for value.
+        
+                    h4.loc
+                        div Open to Work
+                        div Canada ~ World
+                        div Remote 
+                h4.links 
+                    a(href="https://www.linkedin.com/in/aliasger-rasheed/" target="_blank").fab.fa-linkedin        
+                    a(href="https://www.instagram.com/allegoraphy/" target="_blank").fab.fa-instagram
+                    a(href="https://github.com/ali-rasheed/" target="_blank").fab.fa-github
+                    a(href="https://www.figma.com/@the_maker/" target="_blank").fab.fa-figma 
+
+                //- #nav-theme-toggle  
+                    input(id="adjust", name="modeToggle", type="checkbox") 
+                    label#modeLbl(for="adjust")      
+                #nav-theme-toggle  
+                    input(id="adjust", name="modeToggle", type="checkbox") 
+                    label#modeLbl(class="" for="adjust")      
+
+                //- input(type="text" size="3")#mx
+            section#expertise 
+                h4 Services
+                h2.expertise-list
+                    span.col-exp 
+                        em Experience
+                        |  Design/Strategy, 
+                    span.col-web 
+                        em Web
+                        |  Design &amp; Dev, 
+                        
+                    span.col-graphic 
+                    
+                        em  Graphic 
+                        |&amp; 
+                        em  Visual  
+                        | Design,
+                        |  
+                    span.col-photo
+                        //- |Photography
+                        span.shake-little.shake-constant Photography
+                        |,
+                        |
+                    span.col-3D 
+                        em 3D
+                        |  Design  &nbsp;
+
+   
+            section#projects
+                h4 Projects
+
+            section#index-grid-2
+                //- -var tiltp="8" 
                 //- -var tilts="-8"
 
-                +grid-item("Arc'teryx","arcteryx.html","service design for product care",tiltp,"imgs/arcy/cover.jpg",w-reg)
-                 
-                +grid-item("TPR Bords De Plateau"
-                ,"tpr.html","graphic & interaction design ",tiltp,"imgs/tpr/cover2.jpg",arcy)
-
-                +grid-item("UNESCO Lodestar","unesco.html","ux designing education through World Heritage",tiltp,"imgs/unesco/cover.jpg",arcy)
+                +grid-item("Arc'teryx","arcteryx.html","service design for product care","imgs/arcy/cover.jpg","item50 ux threedee")
 
                 +grid-item("Graphic Archive.","gd.html",
-                "professional & personal projects; experiments",tilts,"imgs/projects/posterjam.png")
+                "Collection of Curated Graphic/Visual Design","imgs/projects/honest.jpg"," item33 graphic")
+                +grid-item("Natural Landscapes"
+                ,"photo-natural.html","Gallery A","imgs/projects/natural2.jpg","item50 photo")
+ 
+                +grid-item("Theatre Populaire Romand"
+                ,"tpr.html","graphic & interaction design ","imgs/tpr/cover2.jpg","item50 ux graphic")
 
-                //- +grid-item("Threads To Heaven","threadstoheaven.html","speculative design exploring the choice of a 'good death'",tilts,"imgs/projects/spec.jpg")
 
-                +grid-item("Gakko 2019","gakko.html","a summer of type, graphic design & new media",tiltp,"imgs/projects/gakko.jpg")
+
+                +grid-item("UNESCO Lodestar","unesco.html","ux designing education through World Heritage","imgs/projects/unesco.jpg","item50 ux")
+
+                +grid-item("3D Archive.","threedee.html",
+                "Curated Collection of Work","imgs/projects/threedee.jpg"," item33 threedee")
+
+                +grid-item("Anthropogenic Landscapes"
+                ,"photo-anthro.html","Gallery B","imgs/projects/anthro.jpg","photo item33")
+                +grid-item("People"
+                ,"photo-people.html","Gallery C","imgs/projects/people.jpg","photo item33")
+
+                +grid-item("Architecture"
+                ,"photo-anthro.html","Gallery D","imgs/projects/arch.jpg","photo item25")
+
+
+                +grid-item("Still Life"
+                ,"photo-anthro.html","Gallery E","imgs/projects/still.jpg","photo item25")
+
+
+                +grid-item("Threads To Heaven","threadstoheaven.html","speculative design exploring the choice of a 'good death'","imgs/projects/spec.jpg","other threedee item33")
+
+                +grid-item("Gakko 2019","gakko.html","a summer of type, graphic design & new media","imgs/projects/gakko.jpg","graphic other item33")
+
                 
                 //- - var link = "javascript:;"       
                 //- a(href=link).grid-item.in-progress
@@ -74,6 +160,5 @@ html(lang='en')
 
         footer
             include ./includes/footer1.pug 
-
-        
-        
+            script
+                include ./pug-js/index.js 

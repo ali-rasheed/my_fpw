@@ -17,8 +17,8 @@ html(lang='en')
   head
     include ./includes/head1.pug
     title Photography - Ali Rasheed
-  body.photo 
-    - var home = "index1.html#"
+  body.photo.photo-proj 
+    - var home = "/"
 
     header.gallery
       include ./includes/nav2.pug  
@@ -35,7 +35,7 @@ html(lang='en')
         label(for="all-categories") All
  
         input(name="imgFltr", data-filter=".anthro", type="radio")#anthro 
-        label(for="anthro" ) Anthropogenic Landscape
+        label(for="anthro" ) Anthropocenic Landscape
 
 
         input(name="imgFltr", data-filter=".people", type="radio")#human 

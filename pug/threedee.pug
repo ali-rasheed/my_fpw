@@ -11,8 +11,8 @@ html(lang='en')
   head
     include ./includes/head1.pug
     title 3d visualisations - Ali Rasheed 
-  body.threedee 
-    - var home = "index1.html#"
+  body.threedee.threedee-proj 
+    - var home = "/"
 
     header.gallery
       include ./includes/nav2.pug   
@@ -32,13 +32,13 @@ html(lang='en')
 
         +threedee-lazyloaded-lg("wtrmln.jpg","imgs/threedee/wtrmln.gif","Procedurally generated and textured watermelon","w-reg","image") 
 
-        +threedee-lazyloaded-lg("Curator.jpg","imgs/threedee/Curator.png","Procedurally-generated Nebula full of star-dust!","w-half","image")
+        +threedee-lazyloaded-lg("Curator.jpg","imgs/threedee/Curator.png","Procedurally-generated Nebula full of star-dust!","w-reg","image")
         
         +threedee-lazyloaded-lg("nebula.jpg","imgs/threedee/nebula.png","Procedurally-generated Nebula full of star-dust!","w-reg","image")  
         
         +threedee-lazyloaded-lg("dancer.png","imgs/threedee/dancer.png","","w-half","image")  
-        +threedee-lazyloaded-lg("tea.jpg","imgs/threedee/tea.jpg","Procedurally-generated Nebula full of star-dust!","w-half","image")
+        +threedee-lazyloaded-lg("tea.jpg","imgs/threedee/tea.jpg","Procedurally-generated Nebula full of star-dust!","w-reg","image")
         //- +threedee-lazyloaded-lg("wtrmln.png","wtrmln.gif")
            
-    footer
+    footer 
       include ./includes/footer2.pug  

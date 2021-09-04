@@ -18,7 +18,7 @@ ul
         a(href="https://www.figma.com/@the_maker/" target="_blank").fab.fa-figma 
     li.flex-b.page-links     
         a(href="assets/Aliasger-Rasheed_Resume.pdf" target="_blank").in-txt Résumé
-        a(href="/references.html").in-txt Citations
+        a(href="/references.html") Citations
     //- li.flex-b.r10
 small 
     |Coded by  <em>&nbsp;Me&nbsp;</em> ⨯ Powered by servers somewhere  
@@ -28,7 +28,9 @@ small
 
 include ./script-imports.pug
 include ./photo-imports.pug
+//- script 
+    include ../../ali-rasheed.github.io/js/main.js 
 
 script(src="js/main.js")
-
 script(src="js/effects.js")
+ 

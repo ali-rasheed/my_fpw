@@ -19,10 +19,10 @@ module.exports = function (grunt) {
 		stylus: {
 			compile: {
 				options: {
-					sourcemap: {
-						inline: true,
-						comment: true 
-					},
+					// sourcemap: {
+					// 	inline: true,
+					// 	comment: true 
+					// },
 					// cwd: 'stylus',  // set working folder / root to copy
 					// src: '**/*', 
 					expand: true,

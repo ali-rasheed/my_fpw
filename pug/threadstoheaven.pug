@@ -16,8 +16,8 @@ html(lang='en')
         include ./includes/head1.pug
         title Threads to Heaven - Ali Rasheed
 
-    body 
-        - var home = "index1.html#"
+    body.threedee-proj 
+        - var home = "/"
 
         header
             include ./includes/nav2.pug   
@@ -70,6 +70,7 @@ html(lang='en')
  
 
             section.grid.x12c
+
                 h2.l-sect The Gist
                 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9dX4ImkhJeM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="lr-sect"></iframe>
 
@@ -151,7 +152,7 @@ html(lang='en')
 
             //- section.grid.x12c
                 h3.l-sect Mycelium&Me Website Prototype
-                iframe(src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F5IZL1IuzMVTuZeYEhT1pAY%2FThreads-to-Heaven-Websites%3Fnode-id%3D528%253A201%26scaling%3Dcontain" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" allowfullscreen).lr-sect
+                iframe(src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F5IZL1IuzMVTuZeYEhT1pAY%2FThreads-to-Heaven-Websites%3Fnode-id%3D528%253A201%26scaling%3Dcontain", style="border: 1px solid rgba(0, 0, 0, 0.1);", width="800", height="450", allowfullscreen).lr-sect
                 //- section.grid.x20c
                     h2.l-sect Project Proposals
                     p.ml-sect After choosing death as our provocation area, we proposed 3 concepts for our project

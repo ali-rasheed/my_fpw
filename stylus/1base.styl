@@ -3,16 +3,6 @@
 -------------------VARIABLES------------------
 */
 :root
-    --purple:#d229eb
-    --purple-light:#ed6aff
-    --purple-dark:#9b04b0
-    --purpler: 210;
-    --purpleg: 41;
-    --purpleb: 235;
-
-    --purpleh:292;
-    --purples:83;
-    --purplel 54;
     --grey:hsl(0,0%,20%)
     --light-white: #e4e4e4
     --light-white-rgb: 255,255,255;
@@ -21,46 +11,31 @@
     --light-black:#000
     
     --dark-white: #e2e2e2
-    --dark-black: #141414 
+    --dark-black: #23242A 
     --dark-black-rgb: 30,30,30;
 
-    
-    --purpleh:292;
-    --purples:83%; 
-    --purplel 54%; 
- 
-    // --pfont: "Krona one"
-    --pfont: "Mazius Display Regular"
-    // --pfont: "Almarena Display"
-    // --sfont: "HK Grotesk"
-    // // --sfont: 'neue-haas-grotesk-display'
-    // --sfont: "Happy Times at the IKOB New Game Plus Edition" 
-    // --sfont: "Piazzolla"
-    --sfont: "cabinetgrotesk" 
-    --sfont: 'General Sans'
-    // --sfont: 'Satoshi' 
-    // --sfont: "Clash Grotesk" 
-    
 
-    --pcol: var(--purple) 
+ 
+    --pfont: "Mazius Display Regular"
+    --sfont: "cabinetgrotesk"  
+    --sfont: 'General Sans'
+
+    --blend: lighten
+    --exposure: 50%
+
     --bgcol: var(--dark-black)
-    --scol: var(--purple-light)
-    --tcol: var(--purple-dark)
-    --slctcol var(--purple)
     --bgcol-rgb: var(--dark-black-rgb)
     --txtcol: var(--dark-white)    
-    --reg: 300 
+    --reg: 400 
     --bold: 600 
     --mid: 400
 
     --s-line-space:  1.61
+    --stroke: .8px
 
     --tfont: "Mazius Display Italic"
-    --qfont: "Mazius Display Extra Italic"
-    
-    --qfont: "Spitzkant" 
-    --pfont: "Spitzkant" 
-    --tfont: "Spitzkant" 
+    --qfont: "Mazius Display Extra Italic" 
+     
 
     --p-std-weight: normal  
      
@@ -80,10 +55,11 @@
     --slctcol var(--magenta)
     --scol: var(--magenta-light)
     --tcol: var(--magenta-dark)
+    --customCol: var(--magenta)
 
-    footer 
+    footer  
         --fa-primary-color var(--bgcol)
-
+ 
 @css {
 :root{
     --purple-hsl: var(--purpleh),var(--purples),var(--purplel);
@@ -91,20 +67,20 @@
 }
 }
 
-/*------------DARK MODE------------*/
+/*------------DARK                       MODE------------*/
 
 [data-theme = "light"]
+    --blend: darken
+    --exposure: 150%
     --reg: 400
     --mid: 500
-    --bold: 700
+    --bold: 600
     --s-line-space:  1.6 
     --txtcol: var(--light-black)
     --bgcol: var(--light-white)
     --bgcol-rgb: var(--light-white-rgb)
     --lum: 70%;  
-
-    --scol: var(--purple-dark)
-    --tcol: var(--purple-light)
+    --stroke:1px
     --scol: var(--magenta-dark)
     --tcol: var(--magenta-light)
 
@@ -119,3 +95,66 @@ html
 @media screen and (prefers-color-scheme: dark)
     html
         content: "dark"
+
+
+
+:root
+    --colA1: #E4E4E6
+    --colA2: #1D1D1D
+    --colB1: #D0D8E9
+    --colB2  #263842
+    --colB3  #005999
+    --colC1: #D1BCDF
+    --colC2: #3C2B3F
+    --colC3: #7B24D3
+    --colD1: #D6BBCA
+    --colD2: #3F2B36
+    --colD3: #3F2B36
+    --colE1: #F2E4CE
+    --colE2: #3D2310
+    --colE3: #FF7D04
+
+[data-theme = "light"]
+
+    .index-proj
+        --customCol: var(--magenta)
+
+        --bgcol: var(--colA1)
+
+    .ux-proj
+        --customCol: var(--magenta)
+        --bgcol: var(--colB1)
+
+    .graphic-proj        
+        --customCol: var(--magenta)
+
+        --bgcol: var(--colC1)
+
+    .threedee-proj
+        --customCol: var(--magenta)
+        --bgcol: var(--colD1)
+
+    .photo-proj
+        --customCol: var(--magenta)
+        --bgcol:var(--colE1)
+        
+[data-theme = "dark"]
+
+    .index-proj
+        --bgcol: var(--colA2)
+        --customCol: var(--magenta)
+    .ux-proj
+        --bgcol: var(--colB2)
+        --customCol: var(--magenta)
+
+    .graphic-proj        
+        --bgcol:var(--colB2)
+        --customCol: var(--magenta)
+
+    .threedee-proj
+        --bgcol:  var(--colB2)
+        --customCol: var(--magenta)
+
+    .photo-proj
+        --bgcol: var(--colB2)
+        --customCol: var(--magenta)

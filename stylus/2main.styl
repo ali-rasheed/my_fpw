@@ -28,13 +28,18 @@ narrowerthan(var)
 a
    color: var(--p-col-w)
    text-decoration: none
+   *
+      cursor: url(ex.svg) 30 30, auto
+   cursor: url(ex.svg) 30 30, auto
+   // backdrop-filter: blur(5px)
+
 
 button
    background: none;
    border: none;
    margin 0
    padding: 0
-   
+      
 /*------------------- GLOBAL STYLING -------------------*/  
 
 html
@@ -45,13 +50,13 @@ html
 *
    
    font-feature-settings: "calt" 1, "case" 1, "dlig" 1, "ordn" 1, "ss01" 1, "ss03" 1;
-   font-family: var(--sfont), "Palatino Linotype" ,serif
+   font-family: var(--sfont),  Helvetica, Arial,sans-serif
    font-display: swap
    margin: 0
    padding: 0 
    cursor: url(plus.svg) 30 30, auto
    box-sizing: border-box 
-   transition: background-color ease-out 400ms, color ease-out 400ms
+
 
 
 body,footer,header 
@@ -93,6 +98,11 @@ h1
    font-weight: 400 
    font-family: var(--qfont), serif
    font-size: 7.5rem
+   @supports (-webkit-text-stroke: var(--txtcol) var(--stroke))
+      text-stroke:var(--txtcol) var(--stroke)
+      -webkit-text-stroke: var(--txtcol) var(--stroke)
+      color transparent
+
 h2 
     font-family: var(--qfont), serif
     font-weight: 400 
@@ -103,26 +113,6 @@ h2
         font-size: 2rem 
 em   
    font-family: var(--qfont)
-// #project
-//     h2.l-sect 
-//         display: grid
-//         grid-column: 1fr
-//         *
-//             grid-column: 1/-1
-//             grid-row: 1/2  
-//         &::after
-
-//             height: 2px 
-//             content ""
-//             display inline-block 
-//             // width 100%
-//             flex-grow: 2
-//             min-width: 2px
-//             border-bottom: solid 1px #fff;
-//             position: relative;
-//             left: 0;
-//             // top: 50%;
-//             z-index: 1;
 
 h3
    font-family: var(--pfont), serif 
@@ -202,7 +192,7 @@ mark
 
 
 em
-   font-style italic
+   // font-style italic
 
     
 ul 
@@ -243,7 +233,9 @@ li
 
 img
    display block
-
+   z-index: 21
+video
+   z-index: 21
 main
    padding-bottom: 4rem
    max-width 100vw
@@ -252,7 +244,7 @@ main
 
 h1
    font-size: 8vw
-   z-index 2 
+   z-index 2  
 
    +narrowerthan(1400px)  
       font-size: 12vw     
@@ -359,10 +351,11 @@ hr
 //    border-width: medium 
    background-clip: padding-box;
    transition: background-color ease-out 200ms, border-color ease-out 200ms 
-   cursor: url(ex.svg) 30 30, auto
    display inline-block
    &:hover, &&:focus
     //   background-color: var(--magenta-hlight);
+    color: var(--scol)
+    
 
 
    &:after
@@ -457,7 +450,7 @@ p i
 }  
 
 .slick-next, .slick-prev
-   font-size: 0
+   // font-size: 0
    font-family: "Font Awesome 5 Pro"
    width: 50%
    position absolute
@@ -465,7 +458,7 @@ p i
    z-index: 5
    transition: opacity ease-out 100ms
    background: black
-   height calc(100% - 1.25rem)
+   height 100%
    opacity 0  
    +narrowerthan(1400px)
       top: 50%
@@ -526,8 +519,16 @@ p i
          font-weight: 900
          color: var(--pcol)
 
+.slick-list
+   height: 100%
+   .slick-track
+      max-height: 100%
+      height: 100%
 
-
+      overflow: none
+      .slick-slide
+         max-height: 100%
+         height: 100%
 .colorH
    color: textcol
 
@@ -538,25 +539,25 @@ p i
    padding 0em 2.5rem 0.5em 0rem 
 
 .lb-data .lb-caption
-    font-weight: 400 !important
-    font-size: .9rem !important
+   font-weight: 400 !important
+   font-size: .9rem !important
 
 .long-bar
-    grid-column: 1/2
-    grid-row: 1/-1
-    background-color: var(--pcol)
+   grid-column: 1/2
+   grid-row: 1/-1
+   background-color: var(--pcol)
 
 
 .flex-s
-    margin 0 calc(100vw/12) 
-    .flex-i
-        padding 1rem
+   margin 0 calc(100vw/12) 
+   .flex-i
+      padding 1rem
 
-        flex-basis: 20% 
-        flex-grow 1
-        flex-shrink: 1
-        p, li
-            max-width 30ch
+      flex-basis: 20% 
+      flex-grow 1
+      flex-shrink: 1
+      p, li
+         max-width 30ch
 
         // flex
         // flex-grow: 2   
@@ -565,29 +566,29 @@ p i
             // flex-grow 1 
 
 .it
-    font-style: italic
+   font-style: italic
 
 
 .quote
-    q, blockquote
-        font-weight: var(--mid)
-    figcaption
-        display: inline-block
-        padding-left: 0 
+   q, blockquote
+      font-weight: var(--mid)
+   figcaption
+      display: inline-block
+      padding-left: 0 
 
 blockquote,q
 
-    quotes: "“" "”" "‘" "’";
+   quotes: "“" "”" "‘" "’";
 
-    &::before
-        content: open-quote;
+   &::before
+      content: open-quote;
 
-    &::after 
-        content: close-quote; 
+   &::after 
+      content: close-quote; 
 
 
 .shad
-    box-shadow: 1px 1px 4px rgba(131,131,131,.5);
+   box-shadow: 1px 1px 4px rgba(131,131,131,.5);
 figure.lr-sect.flex
    
 
@@ -604,5 +605,40 @@ figure
 img, video
    z-index: 21 
 
-      
+.bord
+   --b:2px;   /* thickness of the border */
+   --c:var(--pcol);   /* color of the border */
+   --w:.25em;  /* width of border*/
+   transition: background 200ms ease
+   &:hover
+      --w:.5em
+
+   padding .25em
+   border:var(--b) solid transparent; /* space for the border */
+   background:
+      linear-gradient(var(--c),var(--c)) top left,
+      linear-gradient(var(--c),var(--c)) top left,
+      linear-gradient(var(--c),var(--c)) bottom left,
+      linear-gradient(var(--c),var(--c)) bottom left,
+      linear-gradient(var(--c),var(--c)) top right,
+      linear-gradient(var(--c),var(--c)) top right,
+      linear-gradient(var(--c),var(--c)) bottom right,
+      linear-gradient(var(--c),var(--c)) bottom right;
+   background-size:var(--b) var(--w),var(--w) var(--b);
+   background-origin:border-box;
+   background-repeat:no-repeat;
+
+   // position:relative;
+   // // margin:20px auto;
+   // // padding-bottom:20%;
+   // // background-color: var(--bgcol);
+   // border:5px solid var(--txtcol);
+   // &::after
+   //    position:absolute;
+   //    top:-1px; left:-1px;
+   //    border:5px solid var(--bgcol);
+   //    height:100%;
+   //    width:100%;
+   //    border-radius: 10%;
+
 //  #grain > * { position:relative; }
