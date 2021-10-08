@@ -77,8 +77,8 @@ h1,h2,h3,h4,h5,h6,.big, .med, li,figcaption,.email
 
 p,li, a 
    font-weight: var(--reg) 
-   letter-spacing: .35px;
-
+   letter-spacing: -.35px;
+   
 p
    // text-indent: 1rem
    margin-bottom: 1rem   
@@ -98,10 +98,11 @@ h1
    font-weight: 400 
    font-family: var(--qfont), serif
    font-size: 7.5rem
-   @supports (-webkit-text-stroke: var(--txtcol) var(--stroke))
-      text-stroke:var(--txtcol) var(--stroke)
-      -webkit-text-stroke: var(--txtcol) var(--stroke)
-      color transparent
+   +widerthan(1400px)
+      @supports (-webkit-text-stroke: var(--txtcol) var(--stroke))
+         text-stroke:var(--txtcol) var(--stroke)
+         -webkit-text-stroke: var(--txtcol) var(--stroke)
+         color transparent
 
 h2 
     font-family: var(--qfont), serif

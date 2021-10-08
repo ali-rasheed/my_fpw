@@ -30,11 +30,11 @@ narrowerthan(var)
         transform-style: preserve-3d
         transform: perspective(1000px)
         display: grid
-        margin-top: 12vh
+        margin-top: 14vh
         // margin-left: 2rem
 
         grid-template-columns: repeat(12,1fr)
-        grid-template-rows: repeat( 121,auto)
+        grid-template-rows: repeat( 12,auto)
         // +narrowerthan(800px)
 
         grid-template-rows: auto
@@ -50,9 +50,10 @@ narrowerthan(var)
             font-family: var(--pfont)
             justify-self: stretch; 
             align-self: start
-            @supports (-webkit-text-stroke:1px var(--txtcol))
-                -webkit-text-stroke: var(--stroke) var(--txtcol)
-                color transparent
+            +widerthan(1400px)
+                @supports (-webkit-text-stroke:1px var(--txtcol))
+                    -webkit-text-stroke: var(--stroke) var(--txtcol)
+                    color transparent
             
             // text-align: center
             vertical-align: top;
@@ -67,10 +68,15 @@ narrowerthan(var)
                 font-size: inherit
                 padding-right: .5em
                 font-family: inherit
-                line-height: inherit
-                color inherit
-                -webkit-text-stroke: inherit
-                // font-size: inherit
+                line-height: inherit            
+                
+                +narrowerthan(500px)
+                    padding-right: 2vw
+                +widerthan(1400px)
+
+                    color inherit
+                    -webkit-text-stroke: inherit
+                    // font-size: inherit
         h4
             font-family: var(--sfont)
             font-size: 1rem 
@@ -78,11 +84,15 @@ narrowerthan(var)
             max-width:  45ch
             padding-right: 2rem
             box-sizing: content-box 
-            margin-top: .5rem
+            // margin-top: .5rem
             &.desc
                 grid-column: 2/5
                 // grid-column-end: 2
                 grid-row: 3/4
+                +narrowerthanthan(1400px) 
+                    grid-column-end: 6
+                +narrowerthan(600px)
+                    grid-column: 2/-2
             &.loc
                 grid-column: 2/5
                 grid-row: 4/5 
@@ -93,6 +103,12 @@ narrowerthan(var)
             justify-content: flex-end
             // labelwriting-mode: vertical-rl
             padding-bottom: 5vh 
+
+            +narrowerthan(500px)
+                grid-column:  11/13
+                padding-bottom: 0
+
+
             input#adjust[type=checkbox]
                 display: none;  
 
@@ -126,6 +142,8 @@ narrowerthan(var)
                 z-index 500        
                 +narrowerthan(1400px)
                     font-size: .9vw
+                +narrowerthan(600px)
+                    font-size: 3vw
                 text-transform: uppercase;
                 letter-spacing: -0.025em
                 
@@ -163,18 +181,24 @@ narrowerthan(var)
             height  auto
             h1 
                 grid-row 2/3
-                font-size: 10vw
-
+                font-size: 12vw
+                margin-top: 1rem
                 span
                     font-size: inherit
+            h4
+                padding 0 
             #intro-cover
                 grid-column: 1/-1
                 // display none
+            h4.desc
+                grid-column: 1/-2
+                padding-left: calc(100vw/12) 
             // .copy
-            .loc
-                grid-column: 2/4
-            .desc
-                grid-column: 3/4
+            h4.loc
+                grid-column: 2/-4
+            h4.links
+                grid-column: 2/-2
+                grid-row: auto
     #projects
         margin-top: 15vh
     #expertise, #projects
@@ -199,15 +223,16 @@ narrowerthan(var)
         h2.expertise-list
             grid-column: 2/-2
             font-family: var(--pfont)
+            color var(--txtcol)
+            +widerthan(1400px)
+                @supports (-webkit-text-stroke: var(--txtcol) var(--stroke))
+                    text-stroke:var(--txtcol) var(--stroke)
+                    -webkit-text-stroke: var(--txtcol) var(--stroke)
 
-            @supports (-webkit-text-stroke: var(--txtcol) var(--stroke))
-                text-stroke:var(--txtcol) var(--stroke)
-                -webkit-text-stroke: var(--txtcol) var(--stroke)
-                color transparent
+                    color transparent
             span
                 line-height: 1.25
                 font-size: 6.5vw
-                  
                 +narrowerthan(1400px)
                     font-size: 2.25rem
                 +narrowerthan(500px)
@@ -215,32 +240,23 @@ narrowerthan(var)
                 font-family: inherit
                 color inherit
 
-                // &.col-exp
-                    // &:after
-                    //     ba
             .col-3D 
                 text-shadow: 5px 5px var(--pcol)
-                font-size: 2em 
+                // font-size: 2em 
                 +narrowerthan(500px)
                     text-shadow: 3px 3px var(--pcol)
             .col-graphic
-                // color var(--pcol) !important
-                // background-clip: text
-                // // -webkit-background-clip: text
-                // text-stroke: initial
-                // -webkit-text-stroke: initial
-                // background: -webkit-linear-gradient(top, red, blue);
 
-                // background linear-gradient(40deg,  var(--tcol)  var(--scol));
-                @supports (-webkit-text-stroke: 1px blue) 
-                    animation vdesign infinite linear 3s
-                    background -webkit-linear-gradient(40deg, var(--pcol),var(--colB3),var(--colC3),var(--pcol),var(--colB3))
-                    background-size: 100% 800%;
+                +widerthan(1400px)
+                    @supports (-webkit-text-stroke: 1px blue) 
+                        animation vdesign infinite linear 3s
+                        background -webkit-linear-gradient(40deg, var(--pcol),var(--colB3),var(--colC3),var(--pcol),var(--colB3))
+                        background-size: 100% 800%;
 
-                    -webkit-text-fill-color: var(--bgcol);
-                    -webkit-background-clip: text;
-                    -webkit-text-stroke: 3px transparent;
-                    color:var(--bgcol) !important
+                        -webkit-text-fill-color: var(--bgcol);
+                        -webkit-background-clip: text;
+                        -webkit-text-stroke: 3px transparent;
+                        color:var(--bgcol) !important
                 // 
                 // em
                 // padding-right 1rem
@@ -296,9 +312,10 @@ narrowerthan(var)
                     right: 10% 
                     filter: blur(8rem)
                     text-align: center
+
                 transition: filter 250ms ease-out
                 h1 
-                    // transform: translateZ(20px)
+                    // transform: translateZ(20px)F
                     font-size: 3.5rem
                     grid-column: 1/-1
                     margin-top: .5em
@@ -306,6 +323,11 @@ narrowerthan(var)
                     // @supports (-webkit-text-stroke: 1px blue) 
                     //     -webkit-text-stroke: var(--stroke) var(--txtcol)
                     //     color transparent
+                    +narrowerthan(1400px)
+                        text-stroke: none
+                        -webkit-text-stroke:none
+                        -webkit-text-stroke initial initial
+                        color var(--txtcol)
                     +narrowerthan(1000px)
                         font-size 1.5rem
                         font-weight: 500
@@ -313,6 +335,7 @@ narrowerthan(var)
 
                 .genre 
                     // transform: translateZ(20px)
+                    font-weight: 500
                     text-transform: uppercase
                     +narrowerthan(1000px)
                         font-size: .9rem
@@ -335,7 +358,7 @@ narrowerthan(var)
                 
             &:hover,&:focus
                 .proj-title
-                
+                    
                     filter: blur(0)
                 img
                     filter: blur(1rem)  brightness(var(--exposure))

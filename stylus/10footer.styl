@@ -17,24 +17,24 @@ footer
     margin-top: 2rem
   padding-bottom: 1rem   
   padding-top: 3rem
-  margin-bottom: 1rem
+  // margin-bottom: 1rem
   bottom: 0
   width: 100%
-  text-align: center
   z-index: 1
   margin-right: 10vw
-  justify-content: center 
-  align-items: center
   ul 
-
-    margin: 0 0.5rem 
+    border-top:  1px solid var(--txtcol)
+    margin 1rem auto
+    // margin: 0 0.5rem 
+    padding-left: 4vh
     display: flex 
-    justify-content:   center
+
+    justify-content: space-between;
     flex-wrap: wrap
     z-index: inherit
     li
       z-index: inherit
-      font-size: 1rem 
+      font-size: .9rem 
       margin 0.5rem 
       padding 0
       +narrowerthan(500px)
@@ -43,7 +43,6 @@ footer
         // margin: .3rem 
       line-height: initial
       flex-wrap: wrap
-      justify-content: center
 
       em
         color var(--pcol)  
@@ -70,12 +69,10 @@ a
   hr
     // height: 1px
     border-left: none 
-    // border-bottom: none 
     border-right:  none 
     
     border-top: .5px solid var(--txtcol)
     opacity .5
-    // padding-bottom: 2rem
     margin-top: 2rem
     margin-bottom: 0rem  
     // height 2px  
@@ -152,7 +149,6 @@ small
 
     // padding .1rem
     border-radius: 5px
-    text-align: center
     
     width: auto
     max-width 90vw

@@ -39,14 +39,14 @@ nav#nav2
             font-size: 1.5rem
         padding-right: 2.5vw
         color inherit
-        
+        padding-bottom: .5rem
+
     .caption
         font-size: .75rem 
         +narrowerthan(1400px)
             font-size: 1.1vw
         text-transform: uppercase;
         letter-spacing: -0.025em
-        padding-top: .5rem
         word-wrap: break-word
         overflow-wrap: break-word
         max-width: 95%
@@ -182,9 +182,11 @@ nav#nav2
                 height: 100vh
                 width: 100vw
                 max-height: 100vh  
+                // backdrop-filter: blur(15px);
             @css{
                 .space{
             background-color: rgba(var(--bgcol-rgb),.6);
+
                     } 
                 }
 
