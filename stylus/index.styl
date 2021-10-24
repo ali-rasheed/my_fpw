@@ -8,7 +8,6 @@ narrowerthan(var)
     @media condition
         {block}
 
-             
 .in-progress
     *
         opacity 60%
@@ -36,15 +35,16 @@ narrowerthan(var)
         grid-template-columns: repeat(12,1fr)
         grid-template-rows: repeat( 12,auto)
         // +narrowerthan(800px)
+        grid-gap: calc(.5*var(--side-margin))
 
         grid-template-rows: auto
-        height: 88vh
+        height:86vh
         width 100%
         box-sizing: border-box
-        padding: 0vh 8vh 0vh 8vh
-        .copy 
+        padding: 0 var(--side-margin)
+        .copy  
             grid-row: 3/4
-            grid-column: 2/5
+            // grid-column: 1/
         h1
             transform: translateZ(20px)
             font-family: var(--pfont)
@@ -82,11 +82,11 @@ narrowerthan(var)
             font-size: 1rem 
             border-top: solid 1px
             max-width:  45ch
-            padding-right: 2rem
+            // padding-right: 2rem
             box-sizing: content-box 
             // margin-top: .5rem
             &.desc
-                grid-column: 2/5
+                grid-column: 1/5
                 // grid-column-end: 2
                 grid-row: 3/4
                 +narrowerthanthan(1400px) 
@@ -94,11 +94,11 @@ narrowerthan(var)
                 +narrowerthan(600px)
                     grid-column: 2/-2
             &.loc
-                grid-column: 2/5
-                grid-row: 4/5 
+                grid-column: 1/5
+                grid-row: 3/4 
         #nav-theme-toggle
             grid-column: 12/13
-            grid-row 4/5
+            grid-row 3/4
             align-self: first-baseline
             justify-content: flex-end
             // labelwriting-mode: vertical-rl
@@ -168,7 +168,7 @@ narrowerthan(var)
             overflow: none
             mix-blend-mode: var(--blend)
         h4.links
-            grid-row: 4/5
+            grid-row: 3/4
             grid-column: 5/9
             display: flex
             font-size: 1.5rem
@@ -204,15 +204,18 @@ narrowerthan(var)
     #expertise, #projects
         margin-top: 5rem
         display: grid
-        grid-template-columns: 8vh 1fr 10fr 1fr 8vh 
+        grid-template-columns: repeat(12,1fr)
+        margin-left: var(--side-margin)
+        margin-right: var(--side-margin)
+        grid-gap: calc(.5*var(--side-margin))
         +narrowerthan(1400px)
-            grid-template-columns: 1fr 10fr 1fr
+            grid-template-columns: var(--side-margin) 10fr var(--side-margin)
 
         // .expertise-list
         //     display: flex 
         h4
-            grid-column: 2/-2
-            text-align: center 
+            grid-column: 1/4 
+            // text-align: center 
             font-size: 2rem
             +narrowerthan(500px)
                 font-size: 1.5rem
@@ -221,7 +224,7 @@ narrowerthan(var)
             font-family: var(--sfont)
 
         h2.expertise-list
-            grid-column: 2/-2
+            grid-column: 1/-1
             font-family: var(--pfont)
             color var(--txtcol)
             +widerthan(1400px)
@@ -273,9 +276,14 @@ narrowerthan(var)
 
     #index-grid-2 
         // display: grid
-        width: 100%
+        // width: 100%
         // display: flexbox
-        // grid-template-columns: 1fr 1fr 1fr
+        // // grid-template-columns: 1fr 1fr 1fr
+        margin  var(--side-margin)
+        // +narrowerthan(1000px)
+        //     margin 0
+
+        // padding: 0 var(--side-margin) 
         a.grid-item
             // display flexbox
             box-sizing: border-box 
@@ -284,23 +292,24 @@ narrowerthan(var)
             grid-template-columns: 1fr
             grid-template-rows: 1fr 1fr
             // border solid 1px black
-            padding 2.75rem
-            +narrowerthan(1000px)
-                padding 1vw 
+            // padding 2.75rem
+            // margin-bottom var(--side-margin)
+            // +narrowerthan(1000px)
+            //     padding var(--side-margin)
 
             &.item50
-                width calc(100%*6/12) 
+                width calc(100%*6/12 - 2*var(--side-margin)) 
                 +narrowerthan(1000px)
-                    width 100vw
-            &.item33
+                    width 100%
+            &.item33 
                 width calc(100%*4/12) 
                 +narrowerthan(1000px)
-                    width calc(99vw*.5)
+                    width calc(100%*.5 - 2*var(--side-margin))
                 
             &.item25
                 width calc(100%*3/12) 
                 +narrowerthan(1000px)
-                    width calc(99vw*.5)
+                    width calc(100%*.5 - 2*var(--side-margin))
 
             .proj-title
                 grid-row: 3/4

@@ -1,0 +1,20 @@
+.bg-canvas
+        <canvas class="noise" id="noise"></canvas>
+ul
+    li.flex-b
+        .comments Coded by  &nbsp;Me&nbsp; ⨯ Powered by servers somewhere
+        .comments Copyright © 2019 Aliasger Rasheed
+    li.flex-b.page-links      
+        a(href="assets/Aliasger_Rasheed_Resume.pdf" target="_blank").in-txt Résumé
+        a(href="/references.html").in-txt Citations
+        a(href="mailto:aliasgerrasheed@outlook.com") aliasgerrasheed@outlook.com
+
+
+include ./script-imports.pug
+include ./photo-imports.pug 
+//- script 
+    include ../../ali-rasheed.github.io/js/main.js 
+
+script(src="js/photog.js")
+script(src="js/main.js")
+script(src="js/effects.js")

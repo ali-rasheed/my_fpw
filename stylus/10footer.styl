@@ -21,22 +21,26 @@ footer
   bottom: 0
   width: 100%
   z-index: 1
-  margin-right: 10vw
+  // margin-rig ht: 10vw
   ul 
     border-top:  1px solid var(--txtcol)
-    margin 1rem auto
+    margin 1rem var(--side-margin)
+
     // margin: 0 0.5rem 
-    padding-left: 4vh
+    // padding-left: var(--side-margin)
     display: flex 
 
     justify-content: space-between;
     flex-wrap: wrap
     z-index: inherit
     li
+      gap: calc(.25*var(--side-margin))
+      align-items: baseline
+
       z-index: inherit
       font-size: .9rem 
-      margin 0.5rem 
-      padding 0
+      margin 0
+      padding-top: .5em
       +narrowerthan(500px)
         font-size: 0.95rem
         flex-basis: 100%
@@ -56,7 +60,7 @@ footer
       a,button
         align-self: center
         // color: var(--bgcol)
-        margin 0rem 1rem 
+        // margin 0rem 1rem 
 
         +narrowerthan(500px)
           margin .3rem .4rem 
@@ -168,28 +172,6 @@ small
         font-size: inherit
         display inline
 
-
-.tooltip    
-    // text-decoration: underline   
-    margin: 0
-    line-height: 1
-    &:hover ,&:focus ,&:active  
-
-        cursor: url(ex.svg) 30 30, auto
-
-
-    span.fa
-        color: var(--pcol);
-
-    // .popup::after 
-    //   content: "";
-    //   position: absolute;
-    //   top: 100%;
-    //   left: 50%;
-    //   margin-left: -5px;
-    //   border-width: 10px;
-    //   border-style: solid;
-    //   border-color: var(--tcol) transparent transparent transparent
 #mailto
     &:focus
         content: "new draft opened"
@@ -207,6 +189,6 @@ nav
 
 .page-links
   line-height: 1em
-
+  align-content: first baseline;
 textarea
   display: none
