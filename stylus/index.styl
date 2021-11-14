@@ -61,7 +61,7 @@ narrowerthan(var)
             grid-column: 2/6
             margin 0
             line-height: 1 
-            font-size: 7vw
+            font-size: 5.5vw
             em
                 font-size:  inherit
             span 
@@ -226,6 +226,7 @@ narrowerthan(var)
         h2.expertise-list
             grid-column: 1/-1
             font-family: var(--pfont)
+            font-weight: 700
             color var(--txtcol)
             +widerthan(1400px)
                 @supports (-webkit-text-stroke: var(--txtcol) var(--stroke))
@@ -235,7 +236,7 @@ narrowerthan(var)
                     color transparent
             span
                 line-height: 1.25
-                font-size: 6.5vw
+                font-size: 4vw
                 +narrowerthan(1400px)
                     font-size: 2.25rem
                 +narrowerthan(500px)
@@ -315,8 +316,8 @@ narrowerthan(var)
                 grid-row: 3/4
                 +widerthan(1400px)
                     position: absolute 
-                    top 30%
-                    bottom: 30% 
+                    top 20%
+                    bottom: 20% 
                     left 10%
                     right: 10% 
                     filter: blur(8rem)
