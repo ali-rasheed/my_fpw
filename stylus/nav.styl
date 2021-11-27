@@ -10,144 +10,144 @@ narrowerthan(var)
 
 opa = 100% 
 
-#side-nav
-    position: fixed
-    top: 0
-    right: 0
-    bottom: 0rem
-    margin 1rem
-    z-index: 300
+// #side-nav
+//     position: fixed
+//     top: 0
+//     right: 0
+//     bottom: 0rem
+//     margin 1rem
+//     z-index: 300
 
-    +narrowerthan(450px)
+//     +narrowerthan(450px)
 
-        margin-right: 0.9rem
-    +narrowerthan(375px)
-        margin-right: 0.8rem
+//         margin-right: 0.9rem
+//     +narrowerthan(375px)
+//         margin-right: 0.8rem
 
-    display: flex
+//     display: flex
     
-    align-items: center
-    justify-content: space-between
-    max-height: 100vh
-    max-width: 100%
-    #pull-up
-        margin-top: 2rem
-        transition: color .2s ease- 
-        font-size: 2.5rem
-        &:hover,&:focus
-            color: var(--scol)
-        z-index: inherit 
+//     align-items: center
+//     justify-content: space-between
+//     max-height: 100vh
+//     max-width: 100%
+//     #pull-up
+//         margin-top: 2rem
+//         transition: color .2s ease- 
+//         font-size: 2.5rem
+//         &:hover,&:focus
+//             color: var(--scol)
+//         z-index: inherit 
 
 
-#nav 
-    transition: top 0.3s ease; /* Transition effect when sliding down (and up) */
-    font-weight: 300
-    z-index 500
-    margin-top: 1rem
-    margin-bottom: 3rem
-    margin rem 1rem 3rem 1rem
-    padding:0rem
-    display: grid
-    grid-template-rows: 1fr
-    // grid-template-columns: 1fr 1.5fr  
-    // grid-template: auto auto
-    display: flex
+// #nav 
+//     transition: top 0.3s ease; /* Transition effect when sliding down (and up) */
+//     font-weight: 300
+//     z-index 500
+//     margin-top: 1rem
+//     margin-bottom: 3rem
+//     margin rem 1rem 3rem 1rem
+//     padding:0rem
+//     display: grid
+//     grid-template-rows: 1fr
+//     // grid-template-columns: 1fr 1.5fr  
+//     // grid-template: auto auto
+//     display: flex
         
 
-    justify-content: space-between
-    margin-left: 5vw
-    margin-right: 5vw
+//     justify-content: space-between
+//     margin-left: 5vw
+//     margin-right: 5vw
 
-    a
-        font-size: 01.05rem 
-        min-height: 1.5rem
-    .nav-holder
+//     a
+//         font-size: 01.05rem 
+//         min-height: 1.5rem
+//     .nav-holder
         
-        align-items: last baseline
-        align-self: last baseline
-        z-index: inherit
-        text-align: center
-        overflow-wrap: none
-        white-space: nowrap;
-        // text-align: right 
-        display: flex 
-        justify-content: space-between 
+//         align-items: last baseline
+//         align-self: last baseline
+//         z-index: inherit
+//         text-align: center
+//         overflow-wrap: none
+//         white-space: nowrap;
+//         // text-align: right 
+//         display: flex 
+//         justify-content: space-between 
 
-    #nav-home   
-        // margin-right: 40vw 
-        // flex-basis 33%  
-        // margin-right: auto
-        z-index: inherit
-        color: var(--txtcol)
-        opacity opa
-        transition: background-color 200ms ease-in
-        align-self: last baseline
-        line-height: 1.4
-        margin-right: .4em
-        height 100%
-        font-weight: var(--bold)
+//     #nav-home   
+//         // margin-right: 40vw 
+//         // flex-basis 33%  
+//         // margin-right: auto
+//         z-index: inherit
+//         color: var(--txtcol)
+//         opacity opa
+//         transition: background-color 200ms ease-in
+//         align-self: last baseline
+//         line-height: 1.4
+//         margin-right: .4em
+//         height 100%
+//         font-weight: var(--bold)
 
-        +narrowerthan(800px)
-            font-weight: var(--reg)
+//         +narrowerthan(800px)
+//             font-weight: var(--reg)
 
-      // &:hover,&&:focus
-      //    opacity 100%
+//       // &:hover,&&:focus
+//       //    opacity 100%
 
-    #desk-nav
-      // flex-grow: 7
-        // align-items: last baseline
-        // align-self: last baseline
-        z-index: inherit
-        text-align: center
-        overflow-wrap: none
-        white-space: nowrap;
-        flex-grow: 2
-        text-align: right 
-        display: flex 
-        justify-content: space-between 
+//     #desk-nav
+//       // flex-grow: 7
+//         // align-items: last baseline
+//         // align-self: last baseline
+//         z-index: inherit
+//         text-align: center
+//         overflow-wrap: none
+//         white-space: nowrap;
+//         flex-grow: 2
+//         text-align: right 
+//         display: flex 
+//         justify-content: space-between 
 
-        // align-content: center
-        // align-items: baseline
+//         // align-content: center
+//         // align-items: baseline
 
-        #nav-links 
-            min-width 1rem
-            text-align: right 
-            z-index: inherit
+//         #nav-links 
+//             min-width 1rem
+//             text-align: right 
+//             z-index: inherit
 
-        a
-            line-height: 1.4
+//         a
+//             line-height: 1.4
             
-            // height: 1.1rem
-            color: var(--txtcol)
-            // margin: .9rem 0
+//             // height: 1.1rem
+//             color: var(--txtcol)
+//             // margin: .9rem 0
 
-            opacity opa
-            transition: all  200ms ease-in
-            // &:hover,&&:focus
-            //    opacity 100%
-            +narrowerthan(800px)
-                flex-basis: 100% 
+//             opacity opa
+//             transition: all  200ms ease-in
+//             // &:hover,&&:focus
+//             //    opacity 100%
+//             +narrowerthan(800px)
+//                 flex-basis: 100% 
 
-    #nav-home, #nav-links a, #nav-theme-toggle label
-        display inline-block
-        border-radius: .3em
-        border solid transparent
-        border-width: 4px 
-        background-clip: padding-box;
-        transition: background-color ease-out 200ms, border-color ease-out 250ms 
+//     #nav-home, #nav-links a, #nav-theme-toggle label
+//         display inline-block
+//         border-radius: .3em
+//         border solid transparent
+//         border-width: 4px 
+//         background-clip: padding-box;
+//         transition: background-color ease-out 200ms, border-color ease-out 250ms 
             
-        // &:hover, &&:focus, &.active, &:active
-            //  background-color: var(--magenta-hlight); 
-            // transform: scale(1.5) 
+//         // &:hover, &&:focus, &.active, &:active
+//             //  background-color: var(--magenta-hlight); 
+//             // transform: scale(1.5) 
 
-        &:after
-            font-feature-settings: "caps"
-            // font-size: 1.0em  
-            // top: 0.2em
+//         &:after
+//             font-feature-settings: "caps"
+//             // font-size: 1.0em  
+//             // top: 0.2em
 
-    #nav-theme-toggle
-        &:after
-            content: ""
+//     #nav-theme-toggle
+//         &:after
+//             content: ""
 
 
 
@@ -159,33 +159,33 @@ opa = 100%
     
     font-size: 01.05rem
     // align-self: last baseline
-    &::after
-        top -.5em 
-        height 1em
-        position static !important  
-        margin-top: -.25rem  
+    // &::after
+    //     top -.5em 
+    //     height 1em
+    //     position static !important  
+    //     margin-top: -.25rem  
     
 
-input#adjust[type=checkbox]
-input#font[type=checkbox]
-input#mobile-input[type=checkbox]
-    display: none;  /* to hide the checkbox itself */
+// input#adjust[type=checkbox]
+// input#font[type=checkbox]
+// input#mobile-input[type=checkbox]
+//     display: none;  /* to hide the checkbox itself */
 
-input[type=checkbox]#adjust+ label:after
-    display: inline;
-    transition: color ease-in .15s
-    letter-spacing: 7px;
-    font-family: "Font Awesome 5 Brands";
-    content: "\f1d1"
-    color: var(--txtcol)
-    top 0
-    // height: 1.5em
-    // width 1em
+// input[type=checkbox]#adjust+ label:after
+//     display: inline;
+//     transition: color ease-in .15s
+//     letter-spacing: 7px;
+//     font-family: "Font Awesome 5 Brands";
+//     content: "\f1d1"
+//     color: var(--txtcol)
+//     top 0
+//     // height: 1.5em
+//     // width 1em
         
-input[type=checkbox]#adjust:checked + label:after
-    letter-spacing: 7px 
-    font-family: "Font Awesome 5 Brands";
-    content: "\f50e"
+// input[type=checkbox]#adjust:checked + label:after
+//     letter-spacing: 7px 
+//     font-family: "Font Awesome 5 Brands";
+//     content: "\f50e"
 
 input[type=checkbox]#adjust + label::before
     // margin-right: .25rem  
@@ -199,7 +199,7 @@ input[type=checkbox]#adjust:checked + label::before
 
 label#modeLbl
     z-index 500
-    opacity opa
+    // opacity opa
     font-size inherit
     // height 1em
 
@@ -330,7 +330,7 @@ nav
     .nav-holder #nav-home
         font-family: var(--pfont)
         line-height: .9em
-        font-size: 1.5rem
+        font-size: 1.3rem 
         transition: font-size .5s ease-in-out, opacity 200ms ease-in
         animation nav-home-expand  .5s reverse
         animation-name: nav-home-expand;
@@ -369,24 +369,3 @@ nav
         &:after
             content: "asger"
         // font-family: var(--pfont)
-
-// /* Font switch
-
-// input[type=checkbox]#font
-//     visibility hidden
-
-// input[type=checkbox]#font:checked + label::after
-//     content: "Sans"
-//     // font-family: "IBM Plex Serif"
-//     &:hover , &&:focus
-//         color: var(--pcol)
-
-
-// input[type=checkbox]#font + label::after
-//     content: "Serif"
-//     // font-family: "IBM Plex Sans"
-//     transition: color ease-in .15s 
-//     color: var(--txtcol)
-//     &:hover   , &&:focus
-//         color: var(--pcol) 
- 

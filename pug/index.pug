@@ -1,8 +1,8 @@
 mixin grid-item(title,link,desc,image,cl)
     //- - var link = "arcteryx" + end    
-    a(href=link class=cl ).grid-item&attributes(attributes)
+    a(class=cl href=link).grid-item
         .project-img
-            img(data-src=image, src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E" alt="").lazy
+            img(data-src=image, src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E", alt="").lazy
         .proj-title
             h1=title
             .genre=desc
@@ -13,9 +13,9 @@ html(lang='en')
         include ./includes/head1.pug
         title Aliasger Rasheed's Portfolio
     body#new-index.new-index.index-proj
-        - var home = "/"
+        - var home = ""
         - var end = ".html"
-
+        - var hash = "#" 
         header 
             include ./includes/nav2.pug   
         main#grain
@@ -27,38 +27,42 @@ html(lang='en')
                     img(src="imgs/projects/natural.jpg")   
                     img(src="imgs/projects/honest.jpg")   
                     img(src="imgs/projects/arcy2.jpg")   
-                    img(src="imgs/projects/threads-cover.jpg")   
+                    izmg(src="imgs/projects/threads-cover.jpg")   
                     img(src="imgs/projects/spec.jpg")   
-                h1 
-                    em Ali
-                    span asger
-                        
-                    span Rasheed 
+                h1 Aliasger Rasheed 
                 
                 //- .`copy
-                h4.desc A designer &amp; photographer who unabashedly creates for good, for education, for delight, for beauty, for value.
-        
+                h4.desc 
+                    |   My process of working across disciplines lets me develop lasting, impactful, cherished projects that are a  cross product of aesthetics, reason and radical empathy
+                
                 h4.loc
-                    div Open to Work
+                    div Seeking for new opportunities
                     div Canada ~ World
-                    div Remote 
-                h4.links 
-                    a(href="https://www.linkedin.com/in/aliasger-rasheed/" target="_blank").fab.fa-linkedin        
-                    a(href="https://www.instagram.com/allegoraphy/" target="_blank").fab.fa-instagram
-                    a(href="https://github.com/ali-rasheed/" target="_blank").fab.fa-github
-                    a(href="https://www.figma.com/@the_maker/" target="_blank").fab.fa-figma 
+                
+                h4.contact 
+                    div 
+                        a(href="mailto:aliasgerrasheed@outlook.com") aliasgerrasheed@outlook.com
+                    div 
+                        a(href="assets/Aliasger_Rasheed_Resume.pdf" target="_blank").in-txt Résumé
 
+                h4#nav-theme-toggle  
+                    input(id="adjust", name="modeToggle", type="checkbox") 
+                    label#modeLbl(class="" for="adjust").in-txt     
+
+                    //- div Remote 
+                h4.links 
+                    a(href="https://www.linkedin.com/in/aliasger-rasheed/" target="_blank").in-txt Linkedin
+                    a(href="https://www.instagram.com/allegoraphy/" target="_blank").in-txt Instagram 
+                    a(href="https://github.com/ali-rasheed/" target="_blank").in-txt Github
+                    a(href="https://www.figma.com/@the_maker/" target="_blank").in-txt Figma
                 //- #nav-theme-toggle  
                     input(id="adjust", name="modeToggle", type="checkbox") 
-                    label#modeLbl(for="adjust")      
-                #nav-theme-toggle  
-                    input(id="adjust", name="modeToggle", type="checkbox") 
-                    label#modeLbl(class="" for="adjust")      
+                    label#modeLbl(for="adjust")       
 
                 //- input(type="text" size="3")#mx
-            section#expertise 
+            //- section#expertise 
                 h4 Services
-                h2.expertise-list
+                h2 expertise-list
                     span.col-exp 
                         em Experience
                         |  Design, 
@@ -91,7 +95,7 @@ html(lang='en')
             section#projects
                 h4 Projects
 
-            section#index-grid-2
+            section#index-filter
                 //- -var tiltp="8" 
                 //- -var tilts="-8"
 
@@ -151,7 +155,7 @@ html(lang='en')
                 //-     li Model Making
 
                 //- - var link = "headset" + end
-
+ 
                 //- section.grid-item#headset 
                 //-   a(href=link).project-img
                 //-     img(src="imgs/projects/headset"+".jpg", alt=" Kamishibai Headset title").maskable.saturate

@@ -21,6 +21,7 @@ html(lang='en')
         title UNESCO Lodestar • Ali
 
     body.ux-proj 
+    
         - var home = "/"
         header
             include ./includes/nav2.pug   
@@ -29,18 +30,18 @@ html(lang='en')
 
             section#overview.x12c.grid
 
-                h1.main-heading UNESCO Lodestar
+                h1 UNESCO Lodestar
 
                 p.big#summary
                     |Grounding learning for students, while bringing awareness to lesser known World Heritage Sites. UNESCO Lodestar is an online platform for lower-secondary educators to access  lessons plans with World Heritage Site case-studies.
 
             section.flex-s.points
-                .flex-i 
-                    h5 Context
+                .meta-cont 
+                    h6 Context
                     p 6 week project completed as part of Senior Experience Design Course in Vancouver, Canada. 
 
-                div.flex-i
-                    h5 My Responsibilities
+                div.meta-cont
+                    h6 My Responsibilities
                     ol
                         li Project Management
                         li Product Strategy
@@ -50,14 +51,14 @@ html(lang='en')
                         li Curricular design
 
                         
-                div.flex-i 
-                    h5 Tools
+                div.meta-cont 
+                    h6 Tools
                     ul
                         li Figma
                         li Google Sprint Book, Experience Design, Branded Interactions
 
-                div.flex-i.team
-                    h5 Team 
+                div.meta-cont.team
+                    h6 Team 
                     div.team
 
                         +faList("Ali Rasheed")(class="fad fa-jedi")                
@@ -80,43 +81,43 @@ html(lang='en')
             //- hr
   
             section.grid.x12c 
-                h2.l-sect The Gist 
+                h2  The Gist 
 
-                h3.l-sect Contribution 
-                p.ml-sect As project lead, I led our team in determining the area of intervention and framing. As content strategist I determined the content design of the site (the lesson plan in particular) and wrote its corresponding copy. As UX/UI designer, I conducted user interviews/research, and co-designed the site's user flow and user interface.
+                h3  Contribution 
+                p As project lead, I led our team in determining the area of intervention and framing. As content strategist I determined the content design of the site (the lesson plan in particular) and wrote its corresponding copy. As UX/UI designer, I conducted user interviews/research, and co-designed the site's user flow and user interface.
 
 
-                h3.l-sect Brief 
-                p.ml-sect Find areas of opportunity to increasing or retaining value for UNESCO. Use user experience design to acheive this value.  
+                h3  Brief 
+                p Find areas of opportunity to increasing or retaining value for UNESCO. Use user experience design to acheive this value.  
                 
                  
             section.grid.x12c 
-                h2.l-sect Research
-                h3.l-sect What is UNESCO?
+                h2  Research
+                h3  What is UNESCO?
 
-                p.ml-sect
+                p.
                     |UNESCO is a UN agency who’s main mission is to build a culture of peace and sustainability through education, communication and dialogue between different people.
-                h4.l-sect World Heritage
-                p.ml-sect I focused on their World Heritage Centre which preserves and protects landmarks that bring immense value to the culture and the environment of humanity.
+                h4  World Heritage
+                p I focused on their World Heritage Centre which preserves and protects landmarks that bring immense value to the culture and the environment of humanity.
                 
-                figure.ml-sect   
+                figure   
                     img(data-src="imgs/unesco/whc.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
                 
 
-                //- h4.l-sect Brand Purpose
-                //- p.ml-sect UNESCO aims to promote peace and international understanding through shared cultural heritage
+                //- h4  Brand Purpose
+                //- p UNESCO aims to promote peace and international understanding through shared cultural heritage
 
-                //- p.med.quote.ml-sect 
+                //- p.med.quote. 
                 //-     q Heritage is our legacy from the past, what we live with today, and what we pass on the future generation.
                 //-     small.it UNESCO World Heritage Centre 
-                //- h4.l-sect Brand Perception
-                //- p.ml-sect A unique certification of places the global community considers valuable and worth preserving and understanding
+                //- h4  Brand Perception
+                //- p A unique certification of places the global community considers valuable and worth preserving and understanding
    
             //- hr
             //- hr.small 
 
-                h4.l-sect Channels 
-                p.ml-sect Along with physical Heritage Sites ,  UNESCO provides a variety of tools, guidelines and knowledge through its online channels, such as its main websites, and project-specific micro-sites
+                h4  Channels 
+                p Along with physical Heritage Sites ,  UNESCO provides a variety of tools, guidelines and knowledge through its online channels, such as its main websites, and project-specific micro-sites
                 figure.r-sect 
                     .manual-swipe   
                         .img
@@ -128,11 +129,11 @@ html(lang='en')
 
 
             section.grid.x12c 
-                h3.l-sect User Research
+                h3  User Research
 
 
-                //- h4.ml-sect Interviews & Surveys     
-                p.ml-sect Our initial primary research of 13 student and 11 educator survey respondents, helped me frame our interviews with 13 experts, including university and secondary school educators, second-language educators, and professionals working with UNESCO. 
+                //- h4  Interviews & Surveys     
+                p Our initial primary research of 13 student and 11 educator survey respondents, helped me frame our interviews with 13 experts, including university and secondary school educators, second-language educators, and professionals working with UNESCO. 
 
                 figure.mlmr-sect                     
                     .manual-swipe   
@@ -144,10 +145,10 @@ html(lang='en')
             section.grid.x12c 
 
 
-                h2.l-sect Insights  
-                p.ml-sect Synthesizing the research gave me 4 key insights to drive our intervention
+                h2  Insights  
+                p Synthesizing the research gave me 4 key insights to drive our intervention
 
-                ul.ml-sect.big
+                ul.big
 
                     +faList("Second language teachers use cultural heritage to bring personal bearing to language education.")(class="fas fa-lightbulb-on")
                     +faList("Educators, need age-specific, modular actionable lesson resources.")(class="fas fa-lightbulb-on")
@@ -166,38 +167,38 @@ html(lang='en')
                             img(data-src="imgs/unesco/insight4.jpg" ).lazy     
 
 
-            section.grid.x12c#framing.flip  
-                h2.l-sect Framing
-                p.ml-sect We used our insights and teachers' goals to determine the following framing questions:
-                p.ml-sect.med 
+            section.grid.x12c#framing  
+                h2  Framing
+                p We used our insights and teachers' goals to determine the following framing questions:
+                p.med 
                    |How might we make information architecture more systematic and guided to reduce cognitive overhead when accessing educational resources?
-                p.ml-sect.med 
+                p.med 
                    |How might we leverage project-based learning to re-orient UNESCO’s existing educational resources towards its World Heritage Sites?
           
 
 
-            hr.small
+            //hr.small
 
 
             section.grid.x12c#proposal
-                h2.l-sect Proposal
-                p.ml-sect Lodestar is a content distribution platform run by the UNESCO World Heritage Centre, comprising of curated lesson plans accessible to secondary school educators globally.    
+                h2  Proposal
+                p Lodestar is a content distribution platform run by the UNESCO World Heritage Centre, comprising of curated lesson plans accessible to secondary school educators globally.    
 
             section.grid.x12c
-                h3.l-sect Project-based Learning
-                //- p.ml-sect#smart Lesson Plans are based on project-based learning using World Heritage sites as foundational case-studies to build class projects on. 
+                h3  Project-based Learning
+                //- p.#smart Lesson Plans are based on project-based learning using World Heritage sites as foundational case-studies to build class projects on. 
                     |We utilised the SMART(Specific, Measurable, Attainable, Relevant, and, Timely) learning objectives guidelines to guide our information architecture.
                 figure.mlmr-sect   
                     img(data-src="imgs/unesco/learning.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
             
             section.grid.x12c
-                h3.l-sect User Journey
+                h3  User Journey
                 figure.lr-sect   
                     img(data-src="imgs/unesco/educator-journey-map.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy        
 
             section.grid.x12c   
-                h4.l-sect Entice • Discovery 
-                p.ml-sect My research showed that most educators find their lesson plans by simply googling.
+                h4  Entice • Discovery 
+                p My research showed that most educators find their lesson plans by simply googling.
 
                 figure.mlmr-sect 
                     video(src="imgs/unesco/google.mp4" autoplay muted loop preload="auto" controls auto
@@ -205,8 +206,8 @@ html(lang='en')
 
 
             section.grid.x12c
-                h4.l-sect Enter • Filter for Your Needs  
-                p.ml-sect The filter feature focuses on "Specific" and "Relevant" components of 
+                h4  Enter • Filter for Your Needs  
+                p The filter feature focuses on "Specific" and "Relevant" components of 
                     |#[a(href="#smart").in-txt SMART], providing actionable prompts for different forms of teaching.   
 
                 figure.mlmr-sect 
@@ -219,8 +220,8 @@ html(lang='en')
 
 
             section.grid.x12c
-                h4.l-sect Engage • Browse for Applicable Plans
-                p.ml-sect 
+                h4  Engage • Browse for Applicable Plans
+                p 
                 figure.mlmr-sect 
                     video(src="imgs/unesco/browse.mp4", autoplay, muted, loop, controls, preload="none", poster="imgs/unesco/browse.jpg") 
         
@@ -233,8 +234,8 @@ html(lang='en')
         
         
             section.grid.x12c
-                h4.l-sect Engage • Consider, Use &amp; Adapt
-                p.ml-sect 
+                h4  Engage • Consider, Use &amp; Adapt
+                p 
                     //- |A significant component of our intervention is the content of the lesson plans. 
                     |Along with providing materials such as videos, worksheets etc, I used project-based learning to help broaden the scope of lesson plans, making them applicable despite curriculum differences.
 
@@ -257,8 +258,8 @@ html(lang='en')
                     figcaption details regarding lessons plans and how decisions behind content strategy
 
             section.grid.x12c
-                h4.l-sect Exit • Resources Straight to your students 
-                p.ml-sect Lodestar expedites the lesson delivery process, allowing teachers to directly add plans to their online learning platform. For the scope of this project, I only considered the most-used education platform in secondary schools, Google Classroom.
+                h4  Exit • Resources Straight to your students 
+                p Lodestar expedites the lesson delivery process, allowing teachers to directly add plans to their online learning platform. For the scope of this project, I only considered the most-used education platform in secondary schools, Google Classroom.
                 figure.mlmr-sect 
                     video(src="imgs/unesco/classroom.mp4", muted, loop, controls, preload="auto", auto, poster="imgs/unesco/classroom.jpg") 
         
@@ -267,24 +268,24 @@ html(lang='en')
              
             section.grid.x12c#value
                   
-                h3.l-sect The value
-                    //- p.ml-sect Streamlined process for teachers to find and integrate teaching resources that are:
-                    //- ul.ml-sect
+                h3  The value
+                    //- p Streamlined process for teachers to find and integrate teaching resources that are:
+                    //- ul.
                     //-     li assured to be of quality and reputability.
                     //-     li modifiable and modular.
                     //-     li tangible and contextualised through project-based learning.
                 figure.lr-sect
                     img(data-src="imgs/unesco/value-matrix.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E").lazy       
             
-            hr
+            //hr
             section.grid.x12c#decisions
-                h2.l-sect Design Decisions • Reflection
-                h4.l-sect Surfacing Content 
-                p.ml-sect I considered the user tendency to focus on well-known, eurocentric World Heritage Sites, and a lack of awareness of endangered Sites. To counter this, the filter was designed to avoid enabling biases, and recommendations helped surface plans on lesser known Heritage Sites.
+                h2  Design Decisions • Reflection
+                h4  Surfacing Content 
+                p I considered the user tendency to focus on well-known, eurocentric World Heritage Sites, and a lack of awareness of endangered Sites. To counter this, the filter was designed to avoid enabling biases, and recommendations helped surface plans on lesser known Heritage Sites.
                 figure.mlmr-sect 
                     img(data-src="imgs/unesco/explain2.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E").lazy        
-                h4.l-sect Choosing Opportunities 
-                p.ml-sect While UNESCO channels such as their main website lacked intuitive information architecture, I found that a redesign would be simply fixing a painpoint, as compared to creating meaningful value for UNESCO, and for its stakeholders.  
+                h4  Choosing Opportunities 
+                p While UNESCO channels such as their main website lacked intuitive information architecture, I found that a redesign would be simply fixing a painpoint, as compared to creating meaningful value for UNESCO, and for its stakeholders.  
                 figure.mlmr-sect
                     img(data-src="imgs/unesco/process.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 55'%3E%3C/svg%3E").lazy     
 
@@ -292,15 +293,15 @@ html(lang='en')
 
             section#reflection.grid.x12c
 
-                h4.l-sect Constraints & Filling in the Gaps
-                p.ml-sect
+                h4  Constraints & Filling in the Gaps
+                p.
                     | I think that if more time were allocated to the project, there would be a place to consider and implement features to 
                     strong extend 
                     |
                     | the customer experience through creating convenient touchpoints in educational platforms such as Google classrooms.
-                p.ml-sect 
+                p 
                     | Given that lesson plans with the trademark of UNESCO would need quality assurance, a next step would be creating a way for teachers to submit their own plans for verification and upload. 
-                p.ml-sect I think overall the project effectively brings the intended value to UNESCO by revitalising an outdated education programme for a new, more international audience in a much more accessible way. 
+                p I think overall the project effectively brings the intended value to UNESCO by revitalising an outdated education programme for a new, more international audience in a much more accessible way. 
 
                 //- figure.lr-sect
                     img(data-src="imgs/arcy/arcy-team.jpg",src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 2'%3E%3C/svg%3E").lazy 

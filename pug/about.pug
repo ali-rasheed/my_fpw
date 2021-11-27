@@ -11,15 +11,15 @@ html(lang='en')
         include ./includes/head1.pug
         title Me - Ali Rasheed
     body.index-proj
-        header
         -var home = "/"
+        header
         include ./includes/nav2.pug
         main#about.grid.x2c
             section.profile
                 figure 
                     img(src="imgs/crop3.jpg")
                     //- figcaption Me being awkward in front of a camera
-                    figcaption Photographer - a person who would rather be behind the camera than in front...
+                    figcaption Photographer - a person who would rather be behind the camera than in front..
 
             section#intro.about-copy
                 h1 Heyo
@@ -29,7 +29,7 @@ html(lang='en')
                     |<a class="in-txt" href="https://www.youtube.com/user/Nerdwriter1" title="Simon Fraser University">Simon Fraser University</a> 
                     |in Vancouver.
                     |I'm currently looking for internship opportunities, especially in the educational design and digital tool design industries.
-                //- h5.about Contact me at
+                //- h6.about Contact me at
                 //-     |  
                 //-     |   
                 ul.list
@@ -49,7 +49,7 @@ html(lang='en')
                         a(href="https://www.figma.com/@the_maker/" target="_blank").in-txt Figma
 
             section.grid.about-copy
-                h5 Stuff about me
+                h6 Stuff about me
                 ul 
                     +faList(" I design with the intent to create cherished, sustainable, beautiful things")(class="fad fa-hands-heart")
                     +faList("I like organising my brain with lists")(class="fad fa-list")
@@ -65,7 +65,7 @@ html(lang='en')
                     +faList("I want to make anything and everything, and learn how to make the things I can't yet (my current muse is photorealistic renders + music)")(class="fad fa-grin-beam-sweat ")
 
             //- section.grid.about-copy
-            //-     h5 I  design things that
+            //-     h6 I  design things that
             //-     ul 
             //-         +faList(" are cherished")(class="fad fa-hands-heart")
 
@@ -75,7 +75,7 @@ html(lang='en')
 
 
             //- section.grid.about-copy
-            //-     h5 I enjoy...
+            //-     h6 I enjoy..
             //-     ul
 
             //-         //- +faList("")(class="fad fa-film-alt")

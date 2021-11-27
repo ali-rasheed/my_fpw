@@ -11,11 +11,11 @@ main.gallery
     // display: grid
     justify-items: center 
     margin-top: 12rem
-    margin-left: 2vw
-    margin-right: 2vw
-    +narrowerthan(800px)
-        margin-left: 1rem
-        margin-right: 1rem
+    // margin-left: 2vw
+    // margin-right: 2vw
+    // +narrowerthan(800px)
+    //     margin-left: 1rem
+    //     margin-right: 1rem
     //   margin-top: -8rem
     img.grid-image
         &:hover
@@ -35,8 +35,8 @@ main.gallery
         &#threedeeCont, &#gd-cont
             width: 90vw
             // max-width: 1440px
-            margin-left: auto               
-            margin-right: auto
+            margin-left: var(--d-space)               
+            margin-right: var(--d-space)
         &#gd-cont
             a
                 padding 1rem

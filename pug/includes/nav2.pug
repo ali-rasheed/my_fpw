@@ -1,5 +1,4 @@
 - photolink = "/photography.html"
-- index ="/"
 - about ="/about.html"
 
 - threedee ="/threedee.html"
@@ -8,24 +7,29 @@ nav#nav2
     
     input#menu-input(name="menu-input" type="checkbox")
     label#menu-label(for="menu-input")
-
+ 
 
 
  
     #top-nav 
             
 
-        a#nav-about.nav-item(href="about.html")
+        a#nav-about.nav-item(href=home+hash)
             .title Ali 
-            .caption About Me
-        
-        .space
-        #nav-filters
-            a(href="/#")#unfilter Unfilter
+            #unfilter.caption Unfilter
             //- a#back-home(href=home+"") ‹ Back Home  
             
-            a(href=home+"")#back-home Back Home
-
+            #back-home.caption Back Home
+            //- .caption About Me 
+        
+        
+        //- a(href=about).nav-item
+        //-     .title About
+        //-     .caption Design 
+        //-     .caption + Research
+        //- //- .space
+        #nav-filters
+ 
 
             a(href=home+"#ux").nav-item#ux_ 
                 .title UX
@@ -44,13 +48,15 @@ nav#nav2
 
  
             a(href=home+"#threedee").nav-item#threedee_
-                .title Threedee
+                .title 3Dee
                 .caption Art + VFX
                 .caption + Animations
         
-            a(href=home+"other").nav-item#other_
+            a(href=home+"#other").nav-item#other_
                 .title ++
-                .caption other Cool Stuff
+                .caption other 
+                .caption Cool Stuff
+
         
     //- input#menu-input(name="menu-input" type="checkbox")
-    //- label#menu-label(for="menu-input")  
+    //- label#menu-label(for="menu-input")   

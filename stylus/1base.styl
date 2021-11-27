@@ -1,10 +1,17 @@
-
+widerthan(var)
+    condition = 'screen and (min-width: %s)' % var
+    @media condition
+        {block}
+narrowerthan(var)
+    condition = 'screen and (max-width: %s)' % var
+    @media condition
+        {block}
 /*
 -------------------VARIABLES------------------
 */
 :root
     --grey:hsl(0,0%,20%)
-    --light-white: #e4e4e4
+    --light-white: #fff
     --light-white-rgb: 255,255,255;
     
     --light-black:#0B0B0B
@@ -13,20 +20,30 @@
     --dark-white: #e2e2e2
     --dark-black: #23242A 
     --dark-black-rgb: 30,30,30;
-
-
-    --side-margin: 2vw
-    --pfont: "Mazius Display Regular"
-    --pfont: "Messapia Bold"
-    --sfont: "cabinetgrotesk"  
+    --space:1rem; 
+    --d-space:2rem;
+    // font-size: 93.8%;
+    --side-margin: 1rem 
+    --pfont: "Grafier Variable"  
     --sfont: 'General Sans'
-    --sfont: 'switzer'
+    --stdWeight: 400
+    --medWeight: 450
+    --bigWeight: 530
+    
+    +narrowerthan(500px)
+        --space: 0.8rem
+        --d-space: 1.6rem
 
-    --tfont: "Mazius Display Italic"
-    --qfont: "Mazius Display Extra Italic" 
+    // --sfont: 'switzer'
+
+    // --tfont: "Mazius Display Italic"
+    // --qfont: "Mazius Display Extra Italic" 
      
-    --tfont: "Messapia"
-    --qfont: "Messapia" 
+    // --tfont: "Messapia"
+    // --qfont: "Messapia" 
+    
+    --tfont: "Grafier"
+    // --qfont: "Calvino Grande" 
      
 
     --blend: lighten
@@ -39,7 +56,7 @@
     --bold: 600 
     --mid: 400
 
-    --s-line-space:  1.61
+    --lHeight:  1.45
     --stroke: .85px
 
     --p-std-weight: normal  
@@ -76,11 +93,11 @@
 
 [data-theme = "light"]
     --blend: darken
-    --exposure: 170%
+    --exposure: 180%
     --reg: 400
     --mid: 500
     --bold: 600
-    --s-line-space:  1.6 
+    --lHeight:  1.45
     --txtcol: var(--light-black)
     --bgcol: var(--light-white)
     --bgcol-rgb: var(--light-white-rgb)
@@ -88,11 +105,13 @@
     --stroke:1px
     --scol: var(--magenta-dark)
     --tcol: var(--magenta-light)
+    --stdWeight: 450
+    --medWeight: 520
+    --bigWeight: 600
 
-
-[data-font = "sans"]
-    --sfont: 'Verdana'
-    --pfont: 'Open Sauce Sans'
+// [data-font = "sans"]
+//     --sfont: 'Verdana'
+//     --pfont: 'Open Sauce Sans'
 
 
 html
@@ -119,47 +138,47 @@ html
     --colE2: #3D2310
     --colE3: #FF7D04
 
-[data-theme = "light"]
+// [data-theme = "light"]
 
-    .index-proj
-        --customCol: var(--magenta)
+//     .index-proj
+//         --customCol: var(--magenta)
 
-        --bgcol: var(--colA1)
+//         --bgcol: var(--colA1)
 
-    .ux-proj
-        --customCol: var(--magenta)
-        --bgcol: var(--colB1)
+//     .ux-proj
+//         --customCol: var(--magenta)
+//         --bgcol: var(--colB1)
 
-    .graphic-proj        
-        --customCol: var(--magenta)
+//     .graphic-proj        
+//         --customCol: var(--magenta)
 
-        --bgcol: var(--colC1)
+//         --bgcol: var(--colC1)
 
-    .threedee-proj
-        --customCol: var(--magenta)
-        --bgcol: var(--colD1)
+//     .threedee-proj
+//         --customCol: var(--magenta)
+//         --bgcol: var(--colD1)
 
-    .photo-proj
-        --customCol: var(--magenta)
-        --bgcol:var(--colE1)
+//     .photo-proj
+//         --customCol: var(--magenta)
+//         --bgcol:var(--colE1)
         
-[data-theme = "dark"]
+// [data-theme = "dark"]
 
-    .index-proj
-        --bgcol: var(--colA2)
-        --customCol: var(--magenta)
-    .ux-proj
-        --bgcol: var(--colB2)
-        --customCol: var(--magenta)
+//     .index-proj
+//         --bgcol: var(--colA2)
+//         --customCol: var(--magenta)
+//     .ux-proj
+//         --bgcol: var(--colB2)
+//         --customCol: var(--magenta)
 
-    .graphic-proj        
-        --bgcol:var(--colB2)
-        --customCol: var(--magenta)
+//     .graphic-proj        
+//         --bgcol:var(--colB2)
+//         --customCol: var(--magenta)
 
-    .threedee-proj
-        --bgcol:  var(--colB2)
-        --customCol: var(--magenta)
+//     .threedee-proj
+//         --bgcol:  var(--colB2)
+//         --customCol: var(--magenta)
 
-    .photo-proj
-        --bgcol: var(--colB2)
-        --customCol: var(--magenta)
+//     .photo-proj
+//         --bgcol: var(--colB2)
+//         --customCol: var(--magenta)

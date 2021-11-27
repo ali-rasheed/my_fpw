@@ -29,19 +29,19 @@ narrowerthan(var)
         transform-style: preserve-3d
         transform: perspective(1000px)
         display: grid
-        margin-top: 14vh
+        margin-top: 8rem
         // margin-left: 2rem
 
         grid-template-columns: repeat(12,1fr)
-        grid-template-rows: repeat( 12,auto)
+        // grid-template-rows: repeat( 12,auto)
         // +narrowerthan(800px)
-        grid-gap: calc(.5*var(--side-margin))
+        grid-gap: var(--space)
 
         grid-template-rows: auto
-        height:86vh
+        height:calc(65vh+10rem)
         width 100%
         box-sizing: border-box
-        padding: 0 var(--side-margin)
+        padding: 0 var(--d-space)
         .copy  
             grid-row: 3/4
             // grid-column: 1/
@@ -50,18 +50,19 @@ narrowerthan(var)
             font-family: var(--pfont)
             justify-self: stretch; 
             align-self: start
-            +widerthan(1400px)
-                @supports (-webkit-text-stroke:1px var(--txtcol))
-                    -webkit-text-stroke: var(--stroke) var(--txtcol)
-                    color transparent
-            
-            // text-align: center
             vertical-align: top;
             grid-row: 2/3
-            grid-column: 2/6
+            grid-column: 1/5
+            // word-break: break-word;        
+            // display: grid    
             margin 0
             line-height: 1 
-            font-size: 5.5vw
+            font-size: 3.9vw
+            +narrowerthan(1400px)
+                font-size: 5.61rem
+            +narrowerthan(500px)
+                font-size: 2.441rem
+
             em
                 font-size:  inherit
             span 
@@ -72,144 +73,125 @@ narrowerthan(var)
                 
                 +narrowerthan(500px)
                     padding-right: 2vw
-                +widerthan(1400px)
-
-                    color inherit
-                    -webkit-text-stroke: inherit
                     // font-size: inherit
         h4
-            font-family: var(--sfont)
+            font-family: var(--sfont) 
+            font-weight: var(--stdWeight) 
             font-size: 1rem 
+            line-height: var(--lHeight)
             border-top: solid 1px
-            max-width:  45ch
+            // max-width:  45ch
             // padding-right: 2rem
             box-sizing: content-box 
             // margin-top: .5rem
+            +narrowerthan(600px)
+                grid-column: 1/-1
+                grid-row: auto
             &.desc
                 grid-column: 1/5
                 // grid-column-end: 2
                 grid-row: 3/4
-                +narrowerthanthan(1400px) 
-                    grid-column-end: 6
-                +narrowerthan(600px)
-                    grid-column: 2/-2
+                // +narrowerthanthan(1400px)  
+                //     grid-column-end: 6
+            &.contact
+                grid-column: 3/5
+                grid-row: 4/5
             &.loc
-                grid-column: 1/5
-                grid-row: 3/4 
+                grid-column: 1/3
+                grid-row: 4/5 
+            &.links
+                grid-column: 3/5 
+                grid-row 5/6
+                display: flex
+                flex-wrap: wrap
+                a
+                    // margin-right: var(--space)
+                    margin-right auto
+                    flex-basis: 50% 
+                    flex-shrink: 1
         #nav-theme-toggle
-            grid-column: 12/13
-            grid-row 3/4
+            grid-column: 1/2
+            grid-row 5/6 
             align-self: first-baseline
-            justify-content: flex-end
-            // labelwriting-mode: vertical-rl
-            padding-bottom: 5vh 
 
             +narrowerthan(500px)
-                grid-column:  11/13
+                grid-column:  10/12
                 padding-bottom: 0
 
 
             input#adjust[type=checkbox]
                 display: none;  
 
-            input[type=checkbox]#adjust+ label:after
-                display: inline;
-                transition: color ease-in .15s
-                letter-spacing: 7px;
-                font-family: "Font Awesome 5 Brands";
-                content: "\f1d1"
-                color: var(--txtcol)
-                top 0
-                font-size: 3rem
-
-            input[type=checkbox]#adjust:checked + label:after
-                letter-spacing: 7px 
-                font-family: "Font Awesome 5 Brands";
-                content: "\f50e"
-                font-size: 3rem
- 
+            
             input[type=checkbox]#adjust + label::before
                 content: "Dark side"
                 transition: color ease-in .15s
                 color: var(--txtcol)
                 
-                font-size: inherit 
+                // font-size: inherit 
 
             input[type=checkbox]#adjust:checked + label::before
                 content: "Light side"
 
-            label#modeLbl
-                z-index 500        
-                +narrowerthan(1400px)
-                    font-size: .9vw
-                +narrowerthan(600px)
-                    font-size: 3vw
-                text-transform: uppercase;
-                letter-spacing: -0.025em
-                
-                padding-top: .5rem
-
-                font-size: .75rem  
-                display: flex 
-                flex-direction: column-reverse
-                align-items: center
-                align-self: last baseline
-                &:hover,&&:focus
-                    opacity 100%
         #intro-cover
             overflow: hidden    
             img 
                 object-fit: cover
             object-fit: cover
             // right 0
-            grid-row: 1/2
-            max-height: 50vh
+            max-height: calc(6rem + 90vh)
             grid-column: 5/13 
+            grid-row: 1/6
             overflow: none
             mix-blend-mode: var(--blend)
-        h4.links
-            grid-row: 3/4
-            grid-column: 5/9
-            display: flex
-            font-size: 1.5rem
-            justify-content: space-evenly
- 
-        +narrowerthan(500px)
+            +narrowerthan(1400px)
+                grid-row 1/2
+                grid-column: 1/-1 
+                max-height: 50vh
 
+        h4.links
+            font-size: 1rem
+            
+        +narrowerthan(500px)
+            margin: var(--space)
+            width: auto
             padding 0
             margin-top: 4rem
             height  auto
             h1 
                 grid-row 2/3
-                font-size: 12vw
+                // font-size: 10vw
                 margin-top: 1rem
                 span
                     font-size: inherit
             h4
+                
                 padding 0 
+                padding 1rem 0 
+                grid-row: auto !important
+                grid-column: 1/-1
+                &.desc
+                    grid-column: 1/-1
+                &.loc
+                    grid-column: 1/7
+                &.contact, &.links
+                    grid-column: 7/13
+            #nav-theme-toggle
+                grid-column: 1/7
             #intro-cover
                 grid-column: 1/-1
-                // display none
-            h4.desc
-                grid-column: 1/-2
-                padding-left: calc(100vw/12) 
-            // .copy
-            h4.loc
-                grid-column: 2/-4
-            h4.links
-                grid-column: 2/-2
-                grid-row: auto
+
     #projects
         margin-top: 15vh
     #expertise, #projects
         margin-top: 5rem
         display: grid
         grid-template-columns: repeat(12,1fr)
-        margin-left: var(--side-margin)
-        margin-right: var(--side-margin)
-        grid-gap: calc(.5*var(--side-margin))
+        margin-left: var(--d-space)
+        margin-right: var(--d-space)
+        grid-gap: calc(var(--space))
         +narrowerthan(1400px)
-            grid-template-columns: var(--side-margin) 10fr var(--side-margin)
+            grid-template-columns: var(--d-space) 10fr var(--d-space) 
 
         // .expertise-list
         //     display: flex 
@@ -220,27 +202,28 @@ narrowerthan(var)
             +narrowerthan(500px)
                 font-size: 1.5rem
 
-            font-weight: 500
-            font-family: var(--sfont)
+            font-family: var(--pfont)
+            font-variation-settings: "wght" 487, "ctrs" 80.6;
 
         h2.expertise-list
             grid-column: 1/-1
             font-family: var(--pfont)
-            font-weight: 700
-            color var(--txtcol)
-            +widerthan(1400px)
-                @supports (-webkit-text-stroke: var(--txtcol) var(--stroke))
-                    text-stroke:var(--txtcol) var(--stroke)
-                    -webkit-text-stroke: var(--txtcol) var(--stroke)
+            font-variation-settings: "wght" 487, "ctrs" 80.6;
 
-                    color transparent
+            color var(--txtcol)
+            // +widerthan(1400px)
+            //     @supports (-webkit-text-stroke: var(--txtcol) var(--stroke))
+            //         text-stroke:var(--txtcol) var(--stroke)
+            //         -webkit-text-stroke: var(--txtcol) var(--stroke)
+
+            //         color transparent
             span
                 line-height: 1.25
                 font-size: 4vw
                 +narrowerthan(1400px)
                     font-size: 2.25rem
                 +narrowerthan(500px)
-                    font-size: 2.5rem
+                    font-size: 2rem
                 font-family: inherit
                 color inherit
 
@@ -251,40 +234,28 @@ narrowerthan(var)
                     text-shadow: 3px 3px var(--pcol)
             .col-graphic
 
-                +widerthan(1400px)
-                    @supports (-webkit-text-stroke: 1px blue) 
-                        animation vdesign infinite linear 3s
-                        background -webkit-linear-gradient(40deg, var(--pcol),var(--colB3),var(--colC3),var(--pcol),var(--colB3))
-                        background-size: 100% 800%;
+                // +widerthan(1400px)
+                //     @supports (-webkit-text-stroke: 1px blue) 
+                //         animation vdesign infinite linear 3s
+                //         background -webkit-linear-gradient(40deg, var(--pcol),var(--colB3),var(--colC3),var(--pcol),var(--colB3))
+                //         background-size: 100% 800%;
 
-                        -webkit-text-fill-color: var(--bgcol);
-                        -webkit-background-clip: text;
-                        -webkit-text-stroke: 3px transparent;
-                        color:var(--bgcol) !important
+                //         -webkit-text-fill-color: var(--bgcol);
+                //         -webkit-background-clip: text;
+                //         -webkit-text-stroke: 3px transparent;
+                //         color:var(--bgcol) !important
                 // 
-                // em
-                // padding-right 1rem
-
             .col-photo     
                 display: inline-block
                 // color var(--txtcol) !important
                 span
                     filter: url(#text-distort)
 
-                // &.col-web
 
-
-
-    #index-grid-2 
-        // display: grid
-        // width: 100%
-        // display: flexbox
-        // // grid-template-columns: 1fr 1fr 1fr
-        margin  var(--side-margin)
-        // +narrowerthan(1000px)
-        //     margin 0
-
-        // padding: 0 var(--side-margin) 
+    #index-filter
+        margin  var(--d-space)
+        
+        
         a.grid-item
             // display flexbox
             box-sizing: border-box 
@@ -292,12 +263,7 @@ narrowerthan(var)
 
             grid-template-columns: 1fr
             grid-template-rows: 1fr 1fr
-            // border solid 1px black
-            // padding 2.75rem
-            // margin-bottom var(--side-margin)
-            // +narrowerthan(1000px)
-            //     padding var(--side-margin)
-
+            
             &.item50
                 width calc(100%*6/12 - 2*var(--side-margin)) 
                 +narrowerthan(1000px)
@@ -305,7 +271,7 @@ narrowerthan(var)
             &.item33 
                 width calc(100%*4/12) 
                 +narrowerthan(1000px)
-                    width calc(100%*.5 - 2*var(--side-margin))
+                    width calc(100% - 2*var(--side-margin))
                 
             &.item25
                 width calc(100%*3/12) 
@@ -314,43 +280,45 @@ narrowerthan(var)
 
             .proj-title
                 grid-row: 3/4
+                transition: filter 250ms ease-in-out
+                +narrowerthan(1400px)
+                    margin var(--space) 0 0 0
+                    padding-bottom: var(--d-space)
+
                 +widerthan(1400px)
                     position: absolute 
-                    top 20%
-                    bottom: 20% 
-                    left 10%
-                    right: 10% 
+                    top 5%
+                    bottom: 5% 
+                    left 5%
+                    right: 5% 
                     filter: blur(8rem)
                     text-align: center
-
-                transition: filter 250ms ease-out
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
                 h1 
                     // transform: translateZ(20px)F
-                    font-size: 3.5rem
-                    grid-column: 1/-1
-                    margin-top: .5em
-                    margin-bottom: .25em  
-                    // @supports (-webkit-text-stroke: 1px blue) 
-                    //     -webkit-text-stroke: var(--stroke) var(--txtcol)
-                    //     color transparent
+                    font-size:  2.369rem
+                    grid-column: 1/-1  
+                    margin 1rem
                     +narrowerthan(1400px)
-                        text-stroke: none
-                        -webkit-text-stroke:none
-                        -webkit-text-stroke initial initial
-                        color var(--txtcol)
-                    +narrowerthan(1000px)
-                        font-size 1.5rem
-                        font-weight: 500
+                        font-size: 2.441rem
+                        margin 0
+                        margin-top: var(--space)
+                    line-height: 1
+                    transition: font-variation-settings 200ms ease 
+                    transition-delay: 200ms
+
+                    font-variation-settings: "wght" 400, "ctrs" 1;
 
 
                 .genre 
                     // transform: translateZ(20px)
-                    font-weight: 500
-                    text-transform: uppercase
+                    // text-transform: uppercase
                     +narrowerthan(1000px)
                         font-size: .9rem
                     +narrowerthan(500px)
-                        font-size: .6rem
+                        font-size: .8rem
  
                     // transition: filter 300ms ease-in
 
@@ -364,26 +332,28 @@ narrowerthan(var)
                     max-height: 100%;
                     width: auto;
                     height: auto;
-                    transition: filter 250ms ease-out
+                    transition: filter 350ms ease-out
                 
             &:hover,&:focus
                 .proj-title
                     
                     filter: blur(0)
+                    h1 
+                        font-variation-settings: "wght" 500, "ctrs" 100;
                 img
-                    filter: blur(1rem)  brightness(var(--exposure))
+                    filter: blur(1rem) contrast(.8) saturate(1.5) brightness(var(--exposure))
                     // mix-blend-mode: var(--blend)
                 // .genre
                 //     filter: blur(6rem)
-[data-theme = "dark"]
+// [data-theme = "dark"]
 
-    #modeLbl::before, nav#nav2 .caption
-        font-weight 400 !important
-        letter-spacing: .02em !important
+//     #modeLbl::before, nav#nav2 .caption
+        // font-weight 400 !important
+        // letter-spacing: .02em !important
 
 @keyframes vdesign 
     0%
-    background-position: 0% 0% 
+    background-position: 0% 0%  
     100% 
         background-position: 0% 100% 
 

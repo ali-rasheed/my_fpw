@@ -19,49 +19,51 @@ nav#nav2
     overflow: hidden;
     transition: transform .4s cubic-bezier(.25,.46,.45,.94);
     width: 100%;
-    z-index: 5;
+    z-index:22;
     box-sizing: border-box
     top 0
     #back-home
         // position: absolute;
         // left 50%
         // top: 5vh;
-        font-size: .75rem
-        text-transform: uppercase;
-        letter-spacing: -0.005em
-        font-weight: 500
         padding-right: 3vw
 
     .title
-        font-size: 1.5vw
-        font-weight: 500
+        
         +narrowerthan(1400px)
             font-size: 1.5rem
-        padding-right: 2.5vw
+        padding-right: 2.7vw
         color inherit
         padding-bottom: .5rem
 
-    .caption
-        font-size: .75rem 
-        +narrowerthan(1400px)
-            font-size: 1.1vw
-        text-transform: uppercase;
-        letter-spacing: -0.005em
-        word-wrap: break-word
-        overflow-wrap: break-word
-        max-width: 95%
+    .caption, #unfilter
+
+        font-size: .8rem 
+        // +narrowerthan(1400px)
+        //     font-size: 1.1vw
+        text-transform: lowercase;
+        letter-spacing: 0.005em
+        // word-wrap: break-word
+        // overflow-wrap: break-word
+        max-width: 15ch
         color inherit
     
         
     #top-nav
         transition: transform .4s cubic-bezier(.25,.46,.45,.94) .1s,opacity .4s cubic-bezier(.25,.46,.45,.94) .2s,letter-spacing .5s cubic-bezier(.25,.46,.45,.94);
-        padding: 5vh 0rem 0rem var(--side-margin) 
+        padding: var(--d-space) var(--d-space) 0 var(--d-space)
         justify-content: space-between 
         display: flex
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap var(--side-margin);
+        backdrop-blur: 5px;
+        padding-bottom: var(--space)
         *
             z-index: 22
             position relative
         #nav-filters 
+            grid-column: -1/-2
             display: flex
             justify-content: space-between
             flex-basis: 50%
@@ -92,19 +94,20 @@ nav#nav2
         visibility: none
 
     +narrowerthan(800px)
+        backdrop-filter: blur(8px) brightness(var(--exposure));
         height 4rem
         overflow: unset
         .caption, #unfilter 
-            font-size 1rem 
+            font-size .8rem 
         .title 
             font-size: 3rem
         .space
-            -webkit-backdrop-filter: blur(14px)
-            backdrop-filter: blur(14px)
+            // -webkit-backdrop-filter: blur(14px)
+            // backdrop-filter: blur(14px)
             z-index: 23
             content: ""
             //  opacity .5
-            -webkit-backdrop-filter: blur(14px)
+            // -webkit-backdrop-filter: blur(14px)
             backdrop-filter: blur(14px)
             position: fixed
             top 0
@@ -145,35 +148,30 @@ nav#nav2
                 max-width 100%
             #nav-about
                 order 2
+                justify-self: start; 
             #nav-filters 
                 display: flex
                 flex-direction: column
                 flex-wrap: wrap
                 // margin-top: 1rem
                 flex-basis: 100%
-                // &:after
-                //     content: ""  
                 
                 a
-                    // font-family: var(--pfont)
-                    // margin-left: 0
-                    // padding 1rem 0
-                    // flex-basis: 100%
                     justify-self: left
                     text-align: left
-                    font-size: 2.6rem   
+                    font-size: 1rem   
                     &:after
                         content: ""  
         
         #menu-input:checked ~ #top-nav   
             max-height:200vh
             overflow-y: hidden;
+            // -webkit-backdrop-filter: blur(14px)
+            backdrop-filter: blur(8px) brightness(var(--exposure))
             .space
                 z-index: 23
                 content: ""
                 //  opacity .5
-                -webkit-backdrop-filter: blur(14px)
-                backdrop-filter: blur(14px)
                 position: fixed
                 top 0
                 left 0
@@ -222,35 +220,60 @@ nav#nav2
             &:hover, &:focus
                 opacity 100%
 
+// #unfilter
+    // display none
+#back-home
+    display: block
+    padding-right: 3vw
+    
 #unfilter
-    display none
+    display: none
+
 #new-index
+    // #unfilter
+    //     display grid
     #back-home
         display: none
         
     #unfilter
         display: block
         padding-right: 3vw
-        font-size: .75rem
-        text-transform: uppercase;
-        letter-spacing: -0.005em
-        font-weight: 500
-
+// #project
+    
 #top-nav
-    #nav-filters a
-        transition: color 300ms ease, filter 300ms ease-in-out
+    box-sizing: content-box
+
+    *
+        transition: font-weight 300ms ease, filter 300ms ease-in-out
+        box-sizing: content-box
+    #nav-filters a, #nav-about, #nav-filters a .title
+
+    .title
+        transition: font-weight 300ms ease, filter 300ms ease-in-out
+        font-weight: var(--medWeight)
+    .caption
+        transition: font-weight 300ms ease, filter 300ms ease-in-out
+        font-weight: var(--stdWeight)
 
     #nav-filters:hover a
         +widerthan(1400px)
             filter blur(4px)
-    #nav-filters a:hover
+
+    #nav-filters a:hover,  a#nav-about:hover
         +widerthan(1400px)
             filter blur(0px)
             
-        &#nav-about, #unfilter
-        &#ux_
-        &#graphic_
-            color var(--customCol)
+            // color var(--customCol)
+        // font-weight: 490
+        .title
+            font-weight: var(--bigWeight)
+        .caption
+            font-weight: var(--medWeight)
+        // &#nav-about, #unfilter
+
+        // &#ux_
+        //     // color var(--C1)
+        // &#graphic_
         // #photo_
         // #threedee_
 
