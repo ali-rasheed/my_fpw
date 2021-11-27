@@ -23,10 +23,15 @@ narrowerthan(var)
     box-sizing: border-box
     grid-template-columns: repeat(auto-fill,minmax(1fr,50%))
 .x2c
-    grid-template-columns: 50% 50%
+    // grid-template-columns: 50% 50%
+    // grid-template-columns: repeat(autofit,minmax())
     // columns: 5rem 2  
-    margin-top: 1rem
+    grid-gap: calc(4*var(--d-space))
+    grid-column-gap:var(--d-space)
+    justify-content: center
+    
     // h3
+    overflow hidden
 .x24c
     grid-template-columns repeat(24,1fr)
 .x18c

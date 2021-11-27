@@ -8,29 +8,37 @@ narrowerthan(var)
    @media condition
       {block}
 main.gallery
-    // display: grid
+
+    .x2c
+        margin-top: 1rem
+        display: flex
+        flex-wrap: wrap
+
+        img 
+            // margin 0 auto
+            max-height: 85vh 
+
+
     justify-items: center 
     margin-top: 12rem
-    // margin-left: 2vw
-    // margin-right: 2vw
-    // +narrowerthan(800px)
-    //     margin-left: 1rem
-    //     margin-right: 1rem
-    //   margin-top: -8rem
+
     img.grid-image
         &:hover
             cursor: url(ex.svg) 30 30, auto
             // filter contrast(1.2) 
             transition: filter ease-out 200ms
+    margin-left:  var(--d-space)
+    margin-right var(--d-space)
 
-    section
+    section 
+        width 100%
         &#portfolioContainer
             a 
-                padding  19vh 10vmin 
+                // padding  var(--space)
                 box-sizing: border-box
-            margin 0 auto 
+            margin 0 
             // margin-top: 5%
-        
+         
     
         &#threedeeCont, &#gd-cont
             width: 90vw
@@ -69,8 +77,6 @@ main.gallery
             // width: 300px
             // min-height: 200px 
             // min-width: 25vw
-            
-               
             // margin 2px   
             // transition: width 150ms ease
             // margin-right: 0 
@@ -81,17 +87,17 @@ main.gallery
                 transition: transform 250ms ease
                 &:hover, &&:focus
                     z-index 200
-        img
+    img
 
-            display: block
-            padding 0     
-            object-fit: cover   
-            // width: 100%
-            // height auto
-            max-width:100%;
-            max-height:100%;
-            &:not([src]):not([srcset])
-                 visibility: hidden;
+        display: block
+        padding 0     
+        object-fit: cover   
+        // width: 100%
+        // height auto
+        max-width:100%;
+        max-height:100vw
+        &:not([src]):not([srcset])
+                visibility: hidden;
 
     #portfolioFilter
         box-sizing: border-box
