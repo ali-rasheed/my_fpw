@@ -72,7 +72,6 @@ h1, h2, h3, h4, h5, h6, figcaption, p, li, a, button, #summary, small,label, div
    // transition: opacity ease-out 200ms
 
 p,li, a 
-   // font-weight: var(--reg) 
    letter-spacing: .01rem;
    
 p
@@ -106,7 +105,7 @@ h1
    //       color transparent
 
 h2 
-   font-family: var(--pfont), serif
+   font-family: var(--pfont),"times new roman", serif
    font-weight: 400 
    font-size: 4.2rem
    font-size: 3.157rem
@@ -123,7 +122,7 @@ em
 
 
 h3
-   font-family: var(--pfont), serif 
+   font-family: var(--pfont), "times new roman", serif 
    // font-weight: 700 
    line-height: 1.2
    // font-size: 4rem
@@ -156,7 +155,7 @@ h4
  
 h5
    font-size: 1.5rem
-   font-family: var(--sfont), sans-serif
+   font-family: var(--sfont), helvetica, arial, sans-serif
    font-weight: var(--mid) 
    line-height: 1.45
    margin-bottom: .1em
@@ -164,7 +163,7 @@ h5
 
 
 h6
-   font-family: var(--sfont), sans-serif
+   font-family: var(--sfont),  helvetica, arial, sans-serif
    // font-weight: var(--bold) 
    font-variation-settings: "wght" 500
 
@@ -304,7 +303,7 @@ main
    min-height: 0; 
    min-width: 0;
    max-width 55ch 
-   font-family: var(--pfont);
+   font-family: var(--pfont), var(--sfont), arial, sans-serif;
    font-variation-settings: "wght" 400, "ctrs" .2;
    margin-bottom: var(--d-space)
    +narrowerthan(1400px)
@@ -357,7 +356,7 @@ ol
       max-height 90vh  
 
 #summary
-   font-family: var(--pfont)
+   font-family: var(--pfont), "times new roman", serif
    font-variation-settings:  "wght" 487, "ctrs" 0;
 hr
    width 40vw
@@ -372,12 +371,14 @@ hr
 //    border solid transparent
 //    border-width: medium 
    background-clip: padding-box;
-   transition: background-color ease-out 200ms, font-weight ease-out 200ms, text-underline-offset ease-out 200ms , text-decoration-color ease-out 200ms 
+   transition: background-color ease-out 200ms, font-variation-settings ease-out 200ms, text-underline-offset ease-out 200ms , text-decoration-color ease-out 200ms 
    display inline-block 
    // border-bottom: 1px solid var(--pcol)
    text-decoration var(--grey) 1px underline solid 
    display: inline-block
    text-underline-offset: 1px
+   font-variation-settings: "wght" var(--stdWeight)
+   letter-spacing: .04em
    // background-image: linear-gradient(to bottom, red 33%, transparent 33%, transparent 66%, red 66%, red);
    // background-position: 0 1.03em;
    // background-repeat: repeat-x;

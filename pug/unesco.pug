@@ -32,49 +32,38 @@ html(lang='en')
 
                 h1 UNESCO Lodestar
 
-                p.big#summary
-                    |Grounding learning for students, while bringing awareness to lesser known World Heritage Sites. UNESCO Lodestar is an online platform for lower-secondary educators to access  lessons plans with World Heritage Site case-studies.
+                p.big#summary Grounding learning for students, while bringing awareness to lesser known World Heritage Sites. 
+                p.desc UNESCO Lodestar is an online platform for lower-secondary educators to access  lessons plans with World Heritage Site case-studies.
 
-            section.flex-s.points
-                .meta-cont 
+                .meta-cont.series1
                     h6 Context
                     p 6 week project completed as part of Senior Experience Design Course in Vancouver, Canada. 
 
-                div.meta-cont
+                .meta-cont.series2
                     h6 My Responsibilities
-                    ol
-                        li Project Management
-                        li Product Strategy
-                        li Content Strategy
-                        li Copywriting
-                        li Prototyping 
-                        li Curricular design
+                    p Project Management, Product Strategy, Content Strategy, Copywriting, Prototyping, Curricular design
 
                         
-                div.meta-cont 
+                .meta-cont.series1
                     h6 Tools
-                    ul
-                        li Figma
-                        li Google Sprint Book, Experience Design, Branded Interactions
+                    p Figma, Google Sprint Book, Experience Design, Branded Interactions
 
-                div.meta-cont.team
+                .meta-cont.series2 
                     h6 Team 
-                    div.team
-
-                        +faList("Ali Rasheed")(class="fad fa-jedi")                
-                            //- a(href="https://www.yantimo.com/").in-txt 
-                            
-                        +faList("")(class="fad fa-cat")
-                            a(href="www.sfu.ca/~cpa38/KatiePark/").in-txt Katie Park 
-                            
-                        +faList("Benny Huang")(class="fad fa-dragon")
+                    p
+                        | Aliasger Rasheed, 
+                        a(href="www.sfu.ca/~cpa38/KatiePark/").in-txt Katie Park 
+                        |, Benny Huang
+                        |, Grace Lai
+                        |, Lia Yujin
+                        //- +faList("")(class="fad fa-dragon")
                             //- a(href="https://aape.design").in-txt 
 
-                        +faList("Grace Lai")(class="fad fa-fish")
+                        //- +faList("")(class="fad fa-fish")
                             //- a(href="https://aape.design").in-txt 
 
-                        +faList("Lia Yujin")(class="fad fa-deer")                
-            section 
+                        //- +faList("")(class="fad fa-deer")                
+            section.grid.x12c 
                 #cover-image.magenta-hover   
                     img(src="imgs/unesco/landing-cover.jpg") 
  
@@ -148,12 +137,20 @@ html(lang='en')
                 h2  Insights  
                 p Synthesizing the research gave me 4 key insights to drive our intervention
 
-                ul.big
+                ul.med
+                    li.med Second language teachers use cultural heritage to bring personal bearing to language education.
 
-                    +faList("Second language teachers use cultural heritage to bring personal bearing to language education.")(class="fas fa-lightbulb-on")
-                    +faList("Educators, need age-specific, modular actionable lesson resources.")(class="fas fa-lightbulb-on")
-                    +faList("Open-ended middle school curriculum = freedom to bring in external topics such as World Heritage.")(class="fas fa-lightbulb-on")
-                    +faList("World Heritage is eurocentric and so finding resources on lesser-known non-european Heritage Sites is difficult.")(class="fas fa-lightbulb-on")
+                    li.med Educators, need age-specific, modular actionable lesson resources.
+                    li.med Open-ended middle school curriculum = freedom to bring in external topics such as World Heritage.
+                    li.med World Heritage is eurocentric and so finding resources on lesser-known non-european Heritage Sites is difficult
+                    //- +faList("Second language teachers use cultural heritage to bring personal bearing to language education.")(class="fas fa-lightbulb-on med")
+
+                    //- +faList("")(class="fas fa-lightbulb-on med")
+
+                    //- +faList("")(class="fas fa-lightbulb-on med")
+
+                    //- +faList(".")(class="fas fa-lightbulb-on med")
+
 
                 //- figure.mlmr-sect   
                     .manual-swipe    

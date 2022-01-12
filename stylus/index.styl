@@ -47,7 +47,7 @@ narrowerthan(var)
             // grid-column: 1/
         h1
             transform: translateZ(20px)
-            font-family: var(--pfont)
+            font-family: var(--pfont),"times new roman",serif
             justify-self: stretch; 
             align-self: start
             vertical-align: top;
@@ -128,8 +128,10 @@ narrowerthan(var)
                 content: "Dark side"
                 transition: color ease-in .15s
                 color: var(--txtcol)
-                
-                // font-size: inherit 
+                font-variation-settings: "wght" var(--stdWeight)
+
+            input[type=checkbox]#adjust + label:hover::before
+                font-variation-settings: "wght" var(--medWeight)
 
             input[type=checkbox]#adjust:checked + label::before
                 content: "Light side"
@@ -203,12 +205,12 @@ narrowerthan(var)
             +narrowerthan(500px)
                 font-size: 1.5rem
 
-            font-family: var(--pfont)
+            font-family: var(--pfont), "times new roman",serif
             font-variation-settings: "wght" 487, "ctrs" 80.6;
 
         h2.expertise-list
             grid-column: 1/-1
-            font-family: var(--pfont)
+            font-family: var(--pfont), "times new roman",serif
             font-variation-settings: "wght" 487, "ctrs" 80.6;
 
             color var(--txtcol)

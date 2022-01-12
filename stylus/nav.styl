@@ -10,147 +10,6 @@ narrowerthan(var)
 
 opa = 100% 
 
-// #side-nav
-//     position: fixed
-//     top: 0
-//     right: 0
-//     bottom: 0rem
-//     margin 1rem
-//     z-index: 300
-
-//     +narrowerthan(450px)
-
-//         margin-right: 0.9rem
-//     +narrowerthan(375px)
-//         margin-right: 0.8rem
-
-//     display: flex
-    
-//     align-items: center
-//     justify-content: space-between
-//     max-height: 100vh
-//     max-width: 100%
-//     #pull-up
-//         margin-top: 2rem
-//         transition: color .2s ease- 
-//         font-size: 2.5rem
-//         &:hover,&:focus
-//             color: var(--scol)
-//         z-index: inherit 
-
-
-// #nav 
-//     transition: top 0.3s ease; /* Transition effect when sliding down (and up) */
-//     font-weight: 300
-//     z-index 500
-//     margin-top: 1rem
-//     margin-bottom: 3rem
-//     margin rem 1rem 3rem 1rem
-//     padding:0rem
-//     display: grid
-//     grid-template-rows: 1fr
-//     // grid-template-columns: 1fr 1.5fr  
-//     // grid-template: auto auto
-//     display: flex
-        
-
-//     justify-content: space-between
-//     margin-left: 5vw
-//     margin-right: 5vw
-
-//     a
-//         font-size: 01.05rem 
-//         min-height: 1.5rem
-//     .nav-holder
-        
-//         align-items: last baseline
-//         align-self: last baseline
-//         z-index: inherit
-//         text-align: center
-//         overflow-wrap: none
-//         white-space: nowrap;
-//         // text-align: right 
-//         display: flex 
-//         justify-content: space-between 
-
-//     #nav-home   
-//         // margin-right: 40vw 
-//         // flex-basis 33%  
-//         // margin-right: auto
-//         z-index: inherit
-//         color: var(--txtcol)
-//         opacity opa
-//         transition: background-color 200ms ease-in
-//         align-self: last baseline
-//         line-height: 1.4
-//         margin-right: .4em
-//         height 100%
-//         font-weight: var(--bold)
-
-//         +narrowerthan(800px)
-//             font-weight: var(--reg)
-
-//       // &:hover,&&:focus
-//       //    opacity 100%
-
-//     #desk-nav
-//       // flex-grow: 7
-//         // align-items: last baseline
-//         // align-self: last baseline
-//         z-index: inherit
-//         text-align: center
-//         overflow-wrap: none
-//         white-space: nowrap;
-//         flex-grow: 2
-//         text-align: right 
-//         display: flex 
-//         justify-content: space-between 
-
-//         // align-content: center
-//         // align-items: baseline
-
-//         #nav-links 
-//             min-width 1rem
-//             text-align: right 
-//             z-index: inherit
-
-//         a
-//             line-height: 1.4
-            
-//             // height: 1.1rem
-//             color: var(--txtcol)
-//             // margin: .9rem 0
-
-//             opacity opa
-//             transition: all  200ms ease-in
-//             // &:hover,&&:focus
-//             //    opacity 100%
-//             +narrowerthan(800px)
-//                 flex-basis: 100% 
-
-//     #nav-home, #nav-links a, #nav-theme-toggle label
-//         display inline-block
-//         border-radius: .3em
-//         border solid transparent
-//         border-width: 4px 
-//         background-clip: padding-box;
-//         transition: background-color ease-out 200ms, border-color ease-out 250ms 
-            
-//         // &:hover, &&:focus, &.active, &:active
-//             //  background-color: var(--magenta-hlight); 
-//             // transform: scale(1.5) 
-
-//         &:after
-//             font-feature-settings: "caps"
-//             // font-size: 1.0em  
-//             // top: 0.2em
-
-//     #nav-theme-toggle
-//         &:after
-//             content: ""
-
-
-
 
 
 #nav-theme-toggle
@@ -193,10 +52,11 @@ opa = 100%
 
 input[type=checkbox]#adjust + label::before
     // margin-right: .25rem  
-    font-weight: var(--reg)
     content: "Dark side"
     transition: color ease-in .15s
     color: var(--txtcol)
+    font-variation-settings: "wght" var(--stdWeight)
+    // &:hover
 
 input[type=checkbox]#adjust:checked + label::before
     content: "Light side"
@@ -213,9 +73,9 @@ label#modeLbl
 *
     box-sizing: border-box 
 
-nav#nav1 #desk-nav
-    align-items: flex-start
-    align-items: baseline
+// nav#nav1 #desk-nav
+//     align-items: flex-start
+//     align-items: baseline
 
 
 .name-link
@@ -237,79 +97,79 @@ nav
     #menu-label
         display: none;
 
-+narrowerthan(800px)
-    nav#nav1
-        background-color: var(--bgcol)
-        display: block
-        position fixed
-        margin 0`
-        padding 1rem 1rem 1rem
-        left 0
-        top 0
+// +narrowerthan(800px)
+//     nav#nav1
+//         background-color: var(--bgcol)
+//         display: block
+//         position fixed
+//         margin 0`
+//         padding 1rem 1rem 1rem
+//         left 0
+//         top 0
 
-        right 0
-        // bottom: 0
-        .nav-holder
-            font-family: var(--qfont)
-        #menu-label
+//         right 0
+//         // bottom: 0
+//         .nav-holder
+//             font-family: var(--qfont)
+//         #menu-label
 
-            margin: .2rem
+//             margin: .2rem
 
-            top: 1em;
-            right 1em
-            height 1rem
-            width 1.5rem
-            // border-style: 
-            border  outset 3px var(--bgcol) 
-            border-bottom-style: inset
-            border-top-color: var(--txtcol)
-            border-bottom-color: var(--txtcol)
-            border-right: var(--bgcol) inset;
+//             top: 1em;
+//             right 1em
+//             height 1rem
+//             width 1.5rem
+//             // border-style: 
+//             border  outset 3px var(--bgcol) 
+//             border-bottom-style: inset
+//             border-top-color: var(--txtcol)
+//             border-bottom-color: var(--txtcol)
+//             border-right: var(--bgcol) inset;
 
-            background-color var(--bgcol)
-            transition: all 500ms ease-in-out
-            z-index 400
+//             background-color var(--bgcol)
+//             transition: all 500ms ease-in-out
+//             z-index 400
         
-            display: block
-            position absolute
-            top 1rem
-            right 1rem
-            // opacity: opa
-            transition: opacity 200 ease-in
+//             display: block
+//             position absolute
+//             top 1rem
+//             right 1rem
+//             // opacity: opa
+//             transition: opacity 200 ease-in
 
-            &:hover, &:focus
-                opacity 100%
+//             &:hover, &:focus
+//                 opacity 100%
 
-        #desk-nav
-            height 100vh
-            transition max-height .5s ease-in-out
-            position relative
-            max-height: 0
-            overflow: hidden
-            flex-direction: vertical
-            flex-wrap: wrap
-            bottom: 0 
-            // align-content: 
-            align-content: start
-            #nav-links, #nav-theme-toggle 
-                display: flex
-                flex-direction: vertical
-                flex-wrap: wrap
-                // margin-top: 1rem
-                flex-basis: 100%
-                &:after
-                    content: ""  
+//         #desk-nav
+//             height 100vh
+//             transition max-height .5s ease-in-out
+//             position relative
+//             max-height: 0
+//             overflow: hidden
+//             flex-direction: vertical
+//             flex-wrap: wrap
+//             bottom: 0 
+//             // align-content: 
+//             align-content: start
+//             #nav-links, #nav-theme-toggle 
+//                 display: flex
+//                 flex-direction: vertical
+//                 flex-wrap: wrap
+//                 // margin-top: 1rem
+//                 flex-basis: 100%
+//                 &:after
+//                     content: ""  
                 
-                a, label
-                    font-family: var(--pfont)
-                    margin-left: 0
-                    // padding 1rem 0
-                    // flex-basis: 100%
-                    justify-self: left
-                    text-align: left
-                    font-size: 2.6rem   
-                    &:after
-                        content: ""  
+//                 a, label
+//                     font-family: var(--pfont)
+//                     margin-left: 0
+//                     // padding 1rem 0
+//                     // flex-basis: 100%
+//                     justify-self: left
+//                     text-align: left
+//                     font-size: 2.6rem   
+//                     &:after
+//                         content: ""  
 
     input#menu-input:checked + #menu-label
         height: 1.25rem
@@ -357,20 +217,3 @@ nav
          // font-size: 3rem
         #modeLbl:after
             margin-right: 0
-
-
-
-@keyframes nav-home-expand
-    0%
-        &:after
-            content: ""
-
-        // font-family: var(--sfont)
-    70%
-        &:after
-            content: "asger"
-        // font-family: var(--pfont)
-    100%
-        &:after
-            content: "asger"
-        // font-family: var(--pfont)
