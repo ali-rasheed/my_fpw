@@ -35,10 +35,10 @@ narrowerthan(var)
         grid-template-columns: repeat(12,1fr)
         // grid-template-rows: repeat( 12,auto)
         // +narrowerthan(800px)
-        grid-gap: var(--space)
+        grid-gap: var(--d-space)
 
         grid-template-rows: auto
-        height:calc(65vh+10rem)
+        height:calc(65vmin+10rem)
         width 100%
         box-sizing: border-box
         padding: 0 var(--d-space)
@@ -57,7 +57,7 @@ narrowerthan(var)
             // display: grid    
             margin 0
             line-height: 1 
-            font-size: 3.8vw
+            font-size: 3.7vw
             +narrowerthan(1400px)
                 font-size: 5.61rem
             +narrowerthan(500px)
@@ -80,7 +80,7 @@ narrowerthan(var)
             font-size: 1rem 
             line-height: var(--lHeight)
             border-top: solid 1px var(--grey)
-            letter-spacing: .04rem
+            // letter-spacing: .1px
             // max-width:  45ch
             // padding-right: 2rem
             box-sizing: content-box 

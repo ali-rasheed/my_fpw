@@ -22,11 +22,13 @@ narrowerthan(var)
     --dark-black-rgb: 30,30,30;
     --space:1rem; 
     --d-space:2rem;
-    font-size: 93.8%;
+    // font-size: 93.8%;
     --side-margin: 1rem 
     --pfont: "Grafier Variable"  
     --sfont: 'General Sans'
-    --stdWeight: 380
+    --sfont: 'FormaDJRVariable'
+    --backupfont: 'FormaDJRDisplay'
+    --stdWeight: 330
     --medWeight: 450
     --bigWeight: 530
     
@@ -34,14 +36,6 @@ narrowerthan(var)
         --space: 0.8rem
         --d-space: 1.6rem
 
-    // --sfont: 'switzer'
-
-    // --tfont: "Mazius Display Italic"
-    // --qfont: "Mazius Display Extra Italic" 
-     
-    // --tfont: "Messapia"
-    // --qfont: "Messapia" 
-    
     --tfont: "Grafier"
     // --qfont: "Calvino Grande" 
      
@@ -52,9 +46,6 @@ narrowerthan(var)
     --bgcol: var(--dark-black)
     --bgcol-rgb: var(--dark-black-rgb)
     --txtcol: var(--dark-white)    
-    --reg: 400 
-    --bold: 600 
-    --mid: 400
 
     --lHeight:  1.45
     --stroke: .85px
@@ -78,7 +69,7 @@ narrowerthan(var)
     --scol: var(--magenta-light)
     --tcol: var(--magenta-dark)
     --customCol: var(--magenta)
-
+    --lspace:.2px
     footer  
         --fa-primary-color var(--bgcol)
  
@@ -92,6 +83,8 @@ narrowerthan(var)
 /*------------DARK                       MODE------------*/
 
 [data-theme = "light"]
+    --lspace:0px
+
     --blend: darken
     --exposure: 180%
     --lHeight:  1.45
@@ -102,7 +95,7 @@ narrowerthan(var)
     --stroke:1px
     --scol: var(--magenta-dark)
     --tcol: var(--magenta-light)
-    --stdWeight: 450
+    --stdWeight: 400
     --medWeight: 520
     --bigWeight: 600
 

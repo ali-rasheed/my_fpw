@@ -71,19 +71,21 @@ h1, h2, h3, h4, h5, h6, figcaption, p, li, a, button, #summary, small,label, div
    // opacity: 95% 
    // transition: opacity ease-out 200ms
 
-p,li, a 
-   letter-spacing: .01rem;
+// p,li, a 
+//    letter-spacing: .01rem;
    
 p
    // text-indent: 1rem
    margin-bottom: 1rem   
    max-width 50ch
 
-p,li,span,label
+p,li,span,label,a
+   letter-spacing: var(--lspace)
+
    font-size 1rem
    // font-size 1.1rem
    // font-weight: 600
-   font-variation-settings: "wght" var(--stdWeight)
+   // font-variation-settings: "wght" var(--stdWeight)
    line-height: 1.5
    +narrowerthan(500px)
       font-size: 1rem
@@ -109,7 +111,7 @@ h2
    font-weight: 400 
    font-size: 4.2rem
    font-size: 3.157rem
-   font-variation-settings: "wght" 587, "ctrs" 40;
+   font-variation-settings: "wght" 587, "ctrs" 50;
 
    // text-transform: uppercase
    // color: var(--pcol)
@@ -168,6 +170,7 @@ h6
    font-variation-settings: "wght" 500
 
    font-size 1rem
+   letter-spacing .1px
 
 small 
    font-size: 0.7em
@@ -176,7 +179,7 @@ small
 figcaption
    font-size: .8rem
    font-variation-settings: "wght" 487
-   letter-spacing: .04em;
+   // letter-spacing: .04em;
 
 
    //  padding-left: 1rem
@@ -303,8 +306,9 @@ main
    min-height: 0; 
    min-width: 0;
    max-width 55ch 
-   font-family: var(--pfont), var(--sfont), arial, sans-serif;
-   font-variation-settings: "wght" 400, "ctrs" .2;
+   font-family: var(--sfont), arial, sans-serif;
+   
+   font-variation-settings:  "wght"  var(--stdWeight)
    margin-bottom: var(--d-space)
    +narrowerthan(1400px)
       font-size: 1.6em 
@@ -356,8 +360,9 @@ ol
       max-height 90vh  
 
 #summary
-   font-family: var(--pfont), "times new roman", serif
-   font-variation-settings:  "wght" 487, "ctrs" 0;
+   font-family: var(--sfont), "helvetica", serif
+   font-variation-settings:  "wght"  var(--stdWeight)
+;
 hr
    width 40vw
    margin 3rem auto
@@ -378,7 +383,7 @@ hr
    display: inline-block
    text-underline-offset: 1px
    font-variation-settings: "wght" var(--stdWeight)
-   letter-spacing: .04em
+   // letter-spacing: .04em
    // background-image: linear-gradient(to bottom, red 33%, transparent 33%, transparent 66%, red 66%, red);
    // background-position: 0 1.03em;
    // background-repeat: repeat-x;
@@ -436,6 +441,7 @@ img.lazy
       opacity: 1
 
 a,button
+   font-size: 1rem
    font-family: inherit
    cursor: url(ex.svg)30 30, auto
 

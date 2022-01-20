@@ -42,7 +42,7 @@ nav#nav2
         // +narrowerthan(1400px)
         //     font-size: 1.1vw
         text-transform: lowercase;
-        letter-spacing: 0.03em
+        // letter-spacing: 0.03em
         
         // word-wrap: break-word
         // overflow-wrap: break-word
@@ -51,7 +51,7 @@ nav#nav2
     
         
     #top-nav
-        transition: transform .4s cubic-bezier(.25,.46,.45,.94) .1s,opacity .4s cubic-bezier(.25,.46,.45,.94) .2s,letter-spacing .5s cubic-bezier(.25,.46,.45,.94);
+        // transition: transform .4s cubic-bezier(.25,.46,.45,.94) .1s,opacity .4s cubic-bezier(.25,.46,.45,.94) .2s,letter-spacing .5s cubic-bezier(.25,.46,.45,.94);
         padding: var(--d-space) var(--d-space) 0 var(--d-space)
         justify-content: space-between 
         display: flex
@@ -74,7 +74,7 @@ nav#nav2
             .nav-item
                 
                 .caption
-                    transition: transform .25s cubic-bezier(.25,.46,.45,.94) .1s,opacity .25s cubic-bezier(.25,.46,.45,.94) .2s
+                    // transition: transform .25s cubic-bezier(.25,.46,.45,.94) .1s,opacity .25s cubic-bezier(.25,.46,.45,.94) .2s
                     z-index: 3
                 // margin 0 1rem  
                 // display: flex
@@ -245,16 +245,16 @@ nav#nav2
     box-sizing: content-box
 
     *
-        transition: font-weight 300ms ease, filter 300ms ease-in-out
+        transition: font-variation-settings 300ms ease, filter 300ms ease-in-out
         box-sizing: content-box
     #nav-filters a, #nav-about, #nav-filters a .title
 
     .title
-        transition: font-weight 300ms ease, filter 300ms ease-in-out
-        font-weight: var(--medWeight)
+        transition: font-variation-settings 300ms ease, filter 300ms ease-in-out
+        font-variation-settings:  "wght" var(--stdWeight)
     .caption
-        transition: font-weight 300ms ease, filter 300ms ease-in-out
-        font-weight: var(--stdWeight)
+        transition: font-variation-settings 300ms ease, filter 300ms ease-in-out
+        ffont-variation-settings:  "wght" var(--stdWeight)
 
     #nav-filters:hover a
         +widerthan(1400px)
@@ -267,9 +267,11 @@ nav#nav2
             // color var(--customCol)
         // font-weight: 490
         .title
-            font-weight: var(--bigWeight)
+            font-variation-settings: "wght" var(--bigWeight)
+
         .caption
-            font-weight: var(--medWeight)
+            font-variation-settings: "wght" var(--medWeight)
+
         // &#nav-about, #unfilter
 
         // &#ux_
