@@ -1,79 +1,79 @@
-mixin grid-item(title,link,desc,tiltm,image,cl)
-    //- - var link = "arcteryx" + end    
-    a(class=cl data-tilt-startX=tiltm href=link)
-        .proj-title
-            h1=title
-                .genre=desc
-        .project-img
-            img(src=image, alt="").maskable
+//- mixin grid-item(title,link,desc,tiltm,image,cl)
+//-     //- - var link = "arcteryx" + end    
+//-     a(class=cl data-tilt-startX=tiltm href=link)
+//-         .proj-title
+//-             h1=title
+//-                 .genre=desc
+//-         .project-img
+//-             img(src=image, alt="").maskable
         
-<!DOCTYPE html>
-html(lang='en')
-    head
-        include ./includes/head1.pug
-        title Aliasger Rasheed
-    body.index
-        - var end = ".html"
-        - var home = "/"
+//- <!DOCTYPE html>
+//- html(lang='en')
+//-     head
+//-         include ./includes/head1.pug
+//-         title Aliasger Rasheed
+//-     body.index
+//-         - var end = ".html"
+//-         - var home = "/"
 
-        header 
-            include ./includes/nav2.pug   
-        main#grain
-            //- section.define 
-            //-     h2 Ali: A designer who unabashedly wants to design to  help people and make beautiful things 
-            section#index-grid
-                //- -var tiltp="8"
-                //- -var tilts="-8"
+//-         header 
+//-             include ./includes/nav2.pug   
+//-         main#grain
+//-             //- section.define 
+//-             //-     h2 Ali: A designer who unabashedly wants to design to  help people and make beautiful things 
+//-             section#index-grid
+//-                 //- -var tiltp="8"
+//-                 //- -var tilts="-8"
 
-                +grid-item("Arc'teryx","arcteryx.html","service design for product care",tiltp,"imgs/arcy/cover.jpg",w-reg)
+//-                 +grid-item("Arc'teryx","arcteryx.html","service design for product care",tiltp,"imgs/arcy/cover.jpg",w-reg)
                  
-                +grid-item("TPR Bords De Plateau"
-                ,"tpr.html","graphic & interaction design ",tiltp,"imgs/tpr/cover2.jpg",arcy)
+//-                 +grid-item("TPR Bords De Plateau"
+//-                 ,"tpr.html","graphic & interaction design ",tiltp,"imgs/tpr/cover2.jpg",arcy)
 
-                +grid-item("UNESCO Lodestar","unesco.html","ux designing education through World Heritage",tiltp,"imgs/unesco/cover.jpg",arcy)
+//-                 +grid-item("UNESCO Lodestar","unesco.html","ux designing education through World Heritage",tiltp,"imgs/unesco/cover.jpg",arcy)
 
-                +grid-item("Graphic Archive.","gd.html",
-                "professional & personal projects; experiments",tilts,"imgs/projects/posterjam.png")
+//-                 +grid-item("Graphic Archive.","gd.html",
+//-                 "professional & personal projects; experiments",tilts,"imgs/projects/posterjam.png")
 
-                //- +grid-item("Threads To Heaven","threadstoheaven.html","speculative design exploring the choice of a 'good death'",tilts,"imgs/projects/spec.jpg")
+//-                 //- +grid-item("Threads To Heaven","threadstoheaven.html","speculative design exploring the choice of a 'good death'",tilts,"imgs/projects/spec.jpg")
 
-                +grid-item("Gakko 2019","gakko.html","a summer of type, graphic design & new media",tiltp,"imgs/projects/gakko.jpg")
+//-                 //- +grid-item("Gakko 2019","gakko.html","a summer of type, graphic design & new media",tiltp,"imgs/projects/gakko.jpg")
                 
-                //- - var link = "javascript:;"       
-                //- a(href=link).grid-item.in-progress
-                //-     .proj-title
-                //-         h1 OpenIDEO Bagsket 
-                //-             .genre smart bag UX/UI & industrial design submission 
-                //-     .project-img
-                //-         img(src="imgs/projects/bagsket"+".jpg").maskable 
+//-                 //- - var link = "javascript:;"       
+//-                 //- a(href=link).grid-item.in-progress
+//-                 //-     .proj-title
+//-                 //-         h1 OpenIDEO Bagsket 
+//-                 //-             .genre smart bag UX/UI & industrial design submission 
+//-                 //-     .project-img
+//-                 //-         img(src="imgs/projects/bagsket"+".jpg").maskable 
                     
                     
-                //- - var link = "charette"    + end       
-                //- section.grid-item
-                //-   a(href=link).project-img
-                //-     img(src="imgs/charette/hearth-underlit"+".jpg", alt=" Hearth Model").maskable
-                //-   a(href=link).proj-title
-                //-     h1 Hearth 
-                //-   ul.genre
-                //-     li Photography
-                //-     li 3D Modelling
-                //-     li Model Making
+//-                 //- - var link = "charette"    + end       
+//-                 //- section.grid-item
+//-                 //-   a(href=link).project-img
+//-                 //-     img(src="imgs/charette/hearth-underlit"+".jpg", alt=" Hearth Model").maskable
+//-                 //-   a(href=link).proj-title
+//-                 //-     h1 Hearth 
+//-                 //-   ul.genre
+//-                 //-     li Photography
+//-                 //-     li 3D Modelling
+//-                 //-     li Model Making
 
-                //- - var link = "headset" + end
+//-                 //- - var link = "headset" + end
 
-                //- section.grid-item#headset 
-                //-   a(href=link).project-img
-                //-     img(src="imgs/projects/headset"+".jpg", alt=" Kamishibai Headset title").maskable.saturate
-                //-   a(href=link).proj-title
-                //-     h1 Kamishibai
-                //-   ul.genre 
-                //-     li A VR headset designed for experiencing 
-                //-     li traditional Japanese Kabuki Theatre
-                    //- li Industrial Design
-                    //- li 3D Modelling
+//-                 //- section.grid-item#headset 
+//-                 //-   a(href=link).project-img
+//-                 //-     img(src="imgs/projects/headset"+".jpg", alt=" Kamishibai Headset title").maskable.saturate
+//-                 //-   a(href=link).proj-title
+//-                 //-     h1 Kamishibai
+//-                 //-   ul.genre 
+//-                 //-     li A VR headset designed for experiencing 
+//-                 //-     li traditional Japanese Kabuki Theatre
+//-                     //- li Industrial Design
+//-                     //- li 3D Modelling
 
-        footer
-            include ./includes/footer1.pug 
+//-         footer
+//-             include ./includes/footer1.pug 
 
         
         

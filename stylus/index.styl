@@ -58,9 +58,9 @@ narrowerthan(var)
             margin 0
             line-height: 1 
             font-size: 3.7vw
-            +narrowerthan(1400px)
+            +narrowerthan(1200px)
                 font-size: 5.61rem
-            +narrowerthan(500px)
+            +narrowerthan(1200px)
                 font-size: 2.441rem
 
             em
@@ -71,7 +71,7 @@ narrowerthan(var)
                 font-family: inherit
                 line-height: inherit            
                 
-                +narrowerthan(500px)
+                +narrowerthan(1200px)
                     padding-right: 2vw
                     // font-size: inherit
         h4
@@ -85,7 +85,7 @@ narrowerthan(var)
             // padding-right: 2rem
             box-sizing: content-box 
             // margin-top: .5rem
-            +narrowerthan(600px)
+            +narrowerthan(1200px)
                 grid-column: 1/-1
                 grid-row: auto
             &.desc
@@ -115,7 +115,7 @@ narrowerthan(var)
             grid-row 5/6 
             align-self: first-baseline
 
-            +narrowerthan(500px)
+            +narrowerthan(1200px)
                 grid-column:  10/12
                 padding-bottom: 0
 
@@ -140,6 +140,7 @@ narrowerthan(var)
             overflow: hidden    
             img 
                 object-fit: cover
+                width: 100%
             object-fit: cover
             // right 0
             max-height: calc(6rem + 90vh)
@@ -155,7 +156,7 @@ narrowerthan(var)
         h4.links
             font-size: 1rem
             
-        +narrowerthan(500px)
+        +narrowerthan(1200px)
             margin: var(--space)
             width: auto
             padding 0
@@ -170,7 +171,7 @@ narrowerthan(var)
             h4
                 
                 padding 0 
-                padding 1rem 0 
+                padding .5rem 0 
                 grid-row: auto !important
                 grid-column: 1/-1
                 &.desc
@@ -310,7 +311,7 @@ narrowerthan(var)
                         margin-top: var(--space)
                     line-height: 1
                     transition: font-variation-settings 200ms ease 
-                    transition-delay: 200ms
+                    transition-delay: 50ms
 
                     font-variation-settings: "wght" 400, "ctrs" 1;
 
